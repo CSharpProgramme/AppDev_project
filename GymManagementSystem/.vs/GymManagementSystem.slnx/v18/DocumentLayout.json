@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\steve\\Desktop\\AppDev_project\\GymManagementSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4F3516AA-BDC3-4519-A99D-6573E2F48AC2}|GymManagementSystem\\GymManagementSystem.csproj|c:\\users\\steve\\desktop\\appdev_project\\gymmanagementsystem\\gymmanagementsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4F3516AA-BDC3-4519-A99D-6573E2F48AC2}|GymManagementSystem\\GymManagementSystem.csproj|solutionrelative:gymmanagementsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{CE726375-D130-4AE1-9D92-A97DC4272509}|GymManagementSystem\\GymManagementSystem.csproj|c:\\users\\steve\\desktop\\appdev_project\\gymmanagementsystem\\gymmanagementsystem\\gymmanagementdataset.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
+      "RelativeMoniker": "D:0:0:{CE726375-D130-4AE1-9D92-A97DC4272509}|GymManagementSystem\\GymManagementSystem.csproj|solutionrelative:gymmanagementsystem\\gymmanagementdataset.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE726375-D130-4AE1-9D92-A97DC4272509}|GymManagementSystem\\GymManagementSystem.csproj|c:\\users\\steve\\desktop\\appdev_project\\gymmanagementsystem\\gymmanagementsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CE726375-D130-4AE1-9D92-A97DC4272509}|GymManagementSystem\\GymManagementSystem.csproj|solutionrelative:gymmanagementsystem\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,13 +23,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "GymManagementDataSet.xsd",
+              "DocumentMoniker": "C:\\Users\\steve\\Desktop\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\GymManagementDataSet.xsd",
+              "RelativeDocumentMoniker": "GymManagementSystem\\GymManagementDataSet.xsd",
+              "ToolTip": "C:\\Users\\steve\\Desktop\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\GymManagementDataSet.xsd",
+              "RelativeToolTip": "GymManagementSystem\\GymManagementDataSet.xsd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
+              "WhenOpened": "2026-04-18T18:03:53.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\steve\\Desktop\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\Form1.cs",
               "RelativeDocumentMoniker": "GymManagementSystem\\Form1.cs",
               "ToolTip": "C:\\Users\\steve\\Desktop\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\Form1.cs [Design]",
               "RelativeToolTip": "GymManagementSystem\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T16:37:46.266Z",
+              "WhenOpened": "2026-04-18T17:57:32.803Z",
               "EditorCaption": " [Design]"
             }
           ]
