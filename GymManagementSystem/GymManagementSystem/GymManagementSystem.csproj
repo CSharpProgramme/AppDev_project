@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CE726375-D130-4AE1-9D92-A97DC4272509}</ProjectGuid>
+    <ProjectGuid>{AD39DD28-D95B-4633-A524-8A78E00356EE}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>GymManagementSystem</RootNamespace>
     <AssemblyName>GymManagementSystem</AssemblyName>
@@ -74,9 +74,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
