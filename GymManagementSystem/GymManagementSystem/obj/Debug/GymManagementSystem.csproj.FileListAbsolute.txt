@@ -18,3 +18,4 @@ C:\Users\steve\Desktop\AppDev_project\GymManagementSystem\GymManagementSystem\ob
 C:\Users\steve\Desktop\AppDev_project\GymManagementSystem\GymManagementSystem\obj\Debug\GymManagementSystem.TrainerControl.resources
 C:\Users\steve\Desktop\AppDev_project\GymManagementSystem\GymManagementSystem\obj\Debug\GymManagementSystem.LoginForm.resources
 C:\Users\steve\Desktop\AppDev_project\GymManagementSystem\GymManagementSystem\obj\Debug\GymManagementSystem.Views.RegisterForm.resources
+C:\Users\steve\Desktop\AppDev_project\GymManagementSystem\GymManagementSystem\obj\Debug\GymManagementSystem.Views.EditMemberForm.resources

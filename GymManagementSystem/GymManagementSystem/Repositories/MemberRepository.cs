@@ -9,7 +9,8 @@ namespace GymManagementSystem.Repositories
 {
     public class MemberRepository
     {
-        /*Repository class for managing Member entities.
+        /*
+        Repository class for managing Member entities.
         this class provides methods to perform CRUD operations on the Member table in the database.
         */
 
@@ -170,6 +171,25 @@ namespace GymManagementSystem.Repositories
                 throw new Exception("Error searching members: " + ex.Message);
             }
             return members;
+        }
+
+        public int GetTotalMembers()
+        {
+            try
+            {
+                using (SqlConnection conn = DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+                    string query = "SELECT COUNT(*) FROM MEMBER";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    // ExecuteScalar returns a single value instead of rows
+                    return (int)cmd.ExecuteScalar();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error counting members: " + ex.Message);
+            }
         }
 
         //ADD

@@ -6,11 +6,11 @@ using GymManagementSystem.Models;
 
 namespace GymManagementSystem.Repositories
 {
-    /// <summary>
-    /// Handles all database operations for the MEMBERSHIP_PLAN table.
-    /// This is the only class that writes SQL for membership plans.
-    /// The controller calls these methods instead of querying the database directly.
-    /// </summary>
+    /*
+     * Handles all database operations for the MEMBERSHIP_PLAN table. 
+     * This is the only class that writes SQL for membership plans.
+     * The controller calls these methods instead of querying the database directly.
+     */
     public class MembershipPlanRepository
     {
         // read

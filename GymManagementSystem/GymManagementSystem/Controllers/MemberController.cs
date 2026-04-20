@@ -35,6 +35,11 @@ namespace GymManagementSystem.Controllers
             return memberRepository.SearchMembers(name);
         }
 
+        public int GetTotalMembers()
+        {
+            return memberRepository.GetTotalMembers();
+        }
+
         public void AddMember(Member member)
         {
             memberRepository.AddMember(member);

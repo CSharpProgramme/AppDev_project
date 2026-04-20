@@ -185,7 +185,7 @@
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(200, 0);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1479, 849);
+            this.mainPanel.Size = new System.Drawing.Size(1378, 849);
             this.mainPanel.TabIndex = 2;
             // 
             // gymManagementDBDataSet
@@ -234,7 +234,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1679, 849);
+            this.ClientSize = new System.Drawing.Size(1578, 849);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.sidebarNavPanel);
             this.Name = "AdminForm";

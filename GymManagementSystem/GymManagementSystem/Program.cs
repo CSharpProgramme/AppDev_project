@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GymManagementSystem
+namespace GymManagementSystem.Views
 {
     internal static class Program
     {
@@ -17,8 +17,8 @@ namespace GymManagementSystem
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new AdminForm());
-            //Application.Run(new Login
-            //Form());
+            //Application.Run(new LoginForm());
+            //Application.Run(new RegisterForm());
         }
     }
 }

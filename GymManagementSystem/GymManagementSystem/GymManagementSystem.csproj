@@ -137,6 +137,12 @@
     <Compile Include="Views\TrainerControl.Designer.cs">
       <DependentUpon>TrainerControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\EditMemberForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EditMemberForm.Designer.cs">
+      <DependentUpon>EditMemberForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Views\DashboardControl.resx">
       <DependentUpon>DashboardControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\TrainerControl.resx">
       <DependentUpon>TrainerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EditMemberForm.resx">
+      <DependentUpon>EditMemberForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="GymManagementDBDataSet.xsc">
       <DependentUpon>GymManagementDBDataSet.xsd</DependentUpon>

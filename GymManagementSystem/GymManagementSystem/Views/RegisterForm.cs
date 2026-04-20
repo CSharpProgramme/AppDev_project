@@ -10,10 +10,11 @@ using System.Windows.Forms;
 namespace GymManagementSystem.Views
 {
     
-    /*Form for registering a new member.
-    Uses a transaction to insert into MEMBER, SUBSCRIPTION and PAYMENT tables.
-    If any of the 3 inserts fail, all changes are rolled back.
-        */
+    /*
+     * Form for registering a new member.
+     * Uses a transaction to insert into MEMBER, SUBSCRIPTION and PAYMENT tables.
+     * If any of the 3 inserts fail, all changes are rolled back.
+     */
     public partial class RegisterForm : Form
     {
         private MemberController memberController;
@@ -45,7 +46,7 @@ namespace GymManagementSystem.Views
             SetPlaceholder(emergencyPhoneTextBox, "Emergency Contact Phone");
 
             // Load payment method options into ComboBox
-            paymentComboBox.Items.AddRange(new string[] { "cash", "credit_card", "debit_card", "bank_transfer", "online" });
+            paymentComboBox.Items.AddRange(new string[] { "Cash", "Credit Card", "Debit Card" });
             paymentComboBox.SelectedIndex = 0;
 
             // Load plan buttons from database
@@ -83,6 +84,11 @@ namespace GymManagementSystem.Views
                     selectedPlanId = selected.PlanId;
                     selectedPlanPrice = selected.Price;
                     selectedPlanDuration = selected.DurationDays;
+
+                    // Calculate total with 15% tax and display it
+                    decimal tax = selectedPlanPrice * 0.15m;
+                    decimal total = selectedPlanPrice + tax;
+                    showAmountTextBox.Text = "$" + total.ToString("0.00");
                 };
 
                 flowLayoutPlanPanel.Controls.Add(btn);
@@ -154,7 +160,7 @@ namespace GymManagementSystem.Views
 
                 try
                 {
-                    // Step 1 - Insert member and get the new member ID
+                    //Insert member and get the new member ID
                     string memberQuery = @"INSERT INTO MEMBER 
                                         (first_name, last_name, email, phone, date_of_birth,
                                          join_date, emergency_contact_name, emergency_contact_phone, status)
@@ -172,13 +178,14 @@ namespace GymManagementSystem.Views
                     memberCmd.Parameters.AddWithValue("@joinDate", DateTime.Today);
                     memberCmd.Parameters.AddWithValue("@emergencyContactName", string.IsNullOrWhiteSpace(emergencyContactTextBox.Text) ? (object)DBNull.Value : emergencyContactTextBox.Text.Trim());
                     memberCmd.Parameters.AddWithValue("@emergencyContactPhone", string.IsNullOrWhiteSpace(emergencyPhoneTextBox.Text) ? (object)DBNull.Value : emergencyPhoneTextBox.Text.Trim());
+                    
                     // Status defaults to active for new members
                     memberCmd.Parameters.AddWithValue("@status", "active");
 
                     // ExecuteScalar returns the new member ID from SELECT SCOPE_IDENTITY()
                     int newMemberId = Convert.ToInt32(memberCmd.ExecuteScalar());
 
-                    // Step 2 - Insert subscription using the new member ID
+                    //Insert subscription using the new member ID
                     DateTime startDate = DateTime.Today;
                     DateTime endDate = startDate.AddDays(selectedPlanDuration);
 

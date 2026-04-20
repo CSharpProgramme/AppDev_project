@@ -3,12 +3,7 @@ using GymManagementSystem.Models;
 using GymManagementSystem.Views;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GymManagementSystem
@@ -21,6 +16,9 @@ namespace GymManagementSystem
         {
             InitializeComponent();
 
+            //disable edit button until a row from datagridview is selected
+            editButton.Enabled = false;
+
             //create a new MemberController when the control is loaded
             memberController = new MemberController();
 
@@ -29,6 +27,15 @@ namespace GymManagementSystem
             searchMemTextBox.ForeColor = Color.Gray;
 
             LoadMembers();
+
+            // Deselect all rows on load
+            memberDataGridView.ClearSelection();
+        }
+
+        // Enable edit button when a row is selected
+        private void memberDataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            editButton.Enabled = memberDataGridView.SelectedRows.Count > 0;
         }
 
         //fetch all members from the controller and display them in datagridview
@@ -43,13 +50,19 @@ namespace GymManagementSystem
             memberDataGridView.Columns.Clear();
 
             // Add columns manually matching your Member model properties
-            memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "ID", DataPropertyName = "MemberID" });
+            memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { 
+                Name = "MemberID",
+                HeaderText = "ID", 
+                DataPropertyName = "MemberID" });
+
             memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "First Name", DataPropertyName = "FName" });
             memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Last Name", DataPropertyName = "LName" });
             memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Email", DataPropertyName = "Email" });
             memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Phone", DataPropertyName = "Phone" });
             memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Date of Birth", DataPropertyName = "DateOfBirth" });
             memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Join Date", DataPropertyName = "JoinDate" });
+            memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Emergency Contact", DataPropertyName = "EmergencyContactName" });
+            memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Emergency Phone", DataPropertyName = "EmergencyContactPhone" });
             memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Status", DataPropertyName = "Status" });
 
             memberDataGridView.DataSource = members;
@@ -97,6 +110,22 @@ namespace GymManagementSystem
             // Refresh the member list when the form closes
             registerForm.FormClosed += (s, args) => LoadMembers();
             registerForm.ShowDialog();
+        }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            // Get the selected column name member ID from the grid
+            int selectedId = (int)memberDataGridView.SelectedRows[0].Cells["MemberID"].Value;
+
+            // Fetch the full member object from the controller
+            Member member = memberController.GetMemberByID(selectedId);
+
+            // Open the edit form with the selected member
+            EditMemberForm editForm = new EditMemberForm(member);
+
+            // Refresh the member list when the form closes
+            editForm.FormClosed += (s, args) => LoadMembers();
+            editForm.ShowDialog();
         }
     }
 }
