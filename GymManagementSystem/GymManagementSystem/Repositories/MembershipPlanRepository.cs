@@ -22,7 +22,7 @@ namespace GymManagementSystem.Repositories
                 using (SqlConnection conn = DatabaseHelper.GetConnection())
                 {
                     conn.Open();
-                    string query = "SELECT * FROM Membership_Plan";
+                    string query = "SELECT * FROM MEMBERSHIP_PLAN";
                     SqlCommand cmd = new SqlCommand(query, conn);
 
                     // Execute the query and get a reader to go through results row by row

@@ -67,6 +67,16 @@
     <Compile Include="Controllers\MembershipPlanController.cs" />
     <Compile Include="Controllers\StaffController.cs" />
     <Compile Include="Controllers\TrainerController.cs" />
+    <Compile Include="GymManagementDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GymManagementDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GymManagementDBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GymManagementDBDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Models\MembershipPlan.cs" />
     <Compile Include="Models\Staff.cs" />
     <Compile Include="Models\Trainer.cs" />
@@ -129,6 +139,12 @@
       <DependentUpon>MembershipPlanControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Member.cs" />
+    <Compile Include="Views\MembershipPlanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MembershipPlanForm.Designer.cs">
+      <DependentUpon>MembershipPlanForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\PaymentControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -201,6 +217,9 @@
     <EmbeddedResource Include="Views\EditMemberForm.resx">
       <DependentUpon>EditMemberForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\TrainerUpsertForm.resx">
+      <DependentUpon>TrainerUpsertForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="GymManagementDBDataSet.xsc">
       <DependentUpon>GymManagementDBDataSet.xsd</DependentUpon>
     </None>
@@ -212,6 +231,29 @@
     <None Include="GymManagementDBDataSet.xss">
       <DependentUpon>GymManagementDBDataSet.xsd</DependentUpon>
     </None>
+    <None Include="GymManagementDBDataSet1.xsc">
+      <DependentUpon>GymManagementDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GymManagementDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GymManagementDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GymManagementDBDataSet1.xss">
+      <DependentUpon>GymManagementDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GymManagementDBDataSet2.xsc">
+      <DependentUpon>GymManagementDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="GymManagementDBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GymManagementDBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GymManagementDBDataSet2.xss">
+      <DependentUpon>GymManagementDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\GymManagementSystem.Controllers.MembershipPlanController.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

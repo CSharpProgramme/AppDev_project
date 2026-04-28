@@ -129,5 +129,17 @@ namespace GymManagementSystem.Views
 
             DialogResult = DialogResult.OK;
         }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // TrainerUpsertForm
+            // 
+            this.ClientSize = new System.Drawing.Size(303, 297);
+            this.Name = "TrainerUpsertForm";
+            this.ResumeLayout(false);
+
+        }
     }
 }

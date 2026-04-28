@@ -46,8 +46,8 @@ namespace GymManagementSystem
             trainerDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Phone", DataPropertyName = "Phone" });
             trainerDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Specialization", DataPropertyName = "Specialization" });
             trainerDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Hourly Rate", DataPropertyName = "HourlyRate" });
-            trainerDataGridView.MultiSelect = false;
             trainerDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            trainerDataGridView.MultiSelect = false;
             trainerDataGridView.ReadOnly = true;
         }
 
