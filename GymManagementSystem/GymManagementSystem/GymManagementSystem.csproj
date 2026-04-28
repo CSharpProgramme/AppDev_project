@@ -51,6 +51,7 @@
     <Reference Include="System">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -64,8 +65,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\MembershipPlanController.cs" />
+    <Compile Include="Controllers\StaffController.cs" />
+    <Compile Include="Controllers\TrainerController.cs" />
     <Compile Include="Models\MembershipPlan.cs" />
+    <Compile Include="Models\Staff.cs" />
+    <Compile Include="Models\Trainer.cs" />
     <Compile Include="Repositories\MembershipPlanRepository.cs" />
+    <Compile Include="Repositories\StaffRepository.cs" />
+    <Compile Include="Repositories\TrainerRepository.cs" />
+    <Compile Include="Views\EmployeeRegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EmployeeRegisterForm.Designer.cs">
+      <DependentUpon>EmployeeRegisterForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FacilityControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -137,12 +150,18 @@
     <Compile Include="Views\TrainerControl.Designer.cs">
       <DependentUpon>TrainerControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\TrainerUpsertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Views\EditMemberForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\EditMemberForm.Designer.cs">
       <DependentUpon>EditMemberForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\EmployeeRegisterForm.resx">
+      <DependentUpon>EmployeeRegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\DashboardControl.resx">
       <DependentUpon>DashboardControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,11 +227,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="GymManagementDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="GymManagementDB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>GymManagementDB.mdf</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
@@ -227,6 +246,8 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\AllRegisterForms\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

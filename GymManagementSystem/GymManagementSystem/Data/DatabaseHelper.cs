@@ -1,27 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;  // ADD THIS
 using System.Data.SqlClient;
 using System.Linq;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace GymManagementSystem.Data
 {
-    /*
-    This class is responsible for managing the database connection.
-    Instead of writing the connection string in every controller,
-    we centralize it here so all controllers can reuse it easily.
-    If the connection string ever changes, we only need to update it in one place.
-     */
     public class DatabaseHelper
     {
-        //tells the application where and how to connect to the database
-        private static string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" +
-            "C:\\Users\\steve\\Desktop\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\" +
-            "GymManagementDB.mdf;Integrated Security=True;Connect Timeout=30";
+        private static readonly string connectionString = BuildConnectionString();
 
-        //this method creates and returns a new SqlConnection object using the connection string
-        //controllers will call this method whenever they need to interact with the database
+        private static string BuildConnectionString()
+        {
+            // Always target a single physical database file in the app output folder.
+            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string databaseFilePath = Path.Combine(baseDirectory, "GymManagementDB.mdf");
+
+            string configured = ConfigurationManager
+                .ConnectionStrings["GymManagementSystem.Properties.Settings.GymManagementDBConnectionString"]?
+                .ConnectionString ?? string.Empty;
+
+            var builder = new SqlConnectionStringBuilder(configured)
+            {
+                DataSource = @"(LocalDB)\MSSQLLocalDB",
+                IntegratedSecurity = true,
+                ConnectTimeout = 30,
+                AttachDBFilename = databaseFilePath,
+                InitialCatalog = string.Empty
+            };
+
+            return builder.ConnectionString;
+        }
+
         public static SqlConnection GetConnection()
         {
             return new SqlConnection(connectionString);

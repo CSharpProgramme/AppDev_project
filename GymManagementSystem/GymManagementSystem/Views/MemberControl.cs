@@ -11,6 +11,7 @@ namespace GymManagementSystem
     public partial class MemberControl : UserControl
     {
         private MemberController memberController;
+        private readonly Button deleteButton = new Button();
 
         public MemberControl()
         {
@@ -18,6 +19,8 @@ namespace GymManagementSystem
 
             //disable edit button until a row from datagridview is selected
             editButton.Enabled = false;
+            deleteButton.Enabled = false;
+            InitializeDeleteButton();
 
             //create a new MemberController when the control is loaded
             memberController = new MemberController();
@@ -35,7 +38,21 @@ namespace GymManagementSystem
         // Enable edit button when a row is selected
         private void memberDataGridView_SelectionChanged(object sender, EventArgs e)
         {
-            editButton.Enabled = memberDataGridView.SelectedRows.Count > 0;
+            bool hasSelection = memberDataGridView.SelectedRows.Count > 0;
+            editButton.Enabled = hasSelection;
+            deleteButton.Enabled = hasSelection;
+        }
+
+        private void InitializeDeleteButton()
+        {
+            deleteButton.Text = "Delete Member";
+            deleteButton.AutoSize = true;
+            deleteButton.Font = editButton.Font;
+            deleteButton.Height = editButton.Height;
+            deleteButton.Left = editButton.Right + 12;
+            deleteButton.Top = editButton.Top;
+            deleteButton.Click += DeleteButton_Click;
+            Controls.Add(deleteButton);
         }
 
         //fetch all members from the controller and display them in datagridview
@@ -126,6 +143,41 @@ namespace GymManagementSystem
             // Refresh the member list when the form closes
             editForm.FormClosed += (s, args) => LoadMembers();
             editForm.ShowDialog();
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            if (memberDataGridView.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a member to delete.");
+                return;
+            }
+
+            int selectedId = (int)memberDataGridView.SelectedRows[0].Cells["MemberID"].Value;
+            string selectedName = memberDataGridView.SelectedRows[0].Cells["FName"].Value + " " +
+                                  memberDataGridView.SelectedRows[0].Cells["LName"].Value;
+
+            DialogResult confirm = MessageBox.Show(
+                $"Delete member '{selectedName}'?",
+                "Confirm Delete",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+
+            if (confirm != DialogResult.Yes)
+            {
+                return;
+            }
+
+            try
+            {
+                memberController.DeleteMember(selectedId);
+                LoadMembers();
+                memberDataGridView.ClearSelection();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to delete member: " + ex.Message, "Error");
+            }
         }
     }
 }
