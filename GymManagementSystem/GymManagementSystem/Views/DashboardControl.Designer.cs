@@ -71,9 +71,10 @@
             // auditLogLabel
             // 
             this.auditLogLabel.AutoSize = true;
-            this.auditLogLabel.Location = new System.Drawing.Point(52, 493);
+            this.auditLogLabel.Location = new System.Drawing.Point(30, 486);
+            this.auditLogLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.auditLogLabel.Name = "auditLogLabel";
-            this.auditLogLabel.Size = new System.Drawing.Size(77, 20);
+            this.auditLogLabel.Size = new System.Drawing.Size(52, 13);
             this.auditLogLabel.TabIndex = 16;
             this.auditLogLabel.Text = "Audit Log";
             // 
@@ -81,9 +82,10 @@
             // 
             this.recentMemberLabel.AutoSize = true;
             this.recentMemberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.recentMemberLabel.Location = new System.Drawing.Point(50, 168);
+            this.recentMemberLabel.Location = new System.Drawing.Point(33, 109);
+            this.recentMemberLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.recentMemberLabel.Name = "recentMemberLabel";
-            this.recentMemberLabel.Size = new System.Drawing.Size(228, 32);
+            this.recentMemberLabel.Size = new System.Drawing.Size(155, 24);
             this.recentMemberLabel.TabIndex = 15;
             this.recentMemberLabel.Text = "Recent Members";
             // 
@@ -107,9 +109,10 @@
             this.totalPaymentPanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.totalPaymentPanel.Controls.Add(this.revenueNumLabel);
             this.totalPaymentPanel.Controls.Add(this.revenuLabel);
-            this.totalPaymentPanel.Location = new System.Drawing.Point(546, 38);
+            this.totalPaymentPanel.Location = new System.Drawing.Point(364, 25);
+            this.totalPaymentPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.totalPaymentPanel.Name = "totalPaymentPanel";
-            this.totalPaymentPanel.Size = new System.Drawing.Size(180, 100);
+            this.totalPaymentPanel.Size = new System.Drawing.Size(120, 65);
             this.totalPaymentPanel.TabIndex = 10;
             this.totalPaymentPanel.Tag = "";
             // 
@@ -117,18 +120,20 @@
             // 
             this.revenueNumLabel.AutoSize = true;
             this.revenueNumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.revenueNumLabel.Location = new System.Drawing.Point(19, 59);
+            this.revenueNumLabel.Location = new System.Drawing.Point(13, 38);
+            this.revenueNumLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.revenueNumLabel.Name = "revenueNumLabel";
-            this.revenueNumLabel.Size = new System.Drawing.Size(65, 29);
+            this.revenueNumLabel.Size = new System.Drawing.Size(45, 20);
             this.revenueNumLabel.TabIndex = 1;
             this.revenueNumLabel.Text = "$145";
             // 
             // revenuLabel
             // 
             this.revenuLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.revenuLabel.Location = new System.Drawing.Point(20, 10);
+            this.revenuLabel.Location = new System.Drawing.Point(13, 6);
+            this.revenuLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.revenuLabel.Name = "revenuLabel";
-            this.revenuLabel.Size = new System.Drawing.Size(118, 58);
+            this.revenuLabel.Size = new System.Drawing.Size(79, 38);
             this.revenuLabel.TabIndex = 0;
             this.revenuLabel.Text = "Revenue This Month";
             // 
@@ -137,9 +142,10 @@
             this.activePlanPanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.activePlanPanel.Controls.Add(this.activePLanNumLabel);
             this.activePlanPanel.Controls.Add(this.activePlanLabel);
-            this.activePlanPanel.Location = new System.Drawing.Point(289, 38);
+            this.activePlanPanel.Location = new System.Drawing.Point(193, 25);
+            this.activePlanPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.activePlanPanel.Name = "activePlanPanel";
-            this.activePlanPanel.Size = new System.Drawing.Size(180, 100);
+            this.activePlanPanel.Size = new System.Drawing.Size(120, 65);
             this.activePlanPanel.TabIndex = 11;
             this.activePlanPanel.Tag = "";
             // 
@@ -147,9 +153,10 @@
             // 
             this.activePLanNumLabel.AutoSize = true;
             this.activePLanNumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.activePLanNumLabel.Location = new System.Drawing.Point(14, 52);
+            this.activePLanNumLabel.Location = new System.Drawing.Point(9, 34);
+            this.activePLanNumLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.activePLanNumLabel.Name = "activePLanNumLabel";
-            this.activePLanNumLabel.Size = new System.Drawing.Size(52, 29);
+            this.activePLanNumLabel.Size = new System.Drawing.Size(36, 20);
             this.activePLanNumLabel.TabIndex = 1;
             this.activePLanNumLabel.Text = "145";
             // 
@@ -157,9 +164,10 @@
             // 
             this.activePlanLabel.AutoSize = true;
             this.activePlanLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.activePlanLabel.Location = new System.Drawing.Point(15, 21);
+            this.activePlanLabel.Location = new System.Drawing.Point(10, 14);
+            this.activePlanLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.activePlanLabel.Name = "activePlanLabel";
-            this.activePlanLabel.Size = new System.Drawing.Size(163, 22);
+            this.activePlanLabel.Size = new System.Drawing.Size(109, 15);
             this.activePlanLabel.TabIndex = 0;
             this.activePlanLabel.Text = "Active Subscription";
             // 
@@ -168,9 +176,10 @@
             this.totalEmployeePanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.totalEmployeePanel.Controls.Add(this.employeeNumLabel);
             this.totalEmployeePanel.Controls.Add(this.totalEployeeLabel);
-            this.totalEmployeePanel.Location = new System.Drawing.Point(791, 38);
+            this.totalEmployeePanel.Location = new System.Drawing.Point(527, 25);
+            this.totalEmployeePanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.totalEmployeePanel.Name = "totalEmployeePanel";
-            this.totalEmployeePanel.Size = new System.Drawing.Size(180, 100);
+            this.totalEmployeePanel.Size = new System.Drawing.Size(120, 65);
             this.totalEmployeePanel.TabIndex = 12;
             this.totalEmployeePanel.Tag = "";
             // 
@@ -178,9 +187,10 @@
             // 
             this.employeeNumLabel.AutoSize = true;
             this.employeeNumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employeeNumLabel.Location = new System.Drawing.Point(14, 52);
+            this.employeeNumLabel.Location = new System.Drawing.Point(9, 34);
+            this.employeeNumLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.employeeNumLabel.Name = "employeeNumLabel";
-            this.employeeNumLabel.Size = new System.Drawing.Size(52, 29);
+            this.employeeNumLabel.Size = new System.Drawing.Size(36, 20);
             this.employeeNumLabel.TabIndex = 1;
             this.employeeNumLabel.Text = "145";
             // 
@@ -188,9 +198,10 @@
             // 
             this.totalEployeeLabel.AutoSize = true;
             this.totalEployeeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalEployeeLabel.Location = new System.Drawing.Point(15, 21);
+            this.totalEployeeLabel.Location = new System.Drawing.Point(10, 14);
+            this.totalEployeeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalEployeeLabel.Name = "totalEployeeLabel";
-            this.totalEployeeLabel.Size = new System.Drawing.Size(144, 22);
+            this.totalEployeeLabel.Size = new System.Drawing.Size(98, 15);
             this.totalEployeeLabel.TabIndex = 0;
             this.totalEployeeLabel.Text = "Total Employees";
             // 
@@ -199,9 +210,10 @@
             this.totalMembersPanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.totalMembersPanel.Controls.Add(this.memberNumLabel);
             this.totalMembersPanel.Controls.Add(this.totalMemberLabel);
-            this.totalMembersPanel.Location = new System.Drawing.Point(50, 38);
+            this.totalMembersPanel.Location = new System.Drawing.Point(33, 25);
+            this.totalMembersPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.totalMembersPanel.Name = "totalMembersPanel";
-            this.totalMembersPanel.Size = new System.Drawing.Size(180, 100);
+            this.totalMembersPanel.Size = new System.Drawing.Size(120, 65);
             this.totalMembersPanel.TabIndex = 9;
             this.totalMembersPanel.Tag = "";
             // 
@@ -209,9 +221,10 @@
             // 
             this.memberNumLabel.AutoSize = true;
             this.memberNumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.memberNumLabel.Location = new System.Drawing.Point(31, 52);
+            this.memberNumLabel.Location = new System.Drawing.Point(21, 34);
+            this.memberNumLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.memberNumLabel.Name = "memberNumLabel";
-            this.memberNumLabel.Size = new System.Drawing.Size(52, 29);
+            this.memberNumLabel.Size = new System.Drawing.Size(36, 20);
             this.memberNumLabel.TabIndex = 1;
             this.memberNumLabel.Text = "145";
             // 
@@ -219,9 +232,10 @@
             // 
             this.totalMemberLabel.AutoSize = true;
             this.totalMemberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalMemberLabel.Location = new System.Drawing.Point(32, 22);
+            this.totalMemberLabel.Location = new System.Drawing.Point(21, 14);
+            this.totalMemberLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalMemberLabel.Name = "totalMemberLabel";
-            this.totalMemberLabel.Size = new System.Drawing.Size(129, 22);
+            this.totalMemberLabel.Size = new System.Drawing.Size(90, 15);
             this.totalMemberLabel.TabIndex = 0;
             this.totalMemberLabel.Text = "Total Members";
             // 
@@ -266,13 +280,14 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn10});
             this.recentMemberDataGridView.DataSource = this.mEMBERBindingSource;
-            this.recentMemberDataGridView.Location = new System.Drawing.Point(50, 218);
+            this.recentMemberDataGridView.Location = new System.Drawing.Point(33, 142);
+            this.recentMemberDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.recentMemberDataGridView.Name = "recentMemberDataGridView";
             this.recentMemberDataGridView.ReadOnly = true;
             this.recentMemberDataGridView.RowHeadersVisible = false;
             this.recentMemberDataGridView.RowHeadersWidth = 62;
             this.recentMemberDataGridView.RowTemplate.Height = 28;
-            this.recentMemberDataGridView.Size = new System.Drawing.Size(1103, 220);
+            this.recentMemberDataGridView.Size = new System.Drawing.Size(735, 323);
             this.recentMemberDataGridView.TabIndex = 16;
             // 
             // dataGridViewTextBoxColumn1
@@ -340,7 +355,7 @@
             // 
             // DashboardControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.recentMemberDataGridView);
             this.Controls.Add(this.auditLogLabel);
@@ -349,8 +364,9 @@
             this.Controls.Add(this.activePlanPanel);
             this.Controls.Add(this.totalEmployeePanel);
             this.Controls.Add(this.totalMembersPanel);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DashboardControl";
-            this.Size = new System.Drawing.Size(1250, 800);
+            this.Size = new System.Drawing.Size(833, 520);
             ((System.ComponentModel.ISupportInitialize)(this.mEMBERBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gymManagementDBDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gymManagementDBDataSet)).EndInit();

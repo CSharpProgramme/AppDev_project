@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\andyr\\Downloads\\AppDev_project\\GymManagementSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2B9EF50C-D6B4-4D8D-A940-AB2D8222E493}|GymManagementSystem\\GymManagementSystem.csproj|c:\\users\\andyr\\downloads\\appdev_project\\gymmanagementsystem\\gymmanagementsystem\\views\\paymentcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2B9EF50C-D6B4-4D8D-A940-AB2D8222E493}|GymManagementSystem\\GymManagementSystem.csproj|solutionrelative:gymmanagementsystem\\views\\paymentcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2B9EF50C-D6B4-4D8D-A940-AB2D8222E493}|GymManagementSystem\\GymManagementSystem.csproj|c:\\users\\andyr\\downloads\\appdev_project\\gymmanagementsystem\\gymmanagementsystem\\views\\membershipplancontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2B9EF50C-D6B4-4D8D-A940-AB2D8222E493}|GymManagementSystem\\GymManagementSystem.csproj|solutionrelative:gymmanagementsystem\\views\\membershipplancontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B9EF50C-D6B4-4D8D-A940-AB2D8222E493}|GymManagementSystem\\GymManagementSystem.csproj|c:\\users\\andyr\\downloads\\appdev_project\\gymmanagementsystem\\gymmanagementsystem\\views\\membershipplancontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B9EF50C-D6B4-4D8D-A940-AB2D8222E493}|GymManagementSystem\\GymManagementSystem.csproj|solutionrelative:gymmanagementsystem\\views\\membershipplancontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2B9EF50C-D6B4-4D8D-A940-AB2D8222E493}|GymManagementSystem\\GymManagementSystem.csproj|c:\\users\\andyr\\downloads\\appdev_project\\gymmanagementsystem\\gymmanagementsystem\\views\\registermembershipplanform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2B9EF50C-D6B4-4D8D-A940-AB2D8222E493}|GymManagementSystem\\GymManagementSystem.csproj|solutionrelative:gymmanagementsystem\\views\\registermembershipplanform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B9EF50C-D6B4-4D8D-A940-AB2D8222E493}|GymManagementSystem\\GymManagementSystem.csproj|c:\\users\\andyr\\downloads\\appdev_project\\gymmanagementsystem\\gymmanagementsystem\\views\\employeecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B9EF50C-D6B4-4D8D-A940-AB2D8222E493}|GymManagementSystem\\GymManagementSystem.csproj|solutionrelative:gymmanagementsystem\\views\\employeecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2B9EF50C-D6B4-4D8D-A940-AB2D8222E493}|GymManagementSystem\\GymManagementSystem.csproj|c:\\users\\andyr\\downloads\\appdev_project\\gymmanagementsystem\\gymmanagementsystem\\views\\employeecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2B9EF50C-D6B4-4D8D-A940-AB2D8222E493}|GymManagementSystem\\GymManagementSystem.csproj|solutionrelative:gymmanagementsystem\\views\\employeecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B9EF50C-D6B4-4D8D-A940-AB2D8222E493}|GymManagementSystem\\GymManagementSystem.csproj|c:\\users\\andyr\\downloads\\appdev_project\\gymmanagementsystem\\gymmanagementsystem\\views\\trainercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2B9EF50C-D6B4-4D8D-A940-AB2D8222E493}|GymManagementSystem\\GymManagementSystem.csproj|solutionrelative:gymmanagementsystem\\views\\trainercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B9EF50C-D6B4-4D8D-A940-AB2D8222E493}|GymManagementSystem\\GymManagementSystem.csproj|c:\\users\\andyr\\downloads\\appdev_project\\gymmanagementsystem\\gymmanagementsystem\\views\\trainercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B9EF50C-D6B4-4D8D-A940-AB2D8222E493}|GymManagementSystem\\GymManagementSystem.csproj|solutionrelative:gymmanagementsystem\\views\\trainercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B9EF50C-D6B4-4D8D-A940-AB2D8222E493}|GymManagementSystem\\GymManagementSystem.csproj|c:\\users\\andyr\\downloads\\appdev_project\\gymmanagementsystem\\gymmanagementsystem\\views\\dashboardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2B9EF50C-D6B4-4D8D-A940-AB2D8222E493}|GymManagementSystem\\GymManagementSystem.csproj|solutionrelative:gymmanagementsystem\\views\\dashboardcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,66 +38,92 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MembershipPlanControl.cs",
-              "DocumentMoniker": "C:\\Users\\andyr\\Downloads\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\Views\\MembershipPlanControl.cs",
-              "RelativeDocumentMoniker": "GymManagementSystem\\Views\\MembershipPlanControl.cs",
-              "ToolTip": "C:\\Users\\andyr\\Downloads\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\Views\\MembershipPlanControl.cs",
-              "RelativeToolTip": "GymManagementSystem\\Views\\MembershipPlanControl.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAcwAwAAAA4AAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "PaymentControl.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\andyr\\Downloads\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\Views\\PaymentControl.cs",
+              "RelativeDocumentMoniker": "GymManagementSystem\\Views\\PaymentControl.cs",
+              "ToolTip": "C:\\Users\\andyr\\Downloads\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\Views\\PaymentControl.cs [Design]",
+              "RelativeToolTip": "GymManagementSystem\\Views\\PaymentControl.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T19:06:50.933Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-28T22:54:39.741Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MembershipPlanControl.cs [Design]",
               "DocumentMoniker": "C:\\Users\\andyr\\Downloads\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\Views\\MembershipPlanControl.cs",
               "RelativeDocumentMoniker": "GymManagementSystem\\Views\\MembershipPlanControl.cs",
               "ToolTip": "C:\\Users\\andyr\\Downloads\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\Views\\MembershipPlanControl.cs [Design]",
               "RelativeToolTip": "GymManagementSystem\\Views\\MembershipPlanControl.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T19:31:32.64Z",
+              "WhenOpened": "2026-04-28T22:53:47.255Z",
               "EditorCaption": " [Design]"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "68341404-09ec-4740-95eb-7694772981d7",
-        "Display": 2,
-        "X": 613,
-        "Y": 275,
-        "Width": 1230,
-        "Height": 787,
-        "WindowState": 2
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "EmployeeControl.cs",
+              "Title": "RegisterMembershipPlanForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\andyr\\Downloads\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\Views\\RegisterMembershipPlanForm.cs",
+              "RelativeDocumentMoniker": "GymManagementSystem\\Views\\RegisterMembershipPlanForm.cs",
+              "ToolTip": "C:\\Users\\andyr\\Downloads\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\Views\\RegisterMembershipPlanForm.cs [Design]",
+              "RelativeToolTip": "GymManagementSystem\\Views\\RegisterMembershipPlanForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T22:53:40.428Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmployeeControl.cs [Design]",
               "DocumentMoniker": "C:\\Users\\andyr\\Downloads\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\Views\\EmployeeControl.cs",
               "RelativeDocumentMoniker": "GymManagementSystem\\Views\\EmployeeControl.cs",
-              "ToolTip": "C:\\Users\\andyr\\Downloads\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\Views\\EmployeeControl.cs",
-              "RelativeToolTip": "GymManagementSystem\\Views\\EmployeeControl.cs",
-              "ViewState": "AgIAAG8AAAAAAAAAAAAAAKIAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\andyr\\Downloads\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\Views\\EmployeeControl.cs [Design]",
+              "RelativeToolTip": "GymManagementSystem\\Views\\EmployeeControl.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T19:17:48.286Z",
+              "WhenOpened": "2026-04-28T22:52:19.207Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DashboardControl.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\andyr\\Downloads\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\Views\\DashboardControl.cs",
+              "RelativeDocumentMoniker": "GymManagementSystem\\Views\\DashboardControl.cs",
+              "ToolTip": "C:\\Users\\andyr\\Downloads\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\Views\\DashboardControl.cs [Design]",
+              "RelativeToolTip": "GymManagementSystem\\Views\\DashboardControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T22:49:15.279Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TrainerControl.cs",
+              "DocumentMoniker": "C:\\Users\\andyr\\Downloads\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\Views\\TrainerControl.cs",
+              "RelativeDocumentMoniker": "GymManagementSystem\\Views\\TrainerControl.cs",
+              "ToolTip": "C:\\Users\\andyr\\Downloads\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\Views\\TrainerControl.cs",
+              "RelativeToolTip": "GymManagementSystem\\Views\\TrainerControl.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAawBYAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T22:39:43.238Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TrainerControl.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\andyr\\Downloads\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\Views\\TrainerControl.cs",
+              "RelativeDocumentMoniker": "GymManagementSystem\\Views\\TrainerControl.cs",
+              "ToolTip": "C:\\Users\\andyr\\Downloads\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\Views\\TrainerControl.cs [Design]",
+              "RelativeToolTip": "GymManagementSystem\\Views\\TrainerControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T22:37:34.055Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

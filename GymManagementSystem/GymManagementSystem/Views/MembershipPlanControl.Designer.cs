@@ -31,11 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.RegisterPlanButton = new System.Windows.Forms.Button();
             this.membershipPlanDataGridView = new System.Windows.Forms.DataGridView();
-            this.mEMBERSHIPPLANBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gymManagementDBDataSet2 = new GymManagementSystem.GymManagementDBDataSet2();
             this.deletePlanButton = new System.Windows.Forms.Button();
             this.editPlanButton = new System.Windows.Forms.Button();
+            this.mEMBERSHIPPLANBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gymManagementDBDataSet2 = new GymManagementSystem.GymManagementDBDataSet2();
             this.mEMBERSHIP_PLANTableAdapter = new GymManagementSystem.GymManagementDBDataSet2TableAdapters.MEMBERSHIP_PLANTableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.membershipPlanDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mEMBERSHIPPLANBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gymManagementDBDataSet2)).BeginInit();
@@ -50,6 +51,7 @@
             this.RegisterPlanButton.TabIndex = 4;
             this.RegisterPlanButton.Text = "Register Plan";
             this.RegisterPlanButton.UseVisualStyleBackColor = true;
+            this.RegisterPlanButton.Click += new System.EventHandler(this.RegisterPlanButton_Click_1);
             // 
             // membershipPlanDataGridView
             // 
@@ -63,6 +65,28 @@
             this.membershipPlanDataGridView.Size = new System.Drawing.Size(707, 402);
             this.membershipPlanDataGridView.TabIndex = 3;
             // 
+            // deletePlanButton
+            // 
+            this.deletePlanButton.Location = new System.Drawing.Point(542, 34);
+            this.deletePlanButton.Margin = new System.Windows.Forms.Padding(2);
+            this.deletePlanButton.Name = "deletePlanButton";
+            this.deletePlanButton.Size = new System.Drawing.Size(115, 40);
+            this.deletePlanButton.TabIndex = 5;
+            this.deletePlanButton.Text = "Delete Plan";
+            this.deletePlanButton.UseVisualStyleBackColor = true;
+            this.deletePlanButton.Click += new System.EventHandler(this.deletePlanButton_Click_1);
+            // 
+            // editPlanButton
+            // 
+            this.editPlanButton.Location = new System.Drawing.Point(423, 34);
+            this.editPlanButton.Margin = new System.Windows.Forms.Padding(2);
+            this.editPlanButton.Name = "editPlanButton";
+            this.editPlanButton.Size = new System.Drawing.Size(115, 40);
+            this.editPlanButton.TabIndex = 6;
+            this.editPlanButton.Text = "Edit Plan";
+            this.editPlanButton.UseVisualStyleBackColor = true;
+            this.editPlanButton.Click += new System.EventHandler(this.editPlanButton_Click_1);
+            // 
             // mEMBERSHIPPLANBindingSource
             // 
             this.mEMBERSHIPPLANBindingSource.DataMember = "MEMBERSHIP_PLAN";
@@ -73,34 +97,26 @@
             this.gymManagementDBDataSet2.DataSetName = "GymManagementDBDataSet2";
             this.gymManagementDBDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // deletePlanButton
-            // 
-            this.deletePlanButton.Location = new System.Drawing.Point(423, 34);
-            this.deletePlanButton.Margin = new System.Windows.Forms.Padding(2);
-            this.deletePlanButton.Name = "deletePlanButton";
-            this.deletePlanButton.Size = new System.Drawing.Size(115, 40);
-            this.deletePlanButton.TabIndex = 5;
-            this.deletePlanButton.Text = "Delete Plan";
-            this.deletePlanButton.UseVisualStyleBackColor = true;
-            // 
-            // editPlanButton
-            // 
-            this.editPlanButton.Location = new System.Drawing.Point(542, 34);
-            this.editPlanButton.Margin = new System.Windows.Forms.Padding(2);
-            this.editPlanButton.Name = "editPlanButton";
-            this.editPlanButton.Size = new System.Drawing.Size(115, 40);
-            this.editPlanButton.TabIndex = 6;
-            this.editPlanButton.Text = "Edit Plan";
-            this.editPlanButton.UseVisualStyleBackColor = true;
-            // 
             // mEMBERSHIP_PLANTableAdapter
             // 
             this.mEMBERSHIP_PLANTableAdapter.ClearBeforeFill = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(17, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(167, 24);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Membership Plans";
             // 
             // MembershipPlanControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.editPlanButton);
             this.Controls.Add(this.deletePlanButton);
             this.Controls.Add(this.RegisterPlanButton);
@@ -112,6 +128,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.mEMBERSHIPPLANBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gymManagementDBDataSet2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -124,5 +141,6 @@
         private System.Windows.Forms.BindingSource mEMBERSHIPPLANBindingSource;
         private GymManagementDBDataSet2 gymManagementDBDataSet2;
         private GymManagementDBDataSet2TableAdapters.MEMBERSHIP_PLANTableAdapter mEMBERSHIP_PLANTableAdapter;
+        private System.Windows.Forms.Label label1;
     }
 }

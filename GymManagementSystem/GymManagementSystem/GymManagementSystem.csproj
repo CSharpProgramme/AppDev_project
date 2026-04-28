@@ -139,11 +139,11 @@
       <DependentUpon>MembershipPlanControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Member.cs" />
-    <Compile Include="Views\MembershipPlanForm.cs">
+    <Compile Include="Views\EditMembershipPlanForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\MembershipPlanForm.Designer.cs">
-      <DependentUpon>MembershipPlanForm.cs</DependentUpon>
+    <Compile Include="Views\EditMembershipPlanForm.Designer.cs">
+      <DependentUpon>EditMembershipPlanForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\PaymentControl.cs">
       <SubType>UserControl</SubType>
@@ -159,6 +159,12 @@
     </Compile>
     <Compile Include="Views\RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RegisterMembershipPlanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RegisterMembershipPlanForm.Designer.cs">
+      <DependentUpon>RegisterMembershipPlanForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\TrainerControl.cs">
       <SubType>UserControl</SubType>
@@ -196,6 +202,9 @@
     <EmbeddedResource Include="Views\MembershipPlanControl.resx">
       <DependentUpon>MembershipPlanControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\EditMembershipPlanForm.resx">
+      <DependentUpon>EditMembershipPlanForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\PaymentControl.resx">
       <DependentUpon>PaymentControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +219,9 @@
     </Compile>
     <EmbeddedResource Include="Views\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RegisterMembershipPlanForm.resx">
+      <DependentUpon>RegisterMembershipPlanForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\TrainerControl.resx">
       <DependentUpon>TrainerControl.cs</DependentUpon>

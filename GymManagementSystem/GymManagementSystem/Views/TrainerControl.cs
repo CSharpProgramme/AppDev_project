@@ -16,15 +16,11 @@ namespace GymManagementSystem
     public partial class TrainerControl : UserControl
     {
         private readonly TrainerController trainerController = new TrainerController();
-        private readonly Button addTrainerButton = new Button();
-        private readonly Button editTrainerButton = new Button();
-        private readonly Button deleteTrainerButton = new Button();
-
         public TrainerControl()
         {
             InitializeComponent();
             ConfigureGridColumns();
-            InitializeActionButtons();
+            LoadTrainers();
         }
 
         private void trainerBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -49,29 +45,6 @@ namespace GymManagementSystem
             trainerDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             trainerDataGridView.MultiSelect = false;
             trainerDataGridView.ReadOnly = true;
-        }
-
-        private void InitializeActionButtons()
-        {
-            addTrainerButton.Text = "Add Trainer";
-            addTrainerButton.SetBounds(51, 90, 120, 38);
-            addTrainerButton.Click += AddTrainerButton_Click;
-            Controls.Add(addTrainerButton);
-
-            editTrainerButton.Text = "Edit Trainer";
-            editTrainerButton.SetBounds(addTrainerButton.Right + 12, 90, 120, 38);
-            editTrainerButton.Enabled = false;
-            editTrainerButton.Click += EditTrainerButton_Click;
-            Controls.Add(editTrainerButton);
-
-            deleteTrainerButton.Text = "Delete Trainer";
-            deleteTrainerButton.SetBounds(editTrainerButton.Right + 12, 90, 120, 38);
-            deleteTrainerButton.Enabled = false;
-            deleteTrainerButton.Click += DeleteTrainerButton_Click;
-            Controls.Add(deleteTrainerButton);
-
-            trainerDataGridView.SelectionChanged += TrainerDataGridView_SelectionChanged;
-            Load += TrainerControl_Load;
         }
 
         private void TrainerControl_Load(object sender, EventArgs e)
@@ -103,43 +76,7 @@ namespace GymManagementSystem
             editTrainerButton.Enabled = hasSelection;
             deleteTrainerButton.Enabled = hasSelection;
         }
-
-        private void AddTrainerButton_Click(object sender, EventArgs e)
-        {
-            using (TrainerUpsertForm form = new TrainerUpsertForm())
-            {
-                if (form.ShowDialog() != DialogResult.OK)
-                {
-                    return;
-                }
-
-                trainerController.AddTrainer(form.TrainerData);
-                LoadTrainers();
-            }
-        }
-
-        private void EditTrainerButton_Click(object sender, EventArgs e)
-        {
-            Trainer selectedTrainer = GetSelectedTrainer();
-            if (selectedTrainer == null)
-            {
-                MessageBox.Show("Please select a trainer to edit.");
-                return;
-            }
-
-            using (TrainerUpsertForm form = new TrainerUpsertForm(selectedTrainer))
-            {
-                if (form.ShowDialog() != DialogResult.OK)
-                {
-                    return;
-                }
-
-                trainerController.UpdateTrainer(form.TrainerData);
-                LoadTrainers();
-            }
-        }
-
-        private void DeleteTrainerButton_Click(object sender, EventArgs e)
+        private void deleteTrainerButton_Click(object sender, EventArgs e)
         {
             Trainer selectedTrainer = GetSelectedTrainer();
             if (selectedTrainer == null)
@@ -161,6 +98,41 @@ namespace GymManagementSystem
 
             trainerController.DeleteTrainer(selectedTrainer.TrainerId);
             LoadTrainers();
+        }
+
+        private void editTrainerButton_Click(object sender, EventArgs e)
+        {
+            Trainer selectedTrainer = GetSelectedTrainer();
+            if (selectedTrainer == null)
+            {
+                MessageBox.Show("Please select a trainer to edit.");
+                return;
+            }
+
+            using (TrainerUpsertForm form = new TrainerUpsertForm(selectedTrainer))
+            {
+                if (form.ShowDialog() != DialogResult.OK)
+                {
+                    return;
+                }
+
+                trainerController.UpdateTrainer(form.TrainerData);
+                LoadTrainers();
+            }
+        }
+
+        private void RegisterTrainerButton_Click(object sender, EventArgs e)
+        {
+            using (TrainerUpsertForm form = new TrainerUpsertForm())
+            {
+                if (form.ShowDialog() != DialogResult.OK)
+                {
+                    return;
+                }
+
+                trainerController.AddTrainer(form.TrainerData);
+                LoadTrainers();
+            }
         }
     }
 }

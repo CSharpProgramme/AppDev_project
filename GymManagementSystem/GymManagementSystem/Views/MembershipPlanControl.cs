@@ -10,7 +10,7 @@ namespace GymManagementSystem
 {
     public partial class MembershipPlanControl : UserControl
     {
-        private MembershipPlanController planController;
+        private readonly MembershipPlanController planController;
 
         public MembershipPlanControl()
         {
@@ -19,37 +19,9 @@ namespace GymManagementSystem
             planController = new MembershipPlanController();
 
             ConfigureGridColumns();
-            InitializePlanActions();
 
             LoadPlans();
             membershipPlanDataGridView.ClearSelection();
-        }
-
-        private void RegisterPlanButton_Click(object sender, EventArgs e)
-        {
-            MembershipPlanForm registerForm = new MembershipPlanForm();
-            registerForm.FormClosed += (s, args) => LoadPlans();
-            registerForm.ShowDialog();
-        }
-
-        private void InitializePlanActions()
-        {
-            editPlanButton.Text = "Edit Plan";
-            editPlanButton.Left = RegisterPlanButton.Right + 10;
-            editPlanButton.Top = RegisterPlanButton.Top;
-            editPlanButton.Enabled = false;
-            editPlanButton.Click += EditPlanButton_Click;
-
-            deletePlanButton.Text = "Delete Plan";
-            deletePlanButton.Left = editPlanButton.Right + 10;
-            deletePlanButton.Top = RegisterPlanButton.Top;
-            deletePlanButton.Enabled = false;
-            deletePlanButton.Click += DeletePlanButton_Click;
-
-            Controls.Add(editPlanButton);
-            Controls.Add(deletePlanButton);
-
-            membershipPlanDataGridView.SelectionChanged += MembershipPlanDataGridView_SelectionChanged;
         }
 
         private void ConfigureGridColumns()
@@ -59,33 +31,34 @@ namespace GymManagementSystem
 
             membershipPlanDataGridView.Columns.Add(new DataGridViewTextBoxColumn
             {
-                Name = "PlanId",
-                HeaderText = "ID",
+                HeaderText = "Plan ID",
                 DataPropertyName = "PlanId"
             });
 
             membershipPlanDataGridView.Columns.Add(new DataGridViewTextBoxColumn
             {
                 HeaderText = "Plan Name",
-                DataPropertyName = "PlanName"
+                DataPropertyName = "name"
             });
 
             membershipPlanDataGridView.Columns.Add(new DataGridViewTextBoxColumn
             {
                 HeaderText = "Duration",
-                DataPropertyName = "DurationMonths"
+                DataPropertyName = "DurationDays"
             });
 
             membershipPlanDataGridView.Columns.Add(new DataGridViewTextBoxColumn
             {
                 HeaderText = "Price",
-                DataPropertyName = "Price"
+                DataPropertyName = "price"
             });
 
             membershipPlanDataGridView.Columns.Add(new DataGridViewTextBoxColumn
             {
                 HeaderText = "Description",
-                DataPropertyName = "Description"
+                DataPropertyName = "description",
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+
             });
 
             membershipPlanDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -116,7 +89,14 @@ namespace GymManagementSystem
             deletePlanButton.Enabled = hasSelection;
         }
 
-        private void EditPlanButton_Click(object sender, EventArgs e)
+        private void RegisterPlanButton_Click_1(object sender, EventArgs e)
+        {
+            RegisterMembershipPlanForm registerForm = new RegisterMembershipPlanForm();
+            registerForm.FormClosed += (s, args) => LoadPlans();
+            registerForm.ShowDialog();
+        }
+
+        private void editPlanButton_Click_1(object sender, EventArgs e)
         {
             var selectedPlan = GetSelectedPlan();
 
@@ -126,12 +106,12 @@ namespace GymManagementSystem
                 return;
             }
 
-            MembershipPlanForm form = new MembershipPlanForm(); //selectedPlan
+            EditMembershipPlanForm form = new EditMembershipPlanForm(selectedPlan);
             form.FormClosed += (s, args) => LoadPlans();
             form.ShowDialog();
         }
 
-        private void DeletePlanButton_Click(object sender, EventArgs e)
+        private void deletePlanButton_Click_1(object sender, EventArgs e)
         {
             var selectedPlan = GetSelectedPlan();
 
