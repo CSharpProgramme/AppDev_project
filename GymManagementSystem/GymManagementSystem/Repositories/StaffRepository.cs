@@ -286,5 +286,46 @@ namespace GymManagementSystem.Repositories
                 throw new Exception("Error deleting staff: " + ex.Message);
             }
         }
+        public Staff Login(string username, string password)
+        {
+            try
+            {
+                using (SqlConnection conn = DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string query = @"
+                SELECT * 
+                FROM Staff 
+                WHERE username = @Username 
+                AND password_hash = @Password";
+
+                    SqlCommand cmd = new SqlCommand(query, conn);
+
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    cmd.Parameters.AddWithValue("@Password", password);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        return new Staff
+                        {
+                            StaffId = (int)reader["staff_id"],
+                            FName = reader["first_name"].ToString(),
+                            LName = reader["last_name"].ToString(),
+                            Role = reader["role"].ToString(),
+                            Username = reader["username"].ToString()
+                        };
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Login error: " + ex.Message);
+            }
+
+            return null;
+        }
     }
 }

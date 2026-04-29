@@ -86,6 +86,7 @@
     <Compile Include="Repositories\PTSessionRepository.cs" />
     <Compile Include="Repositories\StaffRepository.cs" />
     <Compile Include="Repositories\TrainerRepository.cs" />
+    <Compile Include="Views\Auth.cs" />
     <Compile Include="Views\EmployeeRegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +197,9 @@
     <Compile Include="Views\EditMemberForm.Designer.cs">
       <DependentUpon>EditMemberForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\AdminForm.fr.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\EmployeeRegisterForm.resx">
       <DependentUpon>EmployeeRegisterForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             this.sidebarNavPanel = new System.Windows.Forms.Panel();
+            this.EnglishBtn = new System.Windows.Forms.Button();
             this.adminTitleLabel = new System.Windows.Forms.Label();
             this.membershipPlanButton = new System.Windows.Forms.Button();
             this.facilityButton = new System.Windows.Forms.Button();
@@ -55,8 +57,9 @@
             // 
             // sidebarNavPanel
             // 
-            this.sidebarNavPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            resources.ApplyResources(this.sidebarNavPanel, "sidebarNavPanel");
             this.sidebarNavPanel.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.sidebarNavPanel.Controls.Add(this.EnglishBtn);
             this.sidebarNavPanel.Controls.Add(this.adminTitleLabel);
             this.sidebarNavPanel.Controls.Add(this.membershipPlanButton);
             this.sidebarNavPanel.Controls.Add(this.facilityButton);
@@ -65,128 +68,90 @@
             this.sidebarNavPanel.Controls.Add(this.employeeButton);
             this.sidebarNavPanel.Controls.Add(this.membersButton);
             this.sidebarNavPanel.Controls.Add(this.dashBoardButton);
-            this.sidebarNavPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.sidebarNavPanel.Location = new System.Drawing.Point(0, 0);
             this.sidebarNavPanel.Name = "sidebarNavPanel";
-            this.sidebarNavPanel.Size = new System.Drawing.Size(200, 849);
-            this.sidebarNavPanel.TabIndex = 0;
+            // 
+            // EnglishBtn
+            // 
+            this.EnglishBtn.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.EnglishBtn, "EnglishBtn");
+            this.EnglishBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.EnglishBtn.Name = "EnglishBtn";
+            this.EnglishBtn.UseVisualStyleBackColor = true;
+            this.EnglishBtn.Click += new System.EventHandler(this.languageBtn_Click);
             // 
             // adminTitleLabel
             // 
-            this.adminTitleLabel.AutoSize = true;
-            this.adminTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.adminTitleLabel, "adminTitleLabel");
             this.adminTitleLabel.ForeColor = System.Drawing.Color.White;
-            this.adminTitleLabel.Location = new System.Drawing.Point(21, 25);
             this.adminTitleLabel.Name = "adminTitleLabel";
-            this.adminTitleLabel.Size = new System.Drawing.Size(160, 29);
-            this.adminTitleLabel.TabIndex = 1;
-            this.adminTitleLabel.Text = "Admin Panel";
             // 
             // membershipPlanButton
             // 
-            this.membershipPlanButton.AutoSize = true;
+            resources.ApplyResources(this.membershipPlanButton, "membershipPlanButton");
             this.membershipPlanButton.FlatAppearance.BorderSize = 0;
-            this.membershipPlanButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.membershipPlanButton.ForeColor = System.Drawing.Color.White;
-            this.membershipPlanButton.Location = new System.Drawing.Point(0, 483);
             this.membershipPlanButton.Name = "membershipPlanButton";
-            this.membershipPlanButton.Size = new System.Drawing.Size(200, 32);
-            this.membershipPlanButton.TabIndex = 8;
-            this.membershipPlanButton.Text = "Membership Plan";
             this.membershipPlanButton.UseVisualStyleBackColor = true;
             this.membershipPlanButton.Click += new System.EventHandler(this.membershipPlanButton_Click);
             // 
             // facilityButton
             // 
-            this.facilityButton.AutoSize = true;
+            resources.ApplyResources(this.facilityButton, "facilityButton");
             this.facilityButton.FlatAppearance.BorderSize = 0;
-            this.facilityButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.facilityButton.ForeColor = System.Drawing.Color.White;
-            this.facilityButton.Location = new System.Drawing.Point(0, 424);
             this.facilityButton.Name = "facilityButton";
-            this.facilityButton.Size = new System.Drawing.Size(200, 32);
-            this.facilityButton.TabIndex = 7;
-            this.facilityButton.Text = "Gym Facility";
             this.facilityButton.UseVisualStyleBackColor = true;
             this.facilityButton.Click += new System.EventHandler(this.auditLogButton_Click);
             // 
             // paymentButton
             // 
-            this.paymentButton.AutoSize = true;
+            resources.ApplyResources(this.paymentButton, "paymentButton");
             this.paymentButton.FlatAppearance.BorderSize = 0;
-            this.paymentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.paymentButton.ForeColor = System.Drawing.Color.White;
-            this.paymentButton.Location = new System.Drawing.Point(0, 365);
             this.paymentButton.Name = "paymentButton";
-            this.paymentButton.Size = new System.Drawing.Size(200, 32);
-            this.paymentButton.TabIndex = 6;
-            this.paymentButton.Text = "Payments";
             this.paymentButton.UseVisualStyleBackColor = true;
             this.paymentButton.Click += new System.EventHandler(this.paymentButton_Click);
             // 
             // trainersButton
             // 
-            this.trainersButton.AutoSize = true;
+            resources.ApplyResources(this.trainersButton, "trainersButton");
             this.trainersButton.FlatAppearance.BorderSize = 0;
-            this.trainersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.trainersButton.ForeColor = System.Drawing.Color.White;
-            this.trainersButton.Location = new System.Drawing.Point(-3, 306);
             this.trainersButton.Name = "trainersButton";
-            this.trainersButton.Size = new System.Drawing.Size(200, 32);
-            this.trainersButton.TabIndex = 5;
-            this.trainersButton.Text = "Trainers";
             this.trainersButton.UseVisualStyleBackColor = true;
             this.trainersButton.Click += new System.EventHandler(this.trainersButton_Click);
             // 
             // employeeButton
             // 
-            this.employeeButton.AutoSize = true;
+            resources.ApplyResources(this.employeeButton, "employeeButton");
             this.employeeButton.FlatAppearance.BorderSize = 0;
-            this.employeeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.employeeButton.ForeColor = System.Drawing.Color.White;
-            this.employeeButton.Location = new System.Drawing.Point(3, 247);
             this.employeeButton.Name = "employeeButton";
-            this.employeeButton.Size = new System.Drawing.Size(197, 32);
-            this.employeeButton.TabIndex = 4;
-            this.employeeButton.Text = "Employees";
             this.employeeButton.UseVisualStyleBackColor = true;
             this.employeeButton.Click += new System.EventHandler(this.employeeButton_Click);
             // 
             // membersButton
             // 
-            this.membersButton.AutoSize = true;
+            resources.ApplyResources(this.membersButton, "membersButton");
             this.membersButton.FlatAppearance.BorderSize = 0;
-            this.membersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.membersButton.ForeColor = System.Drawing.Color.White;
-            this.membersButton.Location = new System.Drawing.Point(0, 188);
             this.membersButton.Name = "membersButton";
-            this.membersButton.Size = new System.Drawing.Size(200, 32);
-            this.membersButton.TabIndex = 3;
-            this.membersButton.Text = "Members";
             this.membersButton.UseVisualStyleBackColor = true;
             this.membersButton.Click += new System.EventHandler(this.membersButton_Click);
             // 
             // dashBoardButton
             // 
-            this.dashBoardButton.AutoSize = true;
+            resources.ApplyResources(this.dashBoardButton, "dashBoardButton");
             this.dashBoardButton.FlatAppearance.BorderSize = 0;
-            this.dashBoardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dashBoardButton.ForeColor = System.Drawing.Color.White;
-            this.dashBoardButton.Location = new System.Drawing.Point(0, 129);
             this.dashBoardButton.Name = "dashBoardButton";
-            this.dashBoardButton.Size = new System.Drawing.Size(200, 32);
-            this.dashBoardButton.TabIndex = 2;
-            this.dashBoardButton.Text = "Dashboard";
             this.dashBoardButton.UseVisualStyleBackColor = true;
             this.dashBoardButton.Click += new System.EventHandler(this.dashBoardButton_Click);
             // 
             // mainPanel
             // 
-            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(200, 0);
+            resources.ApplyResources(this.mainPanel, "mainPanel");
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1378, 849);
-            this.mainPanel.TabIndex = 2;
             // 
             // gymManagementDBDataSet
             // 
@@ -232,14 +197,11 @@
             // 
             // AdminForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1578, 849);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.sidebarNavPanel);
             this.Name = "AdminForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Admin Page";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.sidebarNavPanel.ResumeLayout(false);
             this.sidebarNavPanel.PerformLayout();
@@ -270,6 +232,7 @@
         private System.Windows.Forms.BindingSource mEMBERBindingSource;
         private System.Windows.Forms.BindingSource mEMBERBindingSource2;
         private System.Windows.Forms.BindingSource mEMBERBindingSource1;
+        private System.Windows.Forms.Button EnglishBtn;
     }
 }
 

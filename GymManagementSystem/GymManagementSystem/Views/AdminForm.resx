@@ -117,6 +117,381 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="sidebarNavPanel.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="EnglishBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="EnglishBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="EnglishBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 608</value>
+  </data>
+  <data name="EnglishBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 46</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="EnglishBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="EnglishBtn.Text" xml:space="preserve">
+    <value>Français</value>
+  </data>
+  <data name="&gt;&gt;EnglishBtn.Name" xml:space="preserve">
+    <value>EnglishBtn</value>
+  </data>
+  <data name="&gt;&gt;EnglishBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EnglishBtn.Parent" xml:space="preserve">
+    <value>sidebarNavPanel</value>
+  </data>
+  <data name="&gt;&gt;EnglishBtn.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="adminTitleLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="adminTitleLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="adminTitleLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="adminTitleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 20</value>
+  </data>
+  <data name="adminTitleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 25</value>
+  </data>
+  <data name="adminTitleLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="adminTitleLabel.Text" xml:space="preserve">
+    <value>Admin Panel</value>
+  </data>
+  <data name="&gt;&gt;adminTitleLabel.Name" xml:space="preserve">
+    <value>adminTitleLabel</value>
+  </data>
+  <data name="&gt;&gt;adminTitleLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adminTitleLabel.Parent" xml:space="preserve">
+    <value>sidebarNavPanel</value>
+  </data>
+  <data name="&gt;&gt;adminTitleLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="membershipPlanButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="membershipPlanButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="membershipPlanButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="membershipPlanButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 386</value>
+  </data>
+  <data name="membershipPlanButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="membershipPlanButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 26</value>
+  </data>
+  <data name="membershipPlanButton.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="membershipPlanButton.Text" xml:space="preserve">
+    <value>Membership Plan</value>
+  </data>
+  <data name="&gt;&gt;membershipPlanButton.Name" xml:space="preserve">
+    <value>membershipPlanButton</value>
+  </data>
+  <data name="&gt;&gt;membershipPlanButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;membershipPlanButton.Parent" xml:space="preserve">
+    <value>sidebarNavPanel</value>
+  </data>
+  <data name="&gt;&gt;membershipPlanButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="facilityButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="facilityButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="facilityButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="facilityButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 339</value>
+  </data>
+  <data name="facilityButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="facilityButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 26</value>
+  </data>
+  <data name="facilityButton.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="facilityButton.Text" xml:space="preserve">
+    <value>Gym Facility</value>
+  </data>
+  <data name="&gt;&gt;facilityButton.Name" xml:space="preserve">
+    <value>facilityButton</value>
+  </data>
+  <data name="&gt;&gt;facilityButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;facilityButton.Parent" xml:space="preserve">
+    <value>sidebarNavPanel</value>
+  </data>
+  <data name="&gt;&gt;facilityButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="paymentButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="paymentButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="paymentButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="paymentButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 292</value>
+  </data>
+  <data name="paymentButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="paymentButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 26</value>
+  </data>
+  <data name="paymentButton.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="paymentButton.Text" xml:space="preserve">
+    <value>Payments</value>
+  </data>
+  <data name="&gt;&gt;paymentButton.Name" xml:space="preserve">
+    <value>paymentButton</value>
+  </data>
+  <data name="&gt;&gt;paymentButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;paymentButton.Parent" xml:space="preserve">
+    <value>sidebarNavPanel</value>
+  </data>
+  <data name="&gt;&gt;paymentButton.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="trainersButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="trainersButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="trainersButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="trainersButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-3, 245</value>
+  </data>
+  <data name="trainersButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="trainersButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 26</value>
+  </data>
+  <data name="trainersButton.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="trainersButton.Text" xml:space="preserve">
+    <value>Trainers</value>
+  </data>
+  <data name="&gt;&gt;trainersButton.Name" xml:space="preserve">
+    <value>trainersButton</value>
+  </data>
+  <data name="&gt;&gt;trainersButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;trainersButton.Parent" xml:space="preserve">
+    <value>sidebarNavPanel</value>
+  </data>
+  <data name="&gt;&gt;trainersButton.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="employeeButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="employeeButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="employeeButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="employeeButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 198</value>
+  </data>
+  <data name="employeeButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="employeeButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 26</value>
+  </data>
+  <data name="employeeButton.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="employeeButton.Text" xml:space="preserve">
+    <value>Employees</value>
+  </data>
+  <data name="&gt;&gt;employeeButton.Name" xml:space="preserve">
+    <value>employeeButton</value>
+  </data>
+  <data name="&gt;&gt;employeeButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;employeeButton.Parent" xml:space="preserve">
+    <value>sidebarNavPanel</value>
+  </data>
+  <data name="&gt;&gt;employeeButton.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="membersButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="membersButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="membersButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="membersButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 150</value>
+  </data>
+  <data name="membersButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="membersButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 26</value>
+  </data>
+  <data name="membersButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="membersButton.Text" xml:space="preserve">
+    <value>Members</value>
+  </data>
+  <data name="&gt;&gt;membersButton.Name" xml:space="preserve">
+    <value>membersButton</value>
+  </data>
+  <data name="&gt;&gt;membersButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;membersButton.Parent" xml:space="preserve">
+    <value>sidebarNavPanel</value>
+  </data>
+  <data name="&gt;&gt;membersButton.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="dashBoardButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dashBoardButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="dashBoardButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="dashBoardButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 103</value>
+  </data>
+  <data name="dashBoardButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="dashBoardButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 26</value>
+  </data>
+  <data name="dashBoardButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="dashBoardButton.Text" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="&gt;&gt;dashBoardButton.Name" xml:space="preserve">
+    <value>dashBoardButton</value>
+  </data>
+  <data name="&gt;&gt;dashBoardButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dashBoardButton.Parent" xml:space="preserve">
+    <value>sidebarNavPanel</value>
+  </data>
+  <data name="&gt;&gt;dashBoardButton.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="sidebarNavPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="sidebarNavPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="sidebarNavPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="sidebarNavPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 679</value>
+  </data>
+  <data name="sidebarNavPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;sidebarNavPanel.Name" xml:space="preserve">
+    <value>sidebarNavPanel</value>
+  </data>
+  <data name="&gt;&gt;sidebarNavPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sidebarNavPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;sidebarNavPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="mainPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="mainPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>178, 0</value>
+  </data>
+  <data name="mainPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="mainPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1225, 679</value>
+  </data>
+  <data name="mainPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;mainPanel.Name" xml:space="preserve">
+    <value>mainPanel</value>
+  </data>
+  <data name="&gt;&gt;mainPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mainPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;mainPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="gymManagementDBDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -135,4 +510,64 @@
   <metadata name="mEMBERBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>520, 63</value>
   </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1403, 679</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Admin Page</value>
+  </data>
+  <data name="&gt;&gt;gymManagementDBDataSet.Name" xml:space="preserve">
+    <value>gymManagementDBDataSet</value>
+  </data>
+  <data name="&gt;&gt;gymManagementDBDataSet.Type" xml:space="preserve">
+    <value>GymManagementSystem.GymManagementDBDataSet, GymManagementSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;pAYMENTBindingSource.Name" xml:space="preserve">
+    <value>pAYMENTBindingSource</value>
+  </data>
+  <data name="&gt;&gt;pAYMENTBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableAdapterManager.Name" xml:space="preserve">
+    <value>tableAdapterManager</value>
+  </data>
+  <data name="&gt;&gt;tableAdapterManager.Type" xml:space="preserve">
+    <value>GymManagementSystem.GymManagementDBDataSetTableAdapters.TableAdapterManager, GymManagementSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;mEMBERBindingSource.Name" xml:space="preserve">
+    <value>mEMBERBindingSource</value>
+  </data>
+  <data name="&gt;&gt;mEMBERBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mEMBERBindingSource1.Name" xml:space="preserve">
+    <value>mEMBERBindingSource1</value>
+  </data>
+  <data name="&gt;&gt;mEMBERBindingSource1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mEMBERBindingSource2.Name" xml:space="preserve">
+    <value>mEMBERBindingSource2</value>
+  </data>
+  <data name="&gt;&gt;mEMBERBindingSource2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>AdminForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

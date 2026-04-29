@@ -46,6 +46,8 @@
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RegisterMemberButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.EditStaffBtn = new System.Windows.Forms.Button();
+            this.DeleteStaffBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gymManagementDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffDataGridView)).BeginInit();
@@ -97,13 +99,13 @@
             this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn13});
             this.staffDataGridView.DataSource = this.staffBindingSource;
-            this.staffDataGridView.Location = new System.Drawing.Point(28, 80);
-            this.staffDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.staffDataGridView.Location = new System.Drawing.Point(37, 98);
+            this.staffDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.staffDataGridView.Name = "staffDataGridView";
             this.staffDataGridView.RowHeadersVisible = false;
             this.staffDataGridView.RowHeadersWidth = 62;
             this.staffDataGridView.RowTemplate.Height = 28;
-            this.staffDataGridView.Size = new System.Drawing.Size(890, 376);
+            this.staffDataGridView.Size = new System.Drawing.Size(1187, 463);
             this.staffDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -189,12 +191,12 @@
             // 
             // RegisterMemberButton
             // 
-            this.RegisterMemberButton.Location = new System.Drawing.Point(402, 36);
-            this.RegisterMemberButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RegisterMemberButton.Location = new System.Drawing.Point(536, 44);
+            this.RegisterMemberButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RegisterMemberButton.Name = "RegisterMemberButton";
-            this.RegisterMemberButton.Size = new System.Drawing.Size(115, 40);
+            this.RegisterMemberButton.Size = new System.Drawing.Size(153, 49);
             this.RegisterMemberButton.TabIndex = 2;
-            this.RegisterMemberButton.Text = "Register Member";
+            this.RegisterMemberButton.Text = "Register Staff";
             this.RegisterMemberButton.UseVisualStyleBackColor = true;
             this.RegisterMemberButton.Click += new System.EventHandler(this.RegisterMemberButton_Click);
             // 
@@ -202,23 +204,46 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 22);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(32, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 24);
+            this.label1.Size = new System.Drawing.Size(134, 29);
             this.label1.TabIndex = 17;
             this.label1.Text = "Employees";
             // 
+            // EditStaffBtn
+            // 
+            this.EditStaffBtn.Location = new System.Drawing.Point(712, 45);
+            this.EditStaffBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.EditStaffBtn.Name = "EditStaffBtn";
+            this.EditStaffBtn.Size = new System.Drawing.Size(153, 49);
+            this.EditStaffBtn.TabIndex = 18;
+            this.EditStaffBtn.Text = "Edit Staff Info";
+            this.EditStaffBtn.UseVisualStyleBackColor = true;
+            this.EditStaffBtn.Click += new System.EventHandler(this.EditStaffBtn_Click);
+            // 
+            // DeleteStaffBtn
+            // 
+            this.DeleteStaffBtn.Location = new System.Drawing.Point(887, 45);
+            this.DeleteStaffBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DeleteStaffBtn.Name = "DeleteStaffBtn";
+            this.DeleteStaffBtn.Size = new System.Drawing.Size(153, 49);
+            this.DeleteStaffBtn.TabIndex = 19;
+            this.DeleteStaffBtn.Text = "Delete Staff";
+            this.DeleteStaffBtn.UseVisualStyleBackColor = true;
+            this.DeleteStaffBtn.Click += new System.EventHandler(this.DeleteStaffBtn_Click);
+            // 
             // EmployeeControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.DeleteStaffBtn);
+            this.Controls.Add(this.EditStaffBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.RegisterMemberButton);
             this.Controls.Add(this.staffDataGridView);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "EmployeeControl";
-            this.Size = new System.Drawing.Size(985, 565);
+            this.Size = new System.Drawing.Size(1313, 695);
             this.Load += new System.EventHandler(this.EmployeeControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gymManagementDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).EndInit();
@@ -247,5 +272,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.Button RegisterMemberButton;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button EditStaffBtn;
+        private System.Windows.Forms.Button DeleteStaffBtn;
     }
 }

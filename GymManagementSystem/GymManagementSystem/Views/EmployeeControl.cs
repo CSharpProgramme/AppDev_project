@@ -45,24 +45,7 @@ namespace GymManagementSystem
 
         private void InitializeStaffActions()
         {
-            editStaffButton.Text = "Edit Staff";
-            editStaffButton.Width = 120;
-            editStaffButton.Height = RegisterMemberButton.Height;
-            editStaffButton.Left = RegisterMemberButton.Right + 12;
-            editStaffButton.Top = RegisterMemberButton.Top;
-            editStaffButton.Enabled = false;
-            editStaffButton.Click += EditStaffButton_Click;
-
-            deleteStaffButton.Text = "Delete Staff";
-            deleteStaffButton.Width = 120;
-            deleteStaffButton.Height = RegisterMemberButton.Height;
-            deleteStaffButton.Left = editStaffButton.Right + 12;
-            deleteStaffButton.Top = RegisterMemberButton.Top;
-            deleteStaffButton.Enabled = false;
-            deleteStaffButton.Click += DeleteStaffButton_Click;
-
-            Controls.Add(editStaffButton);
-            Controls.Add(deleteStaffButton);
+     
 
             staffDataGridView.SelectionChanged += StaffDataGridView_SelectionChanged;
         }
@@ -111,7 +94,16 @@ namespace GymManagementSystem
             deleteStaffButton.Enabled = hasSelection;
         }
 
-        private void EditStaffButton_Click(object sender, EventArgs e)
+  
+
+    
+
+        private void EmployeeControl_Load(object sender, EventArgs e)
+        {
+            LoadStaff();
+        }
+
+        private void EditStaffBtn_Click(object sender, EventArgs e)
         {
             Staff selectedStaff = GetSelectedStaff();
             if (selectedStaff == null)
@@ -125,7 +117,7 @@ namespace GymManagementSystem
             editForm.ShowDialog();
         }
 
-        private void DeleteStaffButton_Click(object sender, EventArgs e)
+        private void DeleteStaffBtn_Click(object sender, EventArgs e)
         {
             Staff selectedStaff = GetSelectedStaff();
             if (selectedStaff == null)
@@ -154,11 +146,6 @@ namespace GymManagementSystem
             {
                 MessageBox.Show("Failed to delete staff: " + ex.Message);
             }
-        }
-
-        private void EmployeeControl_Load(object sender, EventArgs e)
-        {
-            LoadStaff();
         }
     }
 }
