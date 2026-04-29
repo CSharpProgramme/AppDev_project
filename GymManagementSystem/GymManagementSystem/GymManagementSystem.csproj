@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\MembershipPlanController.cs" />
+    <Compile Include="Controllers\PTSessionController.cs" />
     <Compile Include="Controllers\StaffController.cs" />
     <Compile Include="Controllers\TrainerController.cs" />
     <Compile Include="GymManagementDBDataSet1.Designer.cs">
@@ -78,9 +79,11 @@
       <DependentUpon>GymManagementDBDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="Models\MembershipPlan.cs" />
+    <Compile Include="Models\PTSession.cs" />
     <Compile Include="Models\Staff.cs" />
     <Compile Include="Models\Trainer.cs" />
     <Compile Include="Repositories\MembershipPlanRepository.cs" />
+    <Compile Include="Repositories\PTSessionRepository.cs" />
     <Compile Include="Repositories\StaffRepository.cs" />
     <Compile Include="Repositories\TrainerRepository.cs" />
     <Compile Include="Views\EmployeeRegisterForm.cs">
@@ -154,6 +157,18 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\MemberRepository.cs" />
+    <Compile Include="Views\PTSessionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PTSessionForm.Designer.cs">
+      <DependentUpon>PTSessionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PTSessionUpsertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PTSessionUpsertForm.Designer.cs">
+      <DependentUpon>PTSessionUpsertForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +232,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\PTSessionForm.resx">
+      <DependentUpon>PTSessionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PTSessionUpsertForm.resx">
+      <DependentUpon>PTSessionUpsertForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>

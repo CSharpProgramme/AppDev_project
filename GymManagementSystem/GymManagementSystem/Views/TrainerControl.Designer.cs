@@ -30,10 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.trainerDataGridView = new System.Windows.Forms.DataGridView();
-            this.editTrainerButton = new System.Windows.Forms.Button();
-            this.deleteTrainerButton = new System.Windows.Forms.Button();
-            this.RegisterTrainerButton = new System.Windows.Forms.Button();
-            this.viewPTSessionButton = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +39,10 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trainerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gymManagementDBDataSet = new GymManagementSystem.GymManagementDBDataSet();
+            this.editTrainerButton = new System.Windows.Forms.Button();
+            this.deleteTrainerButton = new System.Windows.Forms.Button();
+            this.RegisterTrainerButton = new System.Windows.Forms.Button();
+            this.viewPTSessionButton = new System.Windows.Forms.Button();
             this.trainerTableAdapter = new GymManagementSystem.GymManagementDBDataSetTableAdapters.TrainerTableAdapter();
             this.tableAdapterManager = new GymManagementSystem.GymManagementDBDataSetTableAdapters.TableAdapterManager();
             this.label1 = new System.Windows.Forms.Label();
@@ -72,49 +72,6 @@
             this.trainerDataGridView.RowTemplate.Height = 28;
             this.trainerDataGridView.Size = new System.Drawing.Size(858, 363);
             this.trainerDataGridView.TabIndex = 1;
-            // 
-            // editTrainerButton
-            // 
-            this.editTrainerButton.Location = new System.Drawing.Point(530, 68);
-            this.editTrainerButton.Margin = new System.Windows.Forms.Padding(2);
-            this.editTrainerButton.Name = "editTrainerButton";
-            this.editTrainerButton.Size = new System.Drawing.Size(115, 40);
-            this.editTrainerButton.TabIndex = 9;
-            this.editTrainerButton.Text = "Edit Trainer";
-            this.editTrainerButton.UseVisualStyleBackColor = true;
-            this.editTrainerButton.Click += new System.EventHandler(this.editTrainerButton_Click);
-            // 
-            // deleteTrainerButton
-            // 
-            this.deleteTrainerButton.Location = new System.Drawing.Point(649, 68);
-            this.deleteTrainerButton.Margin = new System.Windows.Forms.Padding(2);
-            this.deleteTrainerButton.Name = "deleteTrainerButton";
-            this.deleteTrainerButton.Size = new System.Drawing.Size(115, 40);
-            this.deleteTrainerButton.TabIndex = 8;
-            this.deleteTrainerButton.Text = "Delete Trainer";
-            this.deleteTrainerButton.UseVisualStyleBackColor = true;
-            this.deleteTrainerButton.Click += new System.EventHandler(this.deleteTrainerButton_Click);
-            // 
-            // RegisterTrainerButton
-            // 
-            this.RegisterTrainerButton.Location = new System.Drawing.Point(411, 68);
-            this.RegisterTrainerButton.Margin = new System.Windows.Forms.Padding(2);
-            this.RegisterTrainerButton.Name = "RegisterTrainerButton";
-            this.RegisterTrainerButton.Size = new System.Drawing.Size(115, 40);
-            this.RegisterTrainerButton.TabIndex = 7;
-            this.RegisterTrainerButton.Text = "Register Trainer";
-            this.RegisterTrainerButton.UseVisualStyleBackColor = true;
-            this.RegisterTrainerButton.Click += new System.EventHandler(this.RegisterTrainerButton_Click);
-            // 
-            // viewPTSessionButton
-            // 
-            this.viewPTSessionButton.Location = new System.Drawing.Point(248, 68);
-            this.viewPTSessionButton.Margin = new System.Windows.Forms.Padding(2);
-            this.viewPTSessionButton.Name = "viewPTSessionButton";
-            this.viewPTSessionButton.Size = new System.Drawing.Size(115, 40);
-            this.viewPTSessionButton.TabIndex = 10;
-            this.viewPTSessionButton.Text = "View PT Session";
-            this.viewPTSessionButton.UseVisualStyleBackColor = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -182,6 +139,50 @@
             // 
             this.gymManagementDBDataSet.DataSetName = "GymManagementDBDataSet";
             this.gymManagementDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // editTrainerButton
+            // 
+            this.editTrainerButton.Location = new System.Drawing.Point(530, 68);
+            this.editTrainerButton.Margin = new System.Windows.Forms.Padding(2);
+            this.editTrainerButton.Name = "editTrainerButton";
+            this.editTrainerButton.Size = new System.Drawing.Size(115, 40);
+            this.editTrainerButton.TabIndex = 9;
+            this.editTrainerButton.Text = "Edit Trainer";
+            this.editTrainerButton.UseVisualStyleBackColor = true;
+            this.editTrainerButton.Click += new System.EventHandler(this.editTrainerButton_Click);
+            // 
+            // deleteTrainerButton
+            // 
+            this.deleteTrainerButton.Location = new System.Drawing.Point(649, 68);
+            this.deleteTrainerButton.Margin = new System.Windows.Forms.Padding(2);
+            this.deleteTrainerButton.Name = "deleteTrainerButton";
+            this.deleteTrainerButton.Size = new System.Drawing.Size(115, 40);
+            this.deleteTrainerButton.TabIndex = 8;
+            this.deleteTrainerButton.Text = "Delete Trainer";
+            this.deleteTrainerButton.UseVisualStyleBackColor = true;
+            this.deleteTrainerButton.Click += new System.EventHandler(this.deleteTrainerButton_Click);
+            // 
+            // RegisterTrainerButton
+            // 
+            this.RegisterTrainerButton.Location = new System.Drawing.Point(411, 68);
+            this.RegisterTrainerButton.Margin = new System.Windows.Forms.Padding(2);
+            this.RegisterTrainerButton.Name = "RegisterTrainerButton";
+            this.RegisterTrainerButton.Size = new System.Drawing.Size(115, 40);
+            this.RegisterTrainerButton.TabIndex = 7;
+            this.RegisterTrainerButton.Text = "Register Trainer";
+            this.RegisterTrainerButton.UseVisualStyleBackColor = true;
+            this.RegisterTrainerButton.Click += new System.EventHandler(this.RegisterTrainerButton_Click);
+            // 
+            // viewPTSessionButton
+            // 
+            this.viewPTSessionButton.Location = new System.Drawing.Point(248, 68);
+            this.viewPTSessionButton.Margin = new System.Windows.Forms.Padding(2);
+            this.viewPTSessionButton.Name = "viewPTSessionButton";
+            this.viewPTSessionButton.Size = new System.Drawing.Size(115, 40);
+            this.viewPTSessionButton.TabIndex = 10;
+            this.viewPTSessionButton.Text = "View PT Session";
+            this.viewPTSessionButton.UseVisualStyleBackColor = true;
+            this.viewPTSessionButton.Click += new System.EventHandler(this.viewPTSessionButton_Click);
             // 
             // trainerTableAdapter
             // 

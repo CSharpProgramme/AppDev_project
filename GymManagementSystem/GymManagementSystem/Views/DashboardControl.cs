@@ -32,14 +32,13 @@ namespace GymManagementSystem
             recentMemberDataGridView.AutoGenerateColumns = false;
             recentMemberDataGridView.Columns.Clear();
 
-            recentMemberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "ID", DataPropertyName = "MemberID" });
-            recentMemberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "First Name", DataPropertyName = "FName" });
-            recentMemberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Last Name", DataPropertyName = "LName" });
-            recentMemberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Email", DataPropertyName = "Email", AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-            });
-            recentMemberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Phone", DataPropertyName = "Phone" });
-            recentMemberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Join Date", DataPropertyName = "JoinDate" });
-            recentMemberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Status", DataPropertyName = "Status" });
+            recentMemberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "ID", DataPropertyName = "MemberID", AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill });
+            recentMemberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "First Name", DataPropertyName = "FName", AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill });
+            recentMemberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Last Name", DataPropertyName = "LName", AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill });
+            recentMemberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Email", DataPropertyName = "Email", AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells });
+            recentMemberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Phone", DataPropertyName = "Phone", AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill });
+            recentMemberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Join Date", DataPropertyName = "JoinDate", AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill });
+            recentMemberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Status", DataPropertyName = "Status", AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill });
 
             recentMemberDataGridView.DataSource = members;
         }

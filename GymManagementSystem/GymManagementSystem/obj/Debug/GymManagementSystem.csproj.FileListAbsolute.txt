@@ -23,3 +23,5 @@ C:\Users\andyr\Downloads\AppDev_project\GymManagementSystem\GymManagementSystem\
 C:\Users\andyr\Downloads\AppDev_project\GymManagementSystem\GymManagementSystem\obj\Debug\GymManagementSystem.csproj.CoreCompileInputs.cache
 C:\Users\andyr\Downloads\AppDev_project\GymManagementSystem\GymManagementSystem\obj\Debug\GymManagementSystem.exe
 C:\Users\andyr\Downloads\AppDev_project\GymManagementSystem\GymManagementSystem\obj\Debug\GymManagementSystem.pdb
+C:\Users\andyr\Downloads\AppDev_project\GymManagementSystem\GymManagementSystem\obj\Debug\GymManagementSystem.Views.PTSessionForm.resources
+C:\Users\andyr\Downloads\AppDev_project\GymManagementSystem\GymManagementSystem\obj\Debug\GymManagementSystem.Views.PTSessionUpsertForm.resources
