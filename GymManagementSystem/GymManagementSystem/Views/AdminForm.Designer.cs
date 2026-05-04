@@ -34,8 +34,8 @@
             this.EnglishBtn = new System.Windows.Forms.Button();
             this.adminTitleLabel = new System.Windows.Forms.Label();
             this.membershipPlanButton = new System.Windows.Forms.Button();
-            this.facilityButton = new System.Windows.Forms.Button();
-            this.paymentButton = new System.Windows.Forms.Button();
+            this.attendanceButton = new System.Windows.Forms.Button();
+            this.revenueButton = new System.Windows.Forms.Button();
             this.trainersButton = new System.Windows.Forms.Button();
             this.employeeButton = new System.Windows.Forms.Button();
             this.membersButton = new System.Windows.Forms.Button();
@@ -62,8 +62,8 @@
             this.sidebarNavPanel.Controls.Add(this.EnglishBtn);
             this.sidebarNavPanel.Controls.Add(this.adminTitleLabel);
             this.sidebarNavPanel.Controls.Add(this.membershipPlanButton);
-            this.sidebarNavPanel.Controls.Add(this.facilityButton);
-            this.sidebarNavPanel.Controls.Add(this.paymentButton);
+            this.sidebarNavPanel.Controls.Add(this.attendanceButton);
+            this.sidebarNavPanel.Controls.Add(this.revenueButton);
             this.sidebarNavPanel.Controls.Add(this.trainersButton);
             this.sidebarNavPanel.Controls.Add(this.employeeButton);
             this.sidebarNavPanel.Controls.Add(this.membersButton);
@@ -94,23 +94,23 @@
             this.membershipPlanButton.UseVisualStyleBackColor = true;
             this.membershipPlanButton.Click += new System.EventHandler(this.membershipPlanButton_Click);
             // 
-            // facilityButton
+            // attendanceButton
             // 
-            resources.ApplyResources(this.facilityButton, "facilityButton");
-            this.facilityButton.FlatAppearance.BorderSize = 0;
-            this.facilityButton.ForeColor = System.Drawing.Color.White;
-            this.facilityButton.Name = "facilityButton";
-            this.facilityButton.UseVisualStyleBackColor = true;
-            this.facilityButton.Click += new System.EventHandler(this.auditLogButton_Click);
+            this.attendanceButton.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.attendanceButton, "attendanceButton");
+            this.attendanceButton.ForeColor = System.Drawing.Color.White;
+            this.attendanceButton.Name = "attendanceButton";
+            this.attendanceButton.UseVisualStyleBackColor = true;
+            this.attendanceButton.Click += new System.EventHandler(this.auditLogButton_Click);
             // 
-            // paymentButton
+            // revenueButton
             // 
-            resources.ApplyResources(this.paymentButton, "paymentButton");
-            this.paymentButton.FlatAppearance.BorderSize = 0;
-            this.paymentButton.ForeColor = System.Drawing.Color.White;
-            this.paymentButton.Name = "paymentButton";
-            this.paymentButton.UseVisualStyleBackColor = true;
-            this.paymentButton.Click += new System.EventHandler(this.paymentButton_Click);
+            resources.ApplyResources(this.revenueButton, "revenueButton");
+            this.revenueButton.FlatAppearance.BorderSize = 0;
+            this.revenueButton.ForeColor = System.Drawing.Color.White;
+            this.revenueButton.Name = "revenueButton";
+            this.revenueButton.UseVisualStyleBackColor = true;
+            this.revenueButton.Click += new System.EventHandler(this.paymentButton_Click);
             // 
             // trainersButton
             // 
@@ -220,8 +220,8 @@
         private System.Windows.Forms.Label adminTitleLabel;
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Button membershipPlanButton;
-        private System.Windows.Forms.Button facilityButton;
-        private System.Windows.Forms.Button paymentButton;
+        private System.Windows.Forms.Button attendanceButton;
+        private System.Windows.Forms.Button revenueButton;
         private System.Windows.Forms.Button trainersButton;
         private System.Windows.Forms.Button employeeButton;
         private System.Windows.Forms.Button membersButton;

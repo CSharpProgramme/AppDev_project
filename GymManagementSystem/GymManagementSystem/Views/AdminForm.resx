@@ -129,10 +129,13 @@
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="EnglishBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 608</value>
+    <value>53, 882</value>
+  </data>
+  <data name="EnglishBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="EnglishBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 46</value>
+    <value>128, 58</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="EnglishBtn.TabIndex" type="System.Int32, mscorlib">
@@ -163,10 +166,10 @@
     <value>NoControl</value>
   </data>
   <data name="adminTitleLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 20</value>
+    <value>54, 32</value>
   </data>
   <data name="adminTitleLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 25</value>
+    <value>160, 29</value>
   </data>
   <data name="adminTitleLabel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -192,17 +195,20 @@
   <data name="membershipPlanButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
+  <data name="membershipPlanButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
   <data name="membershipPlanButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="membershipPlanButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 386</value>
+    <value>6, 538</value>
   </data>
   <data name="membershipPlanButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="membershipPlanButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 26</value>
+    <value>268, 53</value>
   </data>
   <data name="membershipPlanButton.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -222,76 +228,79 @@
   <data name="&gt;&gt;membershipPlanButton.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="facilityButton.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="facilityButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="attendanceButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="facilityButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="attendanceButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="attendanceButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="facilityButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 339</value>
+  <data name="attendanceButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 472</value>
   </data>
-  <data name="facilityButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="attendanceButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
-  <data name="facilityButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 26</value>
+  <data name="attendanceButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>268, 62</value>
   </data>
-  <data name="facilityButton.TabIndex" type="System.Int32, mscorlib">
+  <data name="attendanceButton.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="facilityButton.Text" xml:space="preserve">
-    <value>Gym Facility</value>
+  <data name="attendanceButton.Text" xml:space="preserve">
+    <value>Member's Attendance</value>
   </data>
-  <data name="&gt;&gt;facilityButton.Name" xml:space="preserve">
-    <value>facilityButton</value>
+  <data name="&gt;&gt;attendanceButton.Name" xml:space="preserve">
+    <value>attendanceButton</value>
   </data>
-  <data name="&gt;&gt;facilityButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;attendanceButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;facilityButton.Parent" xml:space="preserve">
+  <data name="&gt;&gt;attendanceButton.Parent" xml:space="preserve">
     <value>sidebarNavPanel</value>
   </data>
-  <data name="&gt;&gt;facilityButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;attendanceButton.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="paymentButton.AutoSize" type="System.Boolean, mscorlib">
+  <data name="revenueButton.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="paymentButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="revenueButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="paymentButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="revenueButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="revenueButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="paymentButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 292</value>
+  <data name="revenueButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 405</value>
   </data>
-  <data name="paymentButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="revenueButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
-  <data name="paymentButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 26</value>
+  <data name="revenueButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>268, 63</value>
   </data>
-  <data name="paymentButton.TabIndex" type="System.Int32, mscorlib">
+  <data name="revenueButton.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="paymentButton.Text" xml:space="preserve">
-    <value>Payments</value>
+  <data name="revenueButton.Text" xml:space="preserve">
+    <value>Revenue</value>
   </data>
-  <data name="&gt;&gt;paymentButton.Name" xml:space="preserve">
-    <value>paymentButton</value>
+  <data name="&gt;&gt;revenueButton.Name" xml:space="preserve">
+    <value>revenueButton</value>
   </data>
-  <data name="&gt;&gt;paymentButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;revenueButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;paymentButton.Parent" xml:space="preserve">
+  <data name="&gt;&gt;revenueButton.Parent" xml:space="preserve">
     <value>sidebarNavPanel</value>
   </data>
-  <data name="&gt;&gt;paymentButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;revenueButton.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="trainersButton.AutoSize" type="System.Boolean, mscorlib">
@@ -300,17 +309,20 @@
   <data name="trainersButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
+  <data name="trainersButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
   <data name="trainersButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="trainersButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-3, 245</value>
+    <value>3, 338</value>
   </data>
   <data name="trainersButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="trainersButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 26</value>
+    <value>268, 63</value>
   </data>
   <data name="trainersButton.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -336,17 +348,20 @@
   <data name="employeeButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
+  <data name="employeeButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
   <data name="employeeButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="employeeButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 198</value>
+    <value>9, 272</value>
   </data>
   <data name="employeeButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="employeeButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 26</value>
+    <value>265, 62</value>
   </data>
   <data name="employeeButton.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -372,17 +387,20 @@
   <data name="membersButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
+  <data name="membersButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
   <data name="membersButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="membersButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 150</value>
+    <value>6, 204</value>
   </data>
   <data name="membersButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="membersButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 26</value>
+    <value>268, 64</value>
   </data>
   <data name="membersButton.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -408,17 +426,20 @@
   <data name="dashBoardButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
+  <data name="dashBoardButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
   <data name="dashBoardButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="dashBoardButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 103</value>
+    <value>6, 137</value>
   </data>
   <data name="dashBoardButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="dashBoardButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 26</value>
+    <value>268, 63</value>
   </data>
   <data name="dashBoardButton.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -448,7 +469,7 @@
     <value>3, 2, 3, 2</value>
   </data>
   <data name="sidebarNavPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 679</value>
+    <value>274, 1019</value>
   </data>
   <data name="sidebarNavPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -469,13 +490,13 @@
     <value>Fill</value>
   </data>
   <data name="mainPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>178, 0</value>
+    <value>274, 0</value>
   </data>
   <data name="mainPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="mainPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1225, 679</value>
+    <value>1454, 1019</value>
   </data>
   <data name="mainPanel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -514,10 +535,10 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
+    <value>9, 20</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1403, 679</value>
+    <value>1728, 1019</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>

@@ -68,21 +68,64 @@ namespace GymManagementSystem.Views
         {
             if (!ValidateForm()) return;
 
-            // Update the selected member's properties with the new values
+            string originalStatus = selectedMember.Status;
+            string newStatus = statusComboBox.SelectedItem.ToString();
+
+            // If activating an inactive/suspended member, open the reactivation flow
+            if (newStatus == "active" && originalStatus != "active")
+            {
+                // Save all other field changes first (keep original status for now)
+                selectedMember.FName = fNameTextBox.Text.Trim();
+                selectedMember.LName = lNameTextBox.Text.Trim();
+                selectedMember.Email = emailTextBox.Text.Trim();
+                selectedMember.Phone = phoneTextBox.Text.Trim();
+                selectedMember.DateOfBirth = birthdayPicker.Value.Date;
+                selectedMember.EmergencyContactName = emergencyContactTextBox.Text.Trim();
+                selectedMember.EmergencyContactPhone = emergencyPhoneTextBox.Text.Trim();
+
+                try
+                {
+                    memberController.UpdateMember(selectedMember);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error updating member: " + ex.Message, "Error");
+                    return;
+                }
+
+                // Now open reactivation form for plan + payment
+                ReactivateMemberForm reactivateForm = new ReactivateMemberForm(selectedMember);
+                reactivateForm.FormClosed += (s, args) => this.Close();
+                reactivateForm.ShowDialog();
+                return;
+            }
+
+            // Update all other fields first
             selectedMember.FName = fNameTextBox.Text.Trim();
             selectedMember.LName = lNameTextBox.Text.Trim();
             selectedMember.Email = emailTextBox.Text.Trim();
             selectedMember.Phone = phoneTextBox.Text.Trim();
             selectedMember.DateOfBirth = birthdayPicker.Value.Date;
-            selectedMember.Status = statusComboBox.SelectedItem.ToString();
+            selectedMember.Status = newStatus;
             selectedMember.EmergencyContactName = emergencyContactTextBox.Text.Trim();
             selectedMember.EmergencyContactPhone = emergencyPhoneTextBox.Text.Trim();
 
             try
             {
-                // Send updated member to the controller
-                memberController.UpdateMember(selectedMember);
-                MessageBox.Show("Member updated successfully!", "Success");
+                // Deactivating — expire subscription + release locker
+                if (newStatus == "inactive" && originalStatus != "inactive")
+                {
+                    memberController.DeactivateMember(selectedMember.MemberID);
+                    MessageBox.Show(
+                        $"{selectedMember.FName} {selectedMember.LName} has been deactivated.\nSubscription expired and locker released.",
+                        "Deactivated");
+                }
+                else
+                {
+                    // Suspended or any other normal update
+                    memberController.UpdateMember(selectedMember);
+                    MessageBox.Show("Member updated successfully!", "Success");
+                }
                 this.Close();
             }
             catch (Exception ex)

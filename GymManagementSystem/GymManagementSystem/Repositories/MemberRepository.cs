@@ -192,6 +192,24 @@ namespace GymManagementSystem.Repositories
             }
         }
 
+        public int GetActiveSubscriptionCount()
+        {
+            try
+            {
+                using (SqlConnection conn = DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(
+                        "SELECT COUNT(*) FROM SUBSCRIPTION WHERE status = 'active'", conn);
+                    return (int)cmd.ExecuteScalar();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error counting active subscriptions: " + ex.Message);
+            }
+        }
+
         //ADD
         public void AddMember(Member member)
         {
@@ -258,23 +276,95 @@ namespace GymManagementSystem.Repositories
             }
         }
 
+        //DEACTIVATE (inactive only — expires subscription + releases locker)
+        public void DeactivateMember(int memberId)
+        {
+            using (SqlConnection conn = DatabaseHelper.GetConnection())
+            {
+                conn.Open();
+                SqlTransaction tx = conn.BeginTransaction();
+                try
+                {
+                    // 1. Set member status to inactive
+                    SqlCommand cmd1 = new SqlCommand(
+                        "UPDATE MEMBER SET status = 'inactive' WHERE member_id = @id", conn, tx);
+                    cmd1.Parameters.AddWithValue("@id", memberId);
+                    cmd1.ExecuteNonQuery();
+
+                    // 2. Expire any active subscriptions
+                    SqlCommand cmd2 = new SqlCommand(
+                        "UPDATE SUBSCRIPTION SET status = 'expired' WHERE member_id = @id AND status = 'active'", conn, tx);
+                    cmd2.Parameters.AddWithValue("@id", memberId);
+                    cmd2.ExecuteNonQuery();
+
+                    // 3. Release their locker
+                    SqlCommand cmd3 = new SqlCommand(
+                        "UPDATE LOCKER SET member_id = NULL, status = 'available' WHERE member_id = @id", conn, tx);
+                    cmd3.Parameters.AddWithValue("@id", memberId);
+                    cmd3.ExecuteNonQuery();
+
+                    tx.Commit();
+                }
+                catch (Exception ex)
+                {
+                    tx.Rollback();
+                    throw new Exception("Error deactivating member: " + ex.Message);
+                }
+            }
+        }
+
         //DELETE
         public void DeleteMember(int memberId)
         {
-            try
+            using (SqlConnection conn = DatabaseHelper.GetConnection())
             {
-                using (SqlConnection conn = DatabaseHelper.GetConnection())
+                conn.Open();
+
+                // A transaction ensures all deletes succeed together.
+                // If any one step fails, Rollback() undoes everything — no partial deletes.
+                SqlTransaction tx = conn.BeginTransaction();
+                try
                 {
-                    conn.Open();
-                    string query = "DELETE FROM Member WHERE member_id = @MemberID";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@MemberID", memberId);
-                    cmd.ExecuteNonQuery();
+                    // Local helper function — defined inside DeleteMember to avoid repeating the same
+                    // 3 lines (create command, add parameter, execute) for every DELETE statement.
+                    // It captures 'conn', 'tx', and 'memberId' from the outer method automatically,
+                    // so we only need to pass the SQL string each time we call it.
+                    void Run(string sql)
+                    {
+                        SqlCommand cmd = new SqlCommand(sql, conn, tx);
+                        cmd.Parameters.AddWithValue("@id", memberId); // always deleting by member_id
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    // PAYMENT links to SUBSCRIPTION, not MEMBER directly, so we use a subquery.
+                    // We can still use Run() since the parameter name @id matches memberId.
+                    Run(@"DELETE FROM PAYMENT WHERE subscription_id IN
+                          (SELECT subscription_id FROM SUBSCRIPTION WHERE member_id = @id)");
+
+                    // Delete all related records before deleting the member row itself.
+                    // Order matters — child records must be removed before the parent (MEMBER) row
+                    // to avoid foreign key constraint errors.
+                    Run("DELETE FROM MEMBER_PROGRESS WHERE member_id = @id");
+                    Run("DELETE FROM PT_SESSION    WHERE member_id = @id");
+                    Run("DELETE FROM ATTENDANCE    WHERE member_id = @id");
+
+                    // Release the locker instead of deleting it — the locker still exists, just unassigned
+                    Run("UPDATE LOCKER SET member_id = NULL, status = 'available' WHERE member_id = @id");
+
+                    Run("DELETE FROM SUBSCRIPTION  WHERE member_id = @id");
+
+                    // Finally delete the member row — only safe once all related records are gone
+                    Run("DELETE FROM MEMBER WHERE member_id = @id");
+
+                    // All steps succeeded — commit makes all changes permanent
+                    tx.Commit();
                 }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error deleting a member: " + ex.Message);
+                catch (Exception ex)
+                {
+                    // if Something failed — undo all changes to keep the database clean
+                    tx.Rollback();
+                    throw new Exception("Error deleting a member: " + ex.Message);
+                }
             }
         }
     }

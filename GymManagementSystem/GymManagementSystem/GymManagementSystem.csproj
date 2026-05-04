@@ -53,6 +53,7 @@
     </Reference>
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,8 +65,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ActivationController.cs" />
+    <Compile Include="Controllers\AttendanceController.cs" />
     <Compile Include="Controllers\MembershipPlanController.cs" />
     <Compile Include="Controllers\PTSessionController.cs" />
+    <Compile Include="Controllers\RevenueController.cs" />
     <Compile Include="Controllers\StaffController.cs" />
     <Compile Include="Controllers\TrainerController.cs" />
     <Compile Include="GymManagementDBDataSet1.Designer.cs">
@@ -82,7 +86,10 @@
     <Compile Include="Models\PTSession.cs" />
     <Compile Include="Models\Staff.cs" />
     <Compile Include="Models\Trainer.cs" />
+    <Compile Include="Repositories\ActivationRepository.cs" />
+    <Compile Include="Repositories\AttendanceRepository.cs" />
     <Compile Include="Repositories\MembershipPlanRepository.cs" />
+    <Compile Include="Repositories\RevenueRepository.cs" />
     <Compile Include="Repositories\PTSessionRepository.cs" />
     <Compile Include="Repositories\StaffRepository.cs" />
     <Compile Include="Repositories\TrainerRepository.cs" />
@@ -93,11 +100,11 @@
     <Compile Include="Views\EmployeeRegisterForm.Designer.cs">
       <DependentUpon>EmployeeRegisterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\FacilityControl.cs">
+    <Compile Include="Views\AttendanceControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\FacilityControl.Designer.cs">
-      <DependentUpon>FacilityControl.cs</DependentUpon>
+    <Compile Include="Views\AttendanceControl.Designer.cs">
+      <DependentUpon>AttendanceControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Controllers\MemberController.cs" />
     <Compile Include="Views\DashboardControl.cs">
@@ -149,11 +156,17 @@
     <Compile Include="Views\EditMembershipPlanForm.Designer.cs">
       <DependentUpon>EditMembershipPlanForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\PaymentControl.cs">
+    <Compile Include="Views\ReactivateMemberForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ReactivateMemberForm.Designer.cs">
+      <DependentUpon>ReactivateMemberForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RevenueControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\PaymentControl.Designer.cs">
-      <DependentUpon>PaymentControl.cs</DependentUpon>
+    <Compile Include="Views\RevenueControl.Designer.cs">
+      <DependentUpon>RevenueControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -200,6 +213,9 @@
     <EmbeddedResource Include="Views\AdminForm.fr.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\AttendanceControl.resx">
+      <DependentUpon>AttendanceControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\EmployeeRegisterForm.resx">
       <DependentUpon>EmployeeRegisterForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,8 +240,11 @@
     <EmbeddedResource Include="Views\EditMembershipPlanForm.resx">
       <DependentUpon>EditMembershipPlanForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\PaymentControl.resx">
-      <DependentUpon>PaymentControl.cs</DependentUpon>
+    <EmbeddedResource Include="Views\ReactivateMemberForm.resx">
+      <DependentUpon>ReactivateMemberForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RevenueControl.resx">
+      <DependentUpon>RevenueControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -325,8 +344,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\AllRegisterForms\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

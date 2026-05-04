@@ -29,8 +29,8 @@ namespace GymManagementSystem
             { "Members", "Membres" },
             { "Employees", "Employes" },
             { "Trainers", "Entraineurs" },
-            { "Payments", "Paiements" },
-            { "Gym Facility", "Equipements du gym" },
+            { "Revenue", "Revenu" },
+            { "Member's Attendance", "Présence des membres" },
             { "Membership Plan", "Abonnements" },
             { "Membership Plans", "Abonnements" },
             { "Admin Panel", "Panneau admin" },
@@ -101,12 +101,12 @@ namespace GymManagementSystem
 
         private void paymentButton_Click(object sender, EventArgs e)
         {
-            LoadControl(new PaymentControl());
+            LoadControl(new RevenueControl());
         }
 
         private void auditLogButton_Click(object sender, EventArgs e)
         {
-            LoadControl(new FacilityControl());
+            LoadControl(new AttendanceControl());
         }
 
         private void membershipPlanButton_Click(object sender, EventArgs e)
@@ -162,7 +162,7 @@ namespace GymManagementSystem
             if (Auth.Role == "staff")
             {
                 employeeButton.Enabled = false;
-                facilityButton.Enabled = false;
+                attendanceButton.Enabled = false;
 
 
             }

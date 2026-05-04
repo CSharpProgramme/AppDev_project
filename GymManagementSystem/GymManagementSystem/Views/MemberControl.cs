@@ -11,7 +11,6 @@ namespace GymManagementSystem
     public partial class MemberControl : UserControl
     {
         private MemberController memberController;
-        private readonly Button deleteButton = new Button();
 
         public MemberControl()
         {
@@ -20,7 +19,6 @@ namespace GymManagementSystem
             //disable edit button until a row from datagridview is selected
             editButton.Enabled = false;
             deleteButton.Enabled = false;
-            InitializeDeleteButton();
 
             //create a new MemberController when the control is loaded
             memberController = new MemberController();
@@ -43,18 +41,6 @@ namespace GymManagementSystem
             deleteButton.Enabled = hasSelection;
         }
 
-        private void InitializeDeleteButton()
-        {
-            deleteButton.Text = "Delete Member";
-            deleteButton.AutoSize = true;
-            deleteButton.Font = editButton.Font;
-            deleteButton.Height = editButton.Height;
-            deleteButton.Left = editButton.Right + 12;
-            deleteButton.Top = editButton.Top;
-            deleteButton.Click += DeleteButton_Click;
-            Controls.Add(deleteButton);
-        }
-
         //fetch all members from the controller and display them in datagridview
         private void LoadMembers()
         {
@@ -72,15 +58,15 @@ namespace GymManagementSystem
                 HeaderText = "ID", 
                 DataPropertyName = "MemberID" });
 
-            memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "First Name", DataPropertyName = "FName" });
-            memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Last Name", DataPropertyName = "LName" });
-            memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Email", DataPropertyName = "Email" });
-            memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Phone", DataPropertyName = "Phone" });
-            memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Date of Birth", DataPropertyName = "DateOfBirth" });
-            memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Join Date", DataPropertyName = "JoinDate" });
-            memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Emergency Contact", DataPropertyName = "EmergencyContactName" });
-            memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Emergency Phone", DataPropertyName = "EmergencyContactPhone" });
-            memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Status", DataPropertyName = "Status" });
+            memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { Name = "FName",                 HeaderText = "First Name",         DataPropertyName = "FName" });
+            memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { Name = "LName",                 HeaderText = "Last Name",          DataPropertyName = "LName" });
+            memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { Name = "Email",                 HeaderText = "Email",              DataPropertyName = "Email" });
+            memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { Name = "Phone",                 HeaderText = "Phone",              DataPropertyName = "Phone" });
+            memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { Name = "DateOfBirth",           HeaderText = "Date of Birth",      DataPropertyName = "DateOfBirth" });
+            memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { Name = "JoinDate",              HeaderText = "Join Date",          DataPropertyName = "JoinDate" });
+            memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { Name = "EmergencyContactName",  HeaderText = "Emergency Contact",  DataPropertyName = "EmergencyContactName" });
+            memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { Name = "EmergencyContactPhone", HeaderText = "Emergency Phone",    DataPropertyName = "EmergencyContactPhone" });
+            memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { Name = "Status",                HeaderText = "Status",             DataPropertyName = "Status" });
 
             memberDataGridView.DataSource = members;
         }

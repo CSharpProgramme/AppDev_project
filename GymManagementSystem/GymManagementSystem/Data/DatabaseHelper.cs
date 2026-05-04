@@ -1,43 +1,50 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Configuration;  // ADD THIS
 using System.Data.SqlClient;
-using System.Linq;
 using System.IO;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GymManagementSystem.Data
 {
     public class DatabaseHelper
     {
-        private static readonly string connectionString = BuildConnectionString();
+        private const string DbName = "GymManagementDB_App";
+        private const string DataSource = @"(LocalDB)\MSSQLLocalDB";
+        private static bool _attached = false;
 
-        private static string BuildConnectionString()
+        private static void EnsureAttached()
         {
-            // Always target a single physical database file in the app output folder.
-            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            string databaseFilePath = Path.Combine(baseDirectory, "GymManagementDB.mdf");
+            if (_attached) return;
 
-            string configured = ConfigurationManager
-                .ConnectionStrings["GymManagementSystem.Properties.Settings.GymManagementDBConnectionString"]?
-                .ConnectionString ?? string.Empty;
+            string mdfPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "GymManagementDB.mdf");
 
-            var builder = new SqlConnectionStringBuilder(configured)
+            string masterConn = $"Data Source={DataSource};Initial Catalog=master;Integrated Security=True;Connect Timeout=30";
+
+            using (SqlConnection conn = new SqlConnection(masterConn))
             {
-                DataSource = @"(LocalDB)\MSSQLLocalDB",
-                IntegratedSecurity = true,
-                ConnectTimeout = 30,
-                AttachDBFilename = databaseFilePath,
-                InitialCatalog = string.Empty
-            };
+                conn.Open();
 
-            return builder.ConnectionString;
+                // Check if already attached under our consistent name
+                SqlCommand check = new SqlCommand(
+                    "SELECT COUNT(*) FROM sys.databases WHERE name = @name", conn);
+                check.Parameters.AddWithValue("@name", DbName);
+                int exists = (int)check.ExecuteScalar();
+
+                if (exists == 0)
+                {
+                    // Attach it with a fixed name so it never conflicts
+                    SqlCommand attach = new SqlCommand(
+                        $"CREATE DATABASE [{DbName}] ON (FILENAME = N'{mdfPath}') FOR ATTACH", conn);
+                    attach.ExecuteNonQuery();
+                }
+            }
+
+            _attached = true;
         }
 
         public static SqlConnection GetConnection()
         {
-            return new SqlConnection(connectionString);
+            EnsureAttached();
+            string connStr = $"Data Source={DataSource};Initial Catalog={DbName};Integrated Security=True;Connect Timeout=30";
+            return new SqlConnection(connStr);
         }
     }
 }

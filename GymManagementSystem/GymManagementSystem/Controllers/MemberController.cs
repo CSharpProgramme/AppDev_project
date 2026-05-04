@@ -40,6 +40,11 @@ namespace GymManagementSystem.Controllers
             return memberRepository.GetTotalMembers();
         }
 
+        public int GetActiveSubscriptionCount()
+        {
+            return memberRepository.GetActiveSubscriptionCount();
+        }
+
         public void AddMember(Member member)
         {
             memberRepository.AddMember(member);
@@ -48,6 +53,11 @@ namespace GymManagementSystem.Controllers
         public void UpdateMember(Member member)
         {
             memberRepository.UpdateMember(member);
+        }
+
+        public void DeactivateMember(int memberId)
+        {
+            memberRepository.DeactivateMember(memberId);
         }
 
         public void DeleteMember(int memberId)
