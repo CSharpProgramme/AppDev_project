@@ -114,7 +114,7 @@ namespace GymManagementSystem.Views
                 return;
             }
 
-            PTSessionUpsertForm form = new PTSessionUpsertForm();//selected
+            PTSessionUpsertForm form = new PTSessionUpsertForm(selected);
             form.FormClosed += (s, args) => LoadSessions();
             form.ShowDialog();
         }
@@ -175,6 +175,11 @@ namespace GymManagementSystem.Views
                     break;
                 }
             }
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
