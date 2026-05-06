@@ -37,37 +37,43 @@ namespace GymManagementSystem.Views
             {
                 HeaderText = "Session ID",
                 DataPropertyName = "PTSessionID",
-                ReadOnly = true
+                ReadOnly = true,
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             });
 
             sessionDataGridView.Columns.Add(new DataGridViewTextBoxColumn
             {
                 HeaderText = "Member ID",
-                DataPropertyName = "MemberID"
+                DataPropertyName = "MemberID",
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             });
 
             sessionDataGridView.Columns.Add(new DataGridViewTextBoxColumn
             {
                 HeaderText = "Trainer ID",
-                DataPropertyName = "TrainerID"
+                DataPropertyName = "TrainerID",
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             });
 
             sessionDataGridView.Columns.Add(new DataGridViewTextBoxColumn
             {
                 HeaderText = "Scheduled At",
-                DataPropertyName = "ScheduledAt"
+                DataPropertyName = "ScheduledAt",
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             });
 
             sessionDataGridView.Columns.Add(new DataGridViewTextBoxColumn
             {
                 HeaderText = "Duration (min)",
-                DataPropertyName = "DurationMinutes"
+                DataPropertyName = "DurationMinutes",
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             });
 
             sessionDataGridView.Columns.Add(new DataGridViewTextBoxColumn
             {
                 HeaderText = "Status",
-                DataPropertyName = "Status"
+                DataPropertyName = "Status",
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             });
 
             sessionDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -156,7 +162,7 @@ namespace GymManagementSystem.Views
         private void SetGridLanguage()
         {
             string lang = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
-            SetColumnHeader("MemberID", MainPanelLocalization.TranslateFromEnglish("ID", lang));
+            SetColumnHeader("MemberID", MainPanelLocalization.TranslateFromEnglish("Member ID", lang));
             SetColumnHeader("FName", MainPanelLocalization.TranslateFromEnglish("First Name", lang));
             SetColumnHeader("LName", MainPanelLocalization.TranslateFromEnglish("Last Name", lang));
             SetColumnHeader("Email", MainPanelLocalization.TranslateFromEnglish("Email", lang));

@@ -49,8 +49,8 @@ namespace GymManagementSystem.Views
             memberDataGridView.Columns.Clear();
 
             memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "MemberID", HeaderText = "ID" });
-            memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "FName", HeaderText = "First Name" });
-            memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "LName", HeaderText = "Last Name" });
+            memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "FName", HeaderText = "First Name", AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill });
+            memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "LName", HeaderText = "Last Name", AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill });
 
             memberDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             memberDataGridView.MultiSelect = false;
@@ -63,8 +63,8 @@ namespace GymManagementSystem.Views
             trainerDataGridView.Columns.Clear();
 
             trainerDataGridView.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "TrainerId", HeaderText = "ID" });
-            trainerDataGridView.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "FName", HeaderText = "First Name" });
-            trainerDataGridView.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "LName", HeaderText = "Last Name" });
+            trainerDataGridView.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "FName", HeaderText = "First Name", AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill });
+            trainerDataGridView.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "LName", HeaderText = "Last Name", AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill });
 
             trainerDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             trainerDataGridView.MultiSelect = false;

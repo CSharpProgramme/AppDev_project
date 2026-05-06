@@ -150,7 +150,7 @@
             this.memberDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.memberDataGridView.Location = new System.Drawing.Point(11, 59);
             this.memberDataGridView.Name = "memberDataGridView";
-            this.memberDataGridView.Size = new System.Drawing.Size(710, 164);
+            this.memberDataGridView.Size = new System.Drawing.Size(401, 164);
             this.memberDataGridView.TabIndex = 12;
             // 
             // trainerDataGridView
@@ -158,7 +158,7 @@
             this.trainerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.trainerDataGridView.Location = new System.Drawing.Point(11, 280);
             this.trainerDataGridView.Name = "trainerDataGridView";
-            this.trainerDataGridView.Size = new System.Drawing.Size(710, 164);
+            this.trainerDataGridView.Size = new System.Drawing.Size(401, 164);
             this.trainerDataGridView.TabIndex = 13;
             // 
             // contextMenuStrip1
@@ -179,7 +179,7 @@
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(608, 553);
+            this.exitButton.Location = new System.Drawing.Point(299, 553);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(113, 42);
             this.exitButton.TabIndex = 16;
@@ -189,7 +189,7 @@
             // 
             // createButton
             // 
-            this.createButton.Location = new System.Drawing.Point(480, 553);
+            this.createButton.Location = new System.Drawing.Point(171, 553);
             this.createButton.Name = "createButton";
             this.createButton.Size = new System.Drawing.Size(113, 42);
             this.createButton.TabIndex = 17;
@@ -256,7 +256,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(733, 607);
+            this.ClientSize = new System.Drawing.Size(423, 607);
             this.Controls.Add(this.durationLabel);
             this.Controls.Add(this.durationTextBox);
             this.Controls.Add(this.searchTrainersButton);

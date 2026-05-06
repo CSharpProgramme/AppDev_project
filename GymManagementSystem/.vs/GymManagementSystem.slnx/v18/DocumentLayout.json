@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\andyr\\Downloads\\AppDev_project\\GymManagementSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2B9EF50C-D6B4-4D8D-A940-AB2D8222E493}|GymManagementSystem\\GymManagementSystem.csproj|c:\\users\\andyr\\downloads\\appdev_project\\gymmanagementsystem\\gymmanagementsystem\\views\\ptsessionupsertform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B9EF50C-D6B4-4D8D-A940-AB2D8222E493}|GymManagementSystem\\GymManagementSystem.csproj|solutionrelative:gymmanagementsystem\\views\\ptsessionupsertform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B9EF50C-D6B4-4D8D-A940-AB2D8222E493}|GymManagementSystem\\GymManagementSystem.csproj|c:\\users\\andyr\\downloads\\appdev_project\\gymmanagementsystem\\gymmanagementsystem\\views\\ptsessionupsertform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2B9EF50C-D6B4-4D8D-A940-AB2D8222E493}|GymManagementSystem\\GymManagementSystem.csproj|solutionrelative:gymmanagementsystem\\views\\ptsessionupsertform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2B9EF50C-D6B4-4D8D-A940-AB2D8222E493}|GymManagementSystem\\GymManagementSystem.csproj|c:\\users\\andyr\\downloads\\appdev_project\\gymmanagementsystem\\gymmanagementsystem\\views\\ptsessionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2B9EF50C-D6B4-4D8D-A940-AB2D8222E493}|GymManagementSystem\\GymManagementSystem.csproj|solutionrelative:gymmanagementsystem\\views\\ptsessionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B9EF50C-D6B4-4D8D-A940-AB2D8222E493}|GymManagementSystem\\GymManagementSystem.csproj|c:\\users\\andyr\\downloads\\appdev_project\\gymmanagementsystem\\gymmanagementsystem\\views\\ptsessionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{2B9EF50C-D6B4-4D8D-A940-AB2D8222E493}|GymManagementSystem\\GymManagementSystem.csproj|C:\\Users\\andyr\\Downloads\\AppDev_project\\GymManagementSystem\\gymmanagementsystem\\views\\ptsessionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2B9EF50C-D6B4-4D8D-A940-AB2D8222E493}|GymManagementSystem\\GymManagementSystem.csproj|solutionrelative:gymmanagementsystem\\views\\ptsessionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B9EF50C-D6B4-4D8D-A940-AB2D8222E493}|GymManagementSystem\\GymManagementSystem.csproj|c:\\users\\andyr\\downloads\\appdev_project\\gymmanagementsystem\\gymmanagementsystem\\views\\membershipplancontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2B9EF50C-D6B4-4D8D-A940-AB2D8222E493}|GymManagementSystem\\GymManagementSystem.csproj|solutionrelative:gymmanagementsystem\\views\\membershipplancontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B9EF50C-D6B4-4D8D-A940-AB2D8222E493}|GymManagementSystem\\GymManagementSystem.csproj|c:\\users\\andyr\\downloads\\appdev_project\\gymmanagementsystem\\gymmanagementsystem\\views\\membershipplancontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B9EF50C-D6B4-4D8D-A940-AB2D8222E493}|GymManagementSystem\\GymManagementSystem.csproj|solutionrelative:gymmanagementsystem\\views\\membershipplancontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,19 +43,69 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "PTSessionUpsertForm.cs",
+              "DocumentMoniker": "C:\\Users\\andyr\\Downloads\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\Views\\PTSessionUpsertForm.cs",
+              "RelativeDocumentMoniker": "GymManagementSystem\\Views\\PTSessionUpsertForm.cs",
+              "ToolTip": "C:\\Users\\andyr\\Downloads\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\Views\\PTSessionUpsertForm.cs",
+              "RelativeToolTip": "GymManagementSystem\\Views\\PTSessionUpsertForm.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAgwEIAAAC0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T18:47:57.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PTSessionUpsertForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\andyr\\Downloads\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\Views\\PTSessionUpsertForm.cs",
+              "RelativeDocumentMoniker": "GymManagementSystem\\Views\\PTSessionUpsertForm.cs",
+              "ToolTip": "C:\\Users\\andyr\\Downloads\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\Views\\PTSessionUpsertForm.cs [Design]",
+              "RelativeToolTip": "GymManagementSystem\\Views\\PTSessionUpsertForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T18:46:54.755Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MembershipPlanControl.cs",
+              "DocumentMoniker": "C:\\Users\\andyr\\Downloads\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\Views\\MembershipPlanControl.cs",
+              "RelativeDocumentMoniker": "GymManagementSystem\\Views\\MembershipPlanControl.cs",
+              "ToolTip": "C:\\Users\\andyr\\Downloads\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\Views\\MembershipPlanControl.cs",
+              "RelativeToolTip": "GymManagementSystem\\Views\\MembershipPlanControl.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowD0AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T18:42:38.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MembershipPlanControl.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\andyr\\Downloads\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\Views\\MembershipPlanControl.cs",
+              "RelativeDocumentMoniker": "GymManagementSystem\\Views\\MembershipPlanControl.cs",
+              "ToolTip": "C:\\Users\\andyr\\Downloads\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\Views\\MembershipPlanControl.cs [Design]",
+              "RelativeToolTip": "GymManagementSystem\\Views\\MembershipPlanControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T18:42:35.934Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "PTSessionForm.cs",
               "DocumentMoniker": "C:\\Users\\andyr\\Downloads\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\Views\\PTSessionForm.cs",
               "RelativeDocumentMoniker": "GymManagementSystem\\Views\\PTSessionForm.cs",
               "ToolTip": "C:\\Users\\andyr\\Downloads\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\Views\\PTSessionForm.cs",
               "RelativeToolTip": "GymManagementSystem\\Views\\PTSessionForm.cs",
-              "ViewState": "AgIAAKgAAAAAAAAAAAAwwLUAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAAAKQAAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-06T18:24:09.419Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "PTSessionForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\andyr\\Downloads\\AppDev_project\\GymManagementSystem\\GymManagementSystem\\Views\\PTSessionForm.cs",
               "RelativeDocumentMoniker": "GymManagementSystem\\Views\\PTSessionForm.cs",
