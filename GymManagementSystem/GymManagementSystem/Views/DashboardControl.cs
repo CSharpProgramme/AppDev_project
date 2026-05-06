@@ -1,7 +1,9 @@
 ﻿using GymManagementSystem.Controllers;
+using GymManagementSystem.Localization;
 using GymManagementSystem.Models;
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace GymManagementSystem
@@ -49,17 +51,22 @@ namespace GymManagementSystem
         {
             SetGridLanguage();
         }
+
+        public void RefreshLanguage()
+        {
+            SetGridLanguage();
+        }
+
         private void SetGridLanguage()
         {
-            bool isFrench = System.Threading.Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName == "fr";
-
-            SetColumnHeader("MemberID", isFrench ? "ID Membre" : "ID");
-            SetColumnHeader("FName", isFrench ? "Prenom" : "First Name");
-            SetColumnHeader("LName", isFrench ? "Nom" : "Last Name");
-            SetColumnHeader("Email", "Email");
-            SetColumnHeader("Phone", isFrench ? "Telephone" : "Phone");
-            SetColumnHeader("JoinDate", isFrench ? "Date d'inscription" : "Join Date");
-            SetColumnHeader("Status", isFrench ? "Statut" : "Status");
+            string lang = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
+            SetColumnHeader("MemberID", MainPanelLocalization.TranslateFromEnglish("ID", lang));
+            SetColumnHeader("FName", MainPanelLocalization.TranslateFromEnglish("First Name", lang));
+            SetColumnHeader("LName", MainPanelLocalization.TranslateFromEnglish("Last Name", lang));
+            SetColumnHeader("Email", MainPanelLocalization.TranslateFromEnglish("Email", lang));
+            SetColumnHeader("Phone", MainPanelLocalization.TranslateFromEnglish("Phone", lang));
+            SetColumnHeader("JoinDate", MainPanelLocalization.TranslateFromEnglish("Join Date", lang));
+            SetColumnHeader("Status", MainPanelLocalization.TranslateFromEnglish("Status", lang));
         }
 
         private void SetColumnHeader(string dataPropertyName, string headerText)

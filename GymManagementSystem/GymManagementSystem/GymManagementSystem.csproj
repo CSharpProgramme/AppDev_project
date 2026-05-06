@@ -93,6 +93,10 @@
     <Compile Include="Repositories\PTSessionRepository.cs" />
     <Compile Include="Repositories\StaffRepository.cs" />
     <Compile Include="Repositories\TrainerRepository.cs" />
+    <Compile Include="Localization\MainPanelEnglishStrings.cs" />
+    <Compile Include="Localization\MainPanelFrenchStrings.cs" />
+    <Compile Include="Localization\MainPanelLocalization.cs" />
+    <Compile Include="Localization\MainPanelSpanishStrings.cs" />
     <Compile Include="Views\Auth.cs" />
     <Compile Include="Views\EmployeeRegisterForm.cs">
       <SubType>Form</SubType>

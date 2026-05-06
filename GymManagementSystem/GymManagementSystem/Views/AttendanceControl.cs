@@ -1,8 +1,10 @@
 ﻿using GymManagementSystem.Controllers;
+using GymManagementSystem.Localization;
 using GymManagementSystem.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace GymManagementSystem
@@ -39,6 +41,7 @@ namespace GymManagementSystem
             // GetCurrentlyIn returns a DataTable — DataGridView can bind to it directly
             DataTable dt = attendanceController.GetCurrentlyIn();
             dgvCurrentlyIn.DataSource = dt;
+            SetGridLanguage();
         }
 
         /// Fetches and displays today's full attendance history —
@@ -49,6 +52,7 @@ namespace GymManagementSystem
             // GetTodayAttendanceLog returns all today's records including checked-out members
             DataTable dt = attendanceController.GetTodayAttendanceLog();
             dgvAttendanceLog.DataSource = dt;
+            SetGridLanguage();
         }
 
         /// Returns the member ID of the row selected in dgvSearchResults.
@@ -142,5 +146,55 @@ namespace GymManagementSystem
                 MessageBox.Show(ex.Message, "Error");
             }
         }
+        public void RefreshLanguage()
+        {
+            SetGridLanguage();
+        }
+
+        private void SetGridLanguage()
+        {
+            string lang = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
+            SetColumnHeader("MemberID", MainPanelLocalization.TranslateFromEnglish("ID", lang));
+            SetColumnHeader("FName", MainPanelLocalization.TranslateFromEnglish("First Name", lang));
+            SetColumnHeader("LName", MainPanelLocalization.TranslateFromEnglish("Last Name", lang));
+            SetColumnHeader("Email", MainPanelLocalization.TranslateFromEnglish("Email", lang));
+            SetColumnHeader("Phone", MainPanelLocalization.TranslateFromEnglish("Phone", lang));
+            SetColumnHeader("JoinDate", MainPanelLocalization.TranslateFromEnglish("Join Date", lang));
+            SetColumnHeader("Status", MainPanelLocalization.TranslateFromEnglish("Status", lang));
+            SetColumnHeader("MemeberName", MainPanelLocalization.TranslateFromEnglish("Member Name", lang));
+            SetColumnHeader("CheckIn", MainPanelLocalization.TranslateFromEnglish("Check In", lang));
+            SetColumnHeader("CheckOut", MainPanelLocalization.TranslateFromEnglish("Check Out", lang));
+
+        }
+
+        private void SetColumnHeader(string dataPropertyName, string headerText)
+        {
+            foreach (DataGridViewColumn column in dgvSearchResults.Columns)
+            {
+                if (string.Equals(column.DataPropertyName, dataPropertyName, StringComparison.OrdinalIgnoreCase))
+                {
+                    column.HeaderText = headerText;
+                    break;
+                }
+            }
+            foreach (DataGridViewColumn column in dgvCurrentlyIn.Columns)
+            {
+                if (string.Equals(column.DataPropertyName, dataPropertyName, StringComparison.OrdinalIgnoreCase))
+                {
+                    column.HeaderText = headerText;
+                    break;
+                }
+            }
+            foreach (DataGridViewColumn column in dgvAttendanceLog.Columns)
+            {
+                if (string.Equals(column.DataPropertyName, dataPropertyName, StringComparison.OrdinalIgnoreCase))
+                {
+                    column.HeaderText = headerText;
+                    break;
+                }
+            }
+            
+        }
+
     }
 }

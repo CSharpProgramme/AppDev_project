@@ -1,4 +1,5 @@
 using GymManagementSystem.Controllers;
+using GymManagementSystem.Localization;
 using GymManagementSystem.Models;
 using GymManagementSystem.Views;
 using GymManagementSystem.Views.AllRegisterForms;
@@ -9,6 +10,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -75,6 +77,7 @@ namespace GymManagementSystem
             staffDataGridView.DataSource = null;
             staffDataGridView.DataSource = staff;
             StaffDataGridView_SelectionChanged(null, EventArgs.Empty);
+            SetGridLanguage();
         }
 
         private Staff GetSelectedStaff()
@@ -101,6 +104,8 @@ namespace GymManagementSystem
         private void EmployeeControl_Load(object sender, EventArgs e)
         {
             LoadStaff();
+            SetGridLanguage();
+
         }
 
         private void EditStaffBtn_Click(object sender, EventArgs e)
@@ -145,6 +150,37 @@ namespace GymManagementSystem
             catch (Exception ex)
             {
                 MessageBox.Show("Failed to delete staff: " + ex.Message);
+            }
+        }
+
+        private void SetGridLanguage()
+        {
+            string lang = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
+            SetColumnHeader("member_id", MainPanelLocalization.TranslateFromEnglish("ID", lang));
+            SetColumnHeader("FName", MainPanelLocalization.TranslateFromEnglish("First Name", lang));
+            SetColumnHeader("LName", MainPanelLocalization.TranslateFromEnglish("Last Name", lang));
+            SetColumnHeader("Email", MainPanelLocalization.TranslateFromEnglish("Email", lang));
+            SetColumnHeader("Phone", MainPanelLocalization.TranslateFromEnglish("Phone", lang));
+            SetColumnHeader("Position", MainPanelLocalization.TranslateFromEnglish("Position", lang));
+            SetColumnHeader("Role", MainPanelLocalization.TranslateFromEnglish("Role", lang));
+            SetColumnHeader("Salary", MainPanelLocalization.TranslateFromEnglish("Salary", lang));
+            SetColumnHeader("JoinDate", MainPanelLocalization.TranslateFromEnglish("Join Date", lang));
+            SetColumnHeader("Status", MainPanelLocalization.TranslateFromEnglish("Status", lang));
+        }
+        public void RefreshLanguage()
+        {
+            SetGridLanguage();
+        }
+
+        private void SetColumnHeader(string dataPropertyName, string headerText)
+        {
+            foreach (DataGridViewColumn column in staffDataGridView.Columns)
+            {
+                if (string.Equals(column.DataPropertyName, dataPropertyName, StringComparison.OrdinalIgnoreCase))
+                {
+                    column.HeaderText = headerText;
+                    break;
+                }
             }
         }
     }

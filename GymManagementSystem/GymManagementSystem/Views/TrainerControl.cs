@@ -1,8 +1,10 @@
 ﻿using GymManagementSystem.Controllers;
+using GymManagementSystem.Localization;
 using GymManagementSystem.Models;
 using GymManagementSystem.Views;
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace GymManagementSystem
@@ -108,6 +110,7 @@ namespace GymManagementSystem
             }
 
             UpdateButtonState();
+            SetGridLanguage();
         }
 
         // GET SELECTED
@@ -200,6 +203,36 @@ namespace GymManagementSystem
         {
             PTSessionForm form = new PTSessionForm();
             form.ShowDialog();
+        }
+        public void RefreshLanguage()
+        {
+            SetGridLanguage();
+        }
+
+        private void SetGridLanguage()
+        {
+            string lang = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
+            SetColumnHeader("MemberID", MainPanelLocalization.TranslateFromEnglish("ID", lang));
+            SetColumnHeader("FName", MainPanelLocalization.TranslateFromEnglish("First Name", lang));
+            SetColumnHeader("LName", MainPanelLocalization.TranslateFromEnglish("Last Name", lang));
+            SetColumnHeader("Email", MainPanelLocalization.TranslateFromEnglish("Email", lang));
+            SetColumnHeader("Phone", MainPanelLocalization.TranslateFromEnglish("Phone", lang));
+            SetColumnHeader("JoinDate", MainPanelLocalization.TranslateFromEnglish("Join Date", lang));
+            SetColumnHeader("Specialization", MainPanelLocalization.TranslateFromEnglish("Specialization", lang));
+            SetColumnHeader("HourlyRate", MainPanelLocalization.TranslateFromEnglish("Hourly Rate", lang));
+            SetColumnHeader("Status", MainPanelLocalization.TranslateFromEnglish("Status", lang));
+        }
+
+        private void SetColumnHeader(string dataPropertyName, string headerText)
+        {
+            foreach (DataGridViewColumn column in trainerDataGridView.Columns)
+            {
+                if (string.Equals(column.DataPropertyName, dataPropertyName, StringComparison.OrdinalIgnoreCase))
+                {
+                    column.HeaderText = headerText;
+                    break;
+                }
+            }
         }
     }
 }

@@ -1,14 +1,9 @@
-﻿using GymManagementSystem.Views;
+﻿using GymManagementSystem.Controllers;
+using GymManagementSystem.Localization;
+using GymManagementSystem.Views;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Globalization;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GymManagementSystem
@@ -22,46 +17,34 @@ namespace GymManagementSystem
     
     public partial class AdminForm : Form
     {
-        private bool isFrenchUi;
-        private readonly Dictionary<string, string> englishToFrench = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
-        {
-            { "Dashboard", "Tableau de bord" },
-            { "Members", "Membres" },
-            { "Employees", "Employes" },
-            { "Trainers", "Entraineurs" },
-            { "Revenue", "Revenu" },
-            { "Member's Attendance", "Présence des membres" },
-            { "Membership Plan", "Abonnements" },
-            { "Membership Plans", "Abonnements" },
-            { "Admin Panel", "Panneau admin" },
-            { "Register a Member", "Inscrire un membre" },
-            { "Edit a Member", "Modifier un membre" },
-            { "Delete Member", "Supprimer membre" },
-            { "Search", "Rechercher" },
-            { "Member List", "Liste des membres" },
-            { "Register Member", "Inscrire membre" },
-            { "Register Trainer", "Inscrire entraineur" },
-            { "Edit Trainer", "Modifier entraineur" },
-            { "Delete Trainer", "Supprimer entraineur" },
-            { "View PT Session", "Voir session PT" },
-            { "Register Plan", "Inscrire plan" },
-            { "Delete Plan", "Supprimer plan" },
-            { "Edit Plan", "Modifier plan" },
-            { "PT Sessions", "Sessions PT" },
-            { "Create Session", "Creer session" },
-            { "Edit Session", "Modifier session" },
-            { "Cancel Session", "Annuler session" },
-                { "Register Staff", "Ajouter personnel" },
-            { "Edit Staff Info", "Modifier personnel" },
-            { "Delete Staff", "Suprimmer personnel" }
-        };
+        private bool _languageComboInitializing;
 
         public AdminForm()
         {
             InitializeComponent();
-        
-            isFrenchUi = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName == "fr";
+            InitLanguageCombo();
+            SyncLanguageComboFromCulture();
             ApplyPermissions();
+        }
+
+        private void InitLanguageCombo()
+        {
+            languageComboBox.Items.Clear();
+            languageComboBox.Items.AddRange(new object[] { "English", "Français", "Español" });
+        }
+
+        private void SyncLanguageComboFromCulture()
+        {
+            _languageComboInitializing = true;
+            try
+            {
+                string two = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
+                languageComboBox.SelectedIndex = two == "fr" ? 1 : two == "es" ? 2 : 0;
+            }
+            finally
+            {
+                _languageComboInitializing = false;
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -76,6 +59,7 @@ namespace GymManagementSystem
             uc.Dock = DockStyle.Fill;//FILL THE PANEL WITH THE NEW CONTROL
             mainPanel.Controls.Add(uc);//ADD THE NEW CONTROL TO THE PANEL
             ApplyLanguage(this);
+            RefreshDashboardLanguageInMainPanel();
         }
 
         private void dashBoardButton_Click(object sender, EventArgs e)
@@ -114,21 +98,40 @@ namespace GymManagementSystem
             LoadControl(new MembershipPlanControl());
         }
 
-        private void languageBtn_Click(object sender, EventArgs e)
+        private void languageComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            isFrenchUi = !isFrenchUi;
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo(isFrenchUi ? "fr-FR" : "en-US");
-            Thread.CurrentThread.CurrentCulture = new CultureInfo(isFrenchUi ? "fr-FR" : "en-US");
+            if (_languageComboInitializing || languageComboBox.SelectedIndex < 0)
+            {
+                return;
+            }
+
+            string cultureName = languageComboBox.SelectedIndex == 1 ? "fr-FR" : languageComboBox.SelectedIndex == 2 ? "es-ES" : "en-US";
+            var culture = new CultureInfo(cultureName);
+            Thread.CurrentThread.CurrentUICulture = culture;
+            Thread.CurrentThread.CurrentCulture = culture;
             ApplyLanguage(this);
+            RefreshDashboardLanguageInMainPanel();
         }
 
         private void ApplyLanguage(Control root)
         {
+            string lang = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
+
             foreach (Control control in root.Controls)
             {
+                if (control == languageComboBox)
+                {
+                    if (control.HasChildren)
+                    {
+                        ApplyLanguage(control);
+                    }
+
+                    continue;
+                }
+
                 if (!string.IsNullOrWhiteSpace(control.Text))
                 {
-                    control.Text = TranslateText(control.Text);
+                    control.Text = MainPanelLocalization.TranslateVisibleText(control.Text, lang);
                 }
 
                 if (control.HasChildren)
@@ -136,26 +139,53 @@ namespace GymManagementSystem
                     ApplyLanguage(control);
                 }
             }
-
-            EnglishBtn.Text = isFrenchUi ? "English" : "Francais";
         }
 
-        private string TranslateText(string source)
+        private void RefreshDashboardLanguageInMainPanel()
         {
-            if (isFrenchUi)
+            foreach (Control c in mainPanel.Controls)
             {
-                return englishToFrench.TryGetValue(source, out string frenchText) ? frenchText : source;
-            }
-
-            foreach (var pair in englishToFrench)
-            {
-                if (string.Equals(source, pair.Value, StringComparison.OrdinalIgnoreCase))
+                if (c is DashboardControl dashboard)
                 {
-                    return pair.Key;
+                    dashboard.RefreshLanguage();
+                   
+                }
+                if (c is EmployeeControl employeeControl)
+                {
+                    employeeControl.RefreshLanguage();
+
+                }
+                if (c is MemberControl memberControl)
+                {
+                    memberControl.RefreshLanguage();
+
+                }
+                if (c is PTSessionForm pTSessionForm)
+                {
+                    pTSessionForm.RefreshLanguage();
+
+                }
+                if (c is TrainerControl trainerControl)
+                {
+                    trainerControl.RefreshLanguage();
+
+                }
+                if (c is  AttendanceControl attendanceControl)
+                {
+                    attendanceControl.RefreshLanguage();
+
+                }
+                if (c is RevenueControl revenueControl)
+                {
+                    revenueControl.RefreshLanguage();
+
+                }
+                if (c is MembershipPlanControl membershipPlanControl)
+                {
+                    membershipPlanControl.RefreshLanguage();
+
                 }
             }
-
-            return source;
         }
         public void ApplyPermissions()
         {
@@ -166,6 +196,15 @@ namespace GymManagementSystem
 
 
             }
+        }
+
+        private void logOut_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+         
+            loginForm.FormClosed += (s, args) => this.Close();
+            loginForm.Show();
+            this.Hide();
         }
     }
 }

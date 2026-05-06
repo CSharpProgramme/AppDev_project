@@ -1,9 +1,11 @@
 ﻿using GymManagementSystem.Controllers;
+using GymManagementSystem.Localization;
 using GymManagementSystem.Models;
 using GymManagementSystem.Views;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace GymManagementSystem
@@ -41,9 +43,36 @@ namespace GymManagementSystem
             deleteButton.Enabled = hasSelection;
         }
 
+
+        private void SetGridLanguage()
+        {
+            string lang = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
+            SetColumnHeader("MemberID", MainPanelLocalization.TranslateFromEnglish("ID", lang));
+            SetColumnHeader("FName", MainPanelLocalization.TranslateFromEnglish("First Name", lang));
+            SetColumnHeader("LName", MainPanelLocalization.TranslateFromEnglish("Last Name", lang));
+            SetColumnHeader("Email", MainPanelLocalization.TranslateFromEnglish("Email", lang));
+            SetColumnHeader("Phone", MainPanelLocalization.TranslateFromEnglish("Phone", lang));
+            SetColumnHeader("JoinDate", MainPanelLocalization.TranslateFromEnglish("Join Date", lang));
+            SetColumnHeader("Status", MainPanelLocalization.TranslateFromEnglish("Status", lang));
+            SetColumnHeader("EmergencyContactName", MainPanelLocalization.TranslateFromEnglish("Emergency Contact Name", lang));
+            SetColumnHeader("EmergencyContactPhone", MainPanelLocalization.TranslateFromEnglish("Emergency Contact Phone", lang));
+        }
+        private void SetColumnHeader(string dataPropertyName, string headerText)
+        {
+            foreach (DataGridViewColumn column in memberDataGridView.Columns)
+            {
+                if (string.Equals(column.DataPropertyName, dataPropertyName, StringComparison.OrdinalIgnoreCase))
+                {
+                    column.HeaderText = headerText;
+                    break;
+                }
+            }
+        }
+
         //fetch all members from the controller and display them in datagridview
         private void LoadMembers()
         {
+            
             List<Member> members = memberController.GetAllMembers();
 
             // Turn off auto generated columns
@@ -69,6 +98,7 @@ namespace GymManagementSystem
             memberDataGridView.Columns.Add(new DataGridViewTextBoxColumn { Name = "Status",                HeaderText = "Status",             DataPropertyName = "Status" });
 
             memberDataGridView.DataSource = members;
+            SetGridLanguage();
         }
 
         //when user clicks on the search box, it clears the placeholder
@@ -130,7 +160,10 @@ namespace GymManagementSystem
             editForm.FormClosed += (s, args) => LoadMembers();
             editForm.ShowDialog();
         }
-
+        public void RefreshLanguage()
+        {
+            SetGridLanguage();
+        }
         private void DeleteButton_Click(object sender, EventArgs e)
         {
             if (memberDataGridView.SelectedRows.Count == 0)

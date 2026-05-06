@@ -1,8 +1,10 @@
+using GymManagementSystem.Controllers;
+using GymManagementSystem.Localization;
 using System;
 using System.Data;
+using System.Threading;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
-using GymManagementSystem.Controllers;
 
 namespace GymManagementSystem
 {
@@ -75,6 +77,7 @@ namespace GymManagementSystem
             {
                 MessageBox.Show("Error loading revenue data: " + ex.Message);
             }
+            SetGridLanguage();
         }
 
         /// Populates the bar chart with monthly revenue totals.
@@ -117,6 +120,36 @@ namespace GymManagementSystem
             cmbMethod.SelectedIndex = 0;
 
             LoadData();
+        }
+        public void RefreshLanguage()
+        {
+            SetGridLanguage();
+        }
+
+        private void SetGridLanguage()
+        {
+            string lang = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
+            SetColumnHeader("PaymentId", MainPanelLocalization.TranslateFromEnglish("Payment ID", lang));
+            SetColumnHeader("MemberName", MainPanelLocalization.TranslateFromEnglish("Member Name", lang));
+            SetColumnHeader("Amount", MainPanelLocalization.TranslateFromEnglish("Amount", lang));
+            SetColumnHeader("PlanName", MainPanelLocalization.TranslateFromEnglish("Plan Name", lang));
+          SetColumnHeader("PaymentDate", MainPanelLocalization.TranslateFromEnglish("Payment Date", lang));
+          
+          
+
+            SetColumnHeader("Status", MainPanelLocalization.TranslateFromEnglish("Status", lang));
+        }
+
+        private void SetColumnHeader(string dataPropertyName, string headerText)
+        {
+            foreach (DataGridViewColumn column in paymentDataGridView.Columns)
+            {
+                if (string.Equals(column.DataPropertyName, dataPropertyName, StringComparison.OrdinalIgnoreCase))
+                {
+                    column.HeaderText = headerText;
+                    break;
+                }
+            }
         }
     }
 }

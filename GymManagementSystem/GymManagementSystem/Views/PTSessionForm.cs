@@ -1,7 +1,9 @@
 ﻿using GymManagementSystem.Controllers;
+using GymManagementSystem.Localization;
 using GymManagementSystem.Models;
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace GymManagementSystem.Views
@@ -22,6 +24,7 @@ namespace GymManagementSystem.Views
             cancelSessionButton.Enabled = false;
 
             sessionDataGridView.SelectionChanged += SessionDataGridView_SelectionChanged;
+            SetGridLanguage();
         }
 
         // GRID CONFIG
@@ -144,6 +147,34 @@ namespace GymManagementSystem.Views
             PTSessionUpsertForm form = new PTSessionUpsertForm();
             form.FormClosed += (s, args) => LoadSessions();
             form.ShowDialog();
+        }
+        public void RefreshLanguage()
+        {
+            SetGridLanguage();
+        }
+
+        private void SetGridLanguage()
+        {
+            string lang = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
+            SetColumnHeader("MemberID", MainPanelLocalization.TranslateFromEnglish("ID", lang));
+            SetColumnHeader("FName", MainPanelLocalization.TranslateFromEnglish("First Name", lang));
+            SetColumnHeader("LName", MainPanelLocalization.TranslateFromEnglish("Last Name", lang));
+            SetColumnHeader("Email", MainPanelLocalization.TranslateFromEnglish("Email", lang));
+            SetColumnHeader("Phone", MainPanelLocalization.TranslateFromEnglish("Phone", lang));
+            SetColumnHeader("JoinDate", MainPanelLocalization.TranslateFromEnglish("Join Date", lang));
+            SetColumnHeader("Status", MainPanelLocalization.TranslateFromEnglish("Status", lang));
+        }
+
+        private void SetColumnHeader(string dataPropertyName, string headerText)
+        {
+            foreach (DataGridViewColumn column in sessionDataGridView.Columns)
+            {
+                if (string.Equals(column.DataPropertyName, dataPropertyName, StringComparison.OrdinalIgnoreCase))
+                {
+                    column.HeaderText = headerText;
+                    break;
+                }
+            }
         }
     }
 }

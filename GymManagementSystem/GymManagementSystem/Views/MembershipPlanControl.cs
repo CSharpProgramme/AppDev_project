@@ -1,9 +1,11 @@
 ﻿using GymManagementSystem.Controllers;
+using GymManagementSystem.Localization;
 using GymManagementSystem.Models;
 using GymManagementSystem.Views;
 using GymManagementSystem.Views.AllRegisterForms;
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace GymManagementSystem
@@ -72,6 +74,7 @@ namespace GymManagementSystem
 
             membershipPlanDataGridView.DataSource = null;
             membershipPlanDataGridView.DataSource = plans;
+            SetGridLanguage();
         }
 
         private MembershipPlan GetSelectedPlan()
@@ -130,6 +133,33 @@ namespace GymManagementSystem
 
             planController.DeletePlan(selectedPlan.PlanId);
             LoadPlans();
+        }
+        public void RefreshLanguage()
+        {
+            SetGridLanguage();
+        }
+
+        private void SetGridLanguage()
+        {
+            string lang = Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
+            SetColumnHeader("PlanId", MainPanelLocalization.TranslateFromEnglish("Plan ID", lang));
+            SetColumnHeader("name", MainPanelLocalization.TranslateFromEnglish("Name", lang));
+            SetColumnHeader("DurationDays", MainPanelLocalization.TranslateFromEnglish("Duration Name", lang));
+            SetColumnHeader("price", MainPanelLocalization.TranslateFromEnglish("price", lang));
+            SetColumnHeader("description", MainPanelLocalization.TranslateFromEnglish("description", lang));
+     
+        }
+
+        private void SetColumnHeader(string dataPropertyName, string headerText)
+        {
+            foreach (DataGridViewColumn column in membershipPlanDataGridView.Columns)
+            {
+                if (string.Equals(column.DataPropertyName, dataPropertyName, StringComparison.OrdinalIgnoreCase))
+                {
+                    column.HeaderText = headerText;
+                    break;
+                }
+            }
         }
     }
 }

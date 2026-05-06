@@ -31,7 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             this.sidebarNavPanel = new System.Windows.Forms.Panel();
-            this.EnglishBtn = new System.Windows.Forms.Button();
+            this.logOut = new System.Windows.Forms.Button();
+            this.languageComboBox = new System.Windows.Forms.ComboBox();
             this.adminTitleLabel = new System.Windows.Forms.Label();
             this.membershipPlanButton = new System.Windows.Forms.Button();
             this.attendanceButton = new System.Windows.Forms.Button();
@@ -59,7 +60,8 @@
             // 
             resources.ApplyResources(this.sidebarNavPanel, "sidebarNavPanel");
             this.sidebarNavPanel.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.sidebarNavPanel.Controls.Add(this.EnglishBtn);
+            this.sidebarNavPanel.Controls.Add(this.logOut);
+            this.sidebarNavPanel.Controls.Add(this.languageComboBox);
             this.sidebarNavPanel.Controls.Add(this.adminTitleLabel);
             this.sidebarNavPanel.Controls.Add(this.membershipPlanButton);
             this.sidebarNavPanel.Controls.Add(this.attendanceButton);
@@ -70,14 +72,23 @@
             this.sidebarNavPanel.Controls.Add(this.dashBoardButton);
             this.sidebarNavPanel.Name = "sidebarNavPanel";
             // 
-            // EnglishBtn
+            // logOut
             // 
-            this.EnglishBtn.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.EnglishBtn, "EnglishBtn");
-            this.EnglishBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.EnglishBtn.Name = "EnglishBtn";
-            this.EnglishBtn.UseVisualStyleBackColor = true;
-            this.EnglishBtn.Click += new System.EventHandler(this.languageBtn_Click);
+            resources.ApplyResources(this.logOut, "logOut");
+            this.logOut.FlatAppearance.BorderSize = 0;
+            this.logOut.ForeColor = System.Drawing.Color.White;
+            this.logOut.Name = "logOut";
+            this.logOut.UseVisualStyleBackColor = true;
+            this.logOut.Click += new System.EventHandler(this.logOut_Click);
+            // 
+            // languageComboBox
+            // 
+            this.languageComboBox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.languageComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.languageComboBox, "languageComboBox");
+            this.languageComboBox.ForeColor = System.Drawing.Color.White;
+            this.languageComboBox.Name = "languageComboBox";
+            this.languageComboBox.SelectedIndexChanged += new System.EventHandler(this.languageComboBox_SelectedIndexChanged);
             // 
             // adminTitleLabel
             // 
@@ -232,7 +243,8 @@
         private System.Windows.Forms.BindingSource mEMBERBindingSource;
         private System.Windows.Forms.BindingSource mEMBERBindingSource2;
         private System.Windows.Forms.BindingSource mEMBERBindingSource1;
-        private System.Windows.Forms.Button EnglishBtn;
+        private System.Windows.Forms.ComboBox languageComboBox;
+        private System.Windows.Forms.Button logOut;
     }
 }
 

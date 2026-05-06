@@ -121,40 +121,70 @@
   <data name="sidebarNavPanel.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
   </data>
-  <data name="EnglishBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="logOut.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="logOut.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="EnglishBtn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+  <data name="logOut.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
   </data>
-  <data name="EnglishBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>53, 882</value>
+  <data name="logOut.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="EnglishBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
+  <data name="logOut.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 476</value>
   </data>
-  <data name="EnglishBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 58</value>
+  <data name="logOut.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="EnglishBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+  <data name="logOut.Size" type="System.Drawing.Size, System.Drawing">
+    <value>238, 42</value>
   </data>
-  <data name="EnglishBtn.Text" xml:space="preserve">
-    <value>Français</value>
+  <data name="logOut.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
-  <data name="&gt;&gt;EnglishBtn.Name" xml:space="preserve">
-    <value>EnglishBtn</value>
+  <data name="logOut.Text" xml:space="preserve">
+    <value>Log Out</value>
   </data>
-  <data name="&gt;&gt;EnglishBtn.Type" xml:space="preserve">
+  <data name="&gt;&gt;logOut.Name" xml:space="preserve">
+    <value>logOut</value>
+  </data>
+  <data name="&gt;&gt;logOut.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;EnglishBtn.Parent" xml:space="preserve">
+  <data name="&gt;&gt;logOut.Parent" xml:space="preserve">
     <value>sidebarNavPanel</value>
   </data>
-  <data name="&gt;&gt;EnglishBtn.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;logOut.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="languageComboBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="languageComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 698</value>
+  </data>
+  <data name="languageComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 30</value>
+  </data>
+  <data name="languageComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;languageComboBox.Name" xml:space="preserve">
+    <value>languageComboBox</value>
+  </data>
+  <data name="&gt;&gt;languageComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;languageComboBox.Parent" xml:space="preserve">
+    <value>sidebarNavPanel</value>
+  </data>
+  <data name="&gt;&gt;languageComboBox.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="adminTitleLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -166,16 +196,13 @@
     <value>NoControl</value>
   </data>
   <data name="adminTitleLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>54, 32</value>
+    <value>48, 26</value>
   </data>
   <data name="adminTitleLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 29</value>
+    <value>0, 25</value>
   </data>
   <data name="adminTitleLabel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="adminTitleLabel.Text" xml:space="preserve">
-    <value>Admin Panel</value>
   </data>
   <data name="&gt;&gt;adminTitleLabel.Name" xml:space="preserve">
     <value>adminTitleLabel</value>
@@ -187,7 +214,7 @@
     <value>sidebarNavPanel</value>
   </data>
   <data name="&gt;&gt;adminTitleLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="membershipPlanButton.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -202,13 +229,13 @@
     <value>NoControl</value>
   </data>
   <data name="membershipPlanButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 538</value>
+    <value>5, 430</value>
   </data>
   <data name="membershipPlanButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="membershipPlanButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 53</value>
+    <value>238, 42</value>
   </data>
   <data name="membershipPlanButton.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -226,7 +253,7 @@
     <value>sidebarNavPanel</value>
   </data>
   <data name="&gt;&gt;membershipPlanButton.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="attendanceButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -238,13 +265,13 @@
     <value>NoControl</value>
   </data>
   <data name="attendanceButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 472</value>
+    <value>5, 378</value>
   </data>
   <data name="attendanceButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="attendanceButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 62</value>
+    <value>238, 50</value>
   </data>
   <data name="attendanceButton.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -262,7 +289,7 @@
     <value>sidebarNavPanel</value>
   </data>
   <data name="&gt;&gt;attendanceButton.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="revenueButton.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -277,13 +304,13 @@
     <value>NoControl</value>
   </data>
   <data name="revenueButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 405</value>
+    <value>5, 324</value>
   </data>
   <data name="revenueButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="revenueButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 63</value>
+    <value>238, 50</value>
   </data>
   <data name="revenueButton.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -301,7 +328,7 @@
     <value>sidebarNavPanel</value>
   </data>
   <data name="&gt;&gt;revenueButton.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="trainersButton.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -316,13 +343,13 @@
     <value>NoControl</value>
   </data>
   <data name="trainersButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 338</value>
+    <value>3, 270</value>
   </data>
   <data name="trainersButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="trainersButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 63</value>
+    <value>238, 50</value>
   </data>
   <data name="trainersButton.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -340,7 +367,7 @@
     <value>sidebarNavPanel</value>
   </data>
   <data name="&gt;&gt;trainersButton.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="employeeButton.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -355,13 +382,13 @@
     <value>NoControl</value>
   </data>
   <data name="employeeButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 272</value>
+    <value>8, 218</value>
   </data>
   <data name="employeeButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="employeeButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 62</value>
+    <value>236, 50</value>
   </data>
   <data name="employeeButton.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -379,7 +406,7 @@
     <value>sidebarNavPanel</value>
   </data>
   <data name="&gt;&gt;employeeButton.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="membersButton.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -394,13 +421,13 @@
     <value>NoControl</value>
   </data>
   <data name="membersButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 204</value>
+    <value>5, 163</value>
   </data>
   <data name="membersButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="membersButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 64</value>
+    <value>238, 51</value>
   </data>
   <data name="membersButton.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -418,7 +445,7 @@
     <value>sidebarNavPanel</value>
   </data>
   <data name="&gt;&gt;membersButton.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="dashBoardButton.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -433,13 +460,13 @@
     <value>NoControl</value>
   </data>
   <data name="dashBoardButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 137</value>
+    <value>5, 110</value>
   </data>
   <data name="dashBoardButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="dashBoardButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 63</value>
+    <value>238, 50</value>
   </data>
   <data name="dashBoardButton.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -457,7 +484,7 @@
     <value>sidebarNavPanel</value>
   </data>
   <data name="&gt;&gt;dashBoardButton.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="sidebarNavPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
@@ -469,7 +496,7 @@
     <value>3, 2, 3, 2</value>
   </data>
   <data name="sidebarNavPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>274, 1019</value>
+    <value>244, 815</value>
   </data>
   <data name="sidebarNavPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -490,13 +517,13 @@
     <value>Fill</value>
   </data>
   <data name="mainPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>274, 0</value>
+    <value>244, 0</value>
   </data>
   <data name="mainPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="mainPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1454, 1019</value>
+    <value>1292, 815</value>
   </data>
   <data name="mainPanel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -535,10 +562,10 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>9, 20</value>
+    <value>8, 16</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1728, 1019</value>
+    <value>1536, 815</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -547,7 +574,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Admin Page</value>
+    <value>Gym Management System</value>
   </data>
   <data name="&gt;&gt;gymManagementDBDataSet.Name" xml:space="preserve">
     <value>gymManagementDBDataSet</value>

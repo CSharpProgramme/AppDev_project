@@ -1,0 +1,104 @@
+using System;
+using System.Collections.Generic;
+
+namespace GymManagementSystem.Localization
+{
+    /// <summary>Canonical English strings for the admin shell, sidebar, and dashboard (main panel).</summary>
+    internal static class MainPanelEnglishStrings
+    {
+        internal static readonly IReadOnlyDictionary<string, string> EnglishToDisplay =
+            new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
+            {
+                { "Dashboard", "Dashboard" },
+                { "Members", "Members" },
+                { "Employees", "Employees" },
+                { "Trainers", "Trainers" },
+                { "Revenue", "Revenue" },
+                { "Member's Attendance", "Member's Attendance" },
+                { "Membership Plan", "Membership Plan" },
+                { "Membership Plans", "Membership Plans" },
+                { "Admin Panel", "Admin Panel" },
+                { "Admin Page", "Admin Page" },
+                { "Log Out", "Log Out" },
+                { "Register a Member", "Register a Member" },
+                { "Edit a Member", "Edit a Member" },
+                { "Delete Member", "Delete Member" },
+                { "Search", "Search" },
+                { "Member List", "Member List" },
+                { "Register Member", "Register Member" },
+                { "Register Trainer", "Register Trainer" },
+                { "Edit Trainer", "Edit Trainer" },
+                { "Delete Trainer", "Delete Trainer" },
+                { "View PT Session", "View PT Session" },
+                { "Register Plan", "Register Plan" },
+                { "Delete Plan", "Delete Plan" },
+                { "Edit Plan", "Edit Plan" },
+                { "PT Sessions", "PT Sessions" },
+                { "Create Session", "Create Session" },
+                { "Edit Session", "Edit Session" },
+                { "Cancel Session", "Cancel Session" },
+                { "Register Staff", "Register Staff" },
+                { "Edit Staff Info", "Edit Staff Info" },
+                { "Delete Staff", "Delete Staff" },
+                { "Total Members", "Total Members" },
+                { "Total Employees", "Total Employees" },
+                { "Revenue This Month", "Revenue This Month" },
+                { "Active Subscription", "Active Subscription" },
+                { "Recent Members", "Recent Members" },
+                { "Audit Log", "Audit Log" },
+                { "member_id", "member_id" },
+                { "First Name", "First Name" },
+                { "Last Name", "Last Name" },
+                { "Email", "Email" },
+                { "Phone", "Phone" },
+                { "Joined Date", "Joined Date" },
+                { "Join Date", "Join Date" },
+                { "Status", "Status" },
+                { "ID", "ID" },
+                {"Check In", "Check In" },
+                {"Check Out", "Check Out" },
+                {"From:","From"},
+                {"To:", "To" },
+                {"Method:", "Method" },
+                {"Filter", "Filter" },
+                {"Reset", "Reset" },
+                {"Total Revenue", "Total Revenue" },
+                {"Total Payments", "Total payments" },
+               {"Average Payment", "Average payment" },
+                {"Monthly Revenue", "Monthly Revenue" },
+                {"Series 1", "Series 1" },
+                {"Member Check In / Out", "Member Check in/Out " },
+                {"Search Member:", "Search Member:" },
+             
+                {"Currentlry in Gym:", "Currently in Gym" },
+                {"Today's Attendance Log:", "Today's Attendance Log:"},
+                { "Position", "Position" },
+                {"Role", "Role" },
+                {"Salary", "Salary" },
+                {"Specialization", "Specialization" },
+                {"Hourly Rate", "Hourly Rate" },
+                {"Payment ID", "Payment ID"},
+                {"Member Name", "Member Name"},
+                {"Amount", "Amount"},
+                {"Plan Name", "Plan Name"},
+                {"Payment Date", "Payment Date"},
+                {"Emergency Contact Name", "Emergency Contact Name"},
+                {"Emergency Contact Phone", "Emergency Contact Phone"},
+                {"Plan ID", "Plan ID"},
+{"Name", "Name"},
+{"Duration Name", "Duration Name"},
+{"price", "price"},
+{"description", "description"},
+                 {"Currentlry in Gym", "Currently in Gym"},
+              
+
+
+
+
+
+
+
+
+            };
+    }
+}
