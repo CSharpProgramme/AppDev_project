@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardControl));
-            this.auditLogLabel = new System.Windows.Forms.Label();
             this.recentMemberLabel = new System.Windows.Forms.Label();
             this.mEMBERBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gymManagementDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -68,11 +67,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.mEMBERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.recentMemberDataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // auditLogLabel
-            // 
-            resources.ApplyResources(this.auditLogLabel, "auditLogLabel");
-            this.auditLogLabel.Name = "auditLogLabel";
             // 
             // recentMemberLabel
             // 
@@ -271,7 +265,6 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.recentMemberDataGridView);
-            this.Controls.Add(this.auditLogLabel);
             this.Controls.Add(this.recentMemberLabel);
             this.Controls.Add(this.totalPaymentPanel);
             this.Controls.Add(this.activePlanPanel);
@@ -298,8 +291,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label auditLogLabel;
         private System.Windows.Forms.Label recentMemberLabel;
         private System.Windows.Forms.Panel totalPaymentPanel;
         private System.Windows.Forms.Label revenueNumLabel;

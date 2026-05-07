@@ -74,5 +74,32 @@ namespace GymManagementSystem.Localization
             string english = ToEnglishKey(source);
             return TranslateFromEnglish(english, twoLetterIso);
         }
+
+        // Translates a dialog form's title and all its child controls.
+        // Call this right after creating a dialog form, before ShowDialog().
+        public static void ApplyToForm(System.Windows.Forms.Form form)
+        {
+            string lang = System.Threading.Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
+
+            // Translate the form's title bar text
+            if (!string.IsNullOrWhiteSpace(form.Text))
+                form.Text = TranslateVisibleText(form.Text, lang);
+
+            // Recursively translate all controls inside the form
+            ApplyToControls(form, lang);
+        }
+
+        // Recursively walks through all child controls and translates their Text.
+        private static void ApplyToControls(System.Windows.Forms.Control root, string lang)
+        {
+            foreach (System.Windows.Forms.Control control in root.Controls)
+            {
+                if (!string.IsNullOrWhiteSpace(control.Text))
+                    control.Text = TranslateVisibleText(control.Text, lang);
+
+                if (control.HasChildren)
+                    ApplyToControls(control, lang);
+            }
+        }
     }
 }

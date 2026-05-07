@@ -188,3 +188,4 @@ C:\Users\andyr\Downloads\AppDev_project\GymManagementSystem\GymManagementSystem\
 C:\Users\andyr\Downloads\AppDev_project\GymManagementSystem\GymManagementSystem\obj\Debug\GymManagementSystem.RevenueControl.resources
 C:\Users\andyr\Downloads\AppDev_project\GymManagementSystem\GymManagementSystem\obj\Debug\GymManagementSystem.AdminForm.fr.resources
 C:\Users\andyr\Downloads\AppDev_project\GymManagementSystem\GymManagementSystem\obj\Debug\fr\GymManagementSystem.resources.dll
+C:\Users\steve\Desktop\AppDev_project\GymManagementSystem\GymManagementSystem\obj\Debug\GymManagementSystem.DashboardControl.fr.resources

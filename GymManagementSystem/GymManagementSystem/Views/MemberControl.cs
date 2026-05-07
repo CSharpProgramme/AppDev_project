@@ -140,7 +140,7 @@ namespace GymManagementSystem
         private void btnRegisterMember_Click(object sender, EventArgs e)
         {
             RegisterForm registerForm = new RegisterForm();
-            // Refresh the member list when the form closes
+            GymManagementSystem.Localization.MainPanelLocalization.ApplyToForm(registerForm);
             registerForm.FormClosed += (s, args) => LoadMembers();
             registerForm.ShowDialog();
         }
@@ -155,8 +155,7 @@ namespace GymManagementSystem
 
             // Open the edit form with the selected member
             EditMemberForm editForm = new EditMemberForm(member);
-
-            // Refresh the member list when the form closes
+            GymManagementSystem.Localization.MainPanelLocalization.ApplyToForm(editForm);
             editForm.FormClosed += (s, args) => LoadMembers();
             editForm.ShowDialog();
         }

@@ -95,6 +95,7 @@ namespace GymManagementSystem
         private void RegisterPlanButton_Click_1(object sender, EventArgs e)
         {
             RegisterMembershipPlanForm registerForm = new RegisterMembershipPlanForm();
+            GymManagementSystem.Localization.MainPanelLocalization.ApplyToForm(registerForm);
             registerForm.FormClosed += (s, args) => LoadPlans();
             registerForm.ShowDialog();
         }
@@ -110,6 +111,7 @@ namespace GymManagementSystem
             }
 
             EditMembershipPlanForm form = new EditMembershipPlanForm(selectedPlan);
+            GymManagementSystem.Localization.MainPanelLocalization.ApplyToForm(form);
             form.FormClosed += (s, args) => LoadPlans();
             form.ShowDialog();
         }

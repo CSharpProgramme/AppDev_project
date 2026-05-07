@@ -85,20 +85,11 @@ namespace GymManagementSystem.Localization
                 {"Emergency Contact Name", "Emergency Contact Name"},
                 {"Emergency Contact Phone", "Emergency Contact Phone"},
                 {"Plan ID", "Plan ID"},
-{"Name", "Name"},
-{"Duration Name", "Duration Name"},
-{"price", "price"},
-{"description", "description"},
+                {"Name", "Name"},
+                {"Duration Name", "Duration Name"},
+                {"price", "price"},
+                {"description", "description"},
                  {"Currentlry in Gym", "Currently in Gym"},
-              
-
-
-
-
-
-
-
-
             };
     }
 }

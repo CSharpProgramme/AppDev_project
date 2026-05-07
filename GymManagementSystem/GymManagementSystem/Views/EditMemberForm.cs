@@ -95,6 +95,7 @@ namespace GymManagementSystem.Views
 
                 // Now open reactivation form for plan + payment
                 ReactivateMemberForm reactivateForm = new ReactivateMemberForm(selectedMember);
+                GymManagementSystem.Localization.MainPanelLocalization.ApplyToForm(reactivateForm);
                 reactivateForm.FormClosed += (s, args) => this.Close();
                 reactivateForm.ShowDialog();
                 return;

@@ -16,8 +16,8 @@ namespace GymManagementSystem.Views
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AdminForm());
-            //Application.Run(new LoginForm());
+            //Application.Run(new AdminForm());
+            Application.Run(new LoginForm());
             //Application.Run(new RegisterForm());
         }
     }

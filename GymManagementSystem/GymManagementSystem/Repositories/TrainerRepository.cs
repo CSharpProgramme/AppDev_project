@@ -89,10 +89,29 @@ namespace GymManagementSystem.Repositories
             using (SqlConnection conn = DatabaseHelper.GetConnection())
             {
                 conn.Open();
-                string query = "DELETE FROM Trainer WHERE trainer_id = @TrainerId";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@TrainerId", trainerId);
-                cmd.ExecuteNonQuery();
+                SqlTransaction tx = conn.BeginTransaction();
+                try
+                {
+                    // Delete PT sessions linked to this trainer first
+                    // (trainer_id is NOT NULL in PT_SESSION so we can't set it to NULL)
+                    SqlCommand deleteSessions = new SqlCommand(
+                        "DELETE FROM PT_SESSION WHERE trainer_id = @id", conn, tx);
+                    deleteSessions.Parameters.AddWithValue("@id", trainerId);
+                    deleteSessions.ExecuteNonQuery();
+
+                    // Now safe to delete the trainer
+                    SqlCommand deleteTrainer = new SqlCommand(
+                        "DELETE FROM TRAINER WHERE trainer_id = @id", conn, tx);
+                    deleteTrainer.Parameters.AddWithValue("@id", trainerId);
+                    deleteTrainer.ExecuteNonQuery();
+
+                    tx.Commit();
+                }
+                catch (Exception ex)
+                {
+                    tx.Rollback();
+                    throw new Exception("Error deleting trainer: " + ex.Message);
+                }
             }
         }
     }

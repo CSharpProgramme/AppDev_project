@@ -141,9 +141,6 @@
   <data name="recentMemberDataGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
-  <data name="dataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
-    <value>Last Name</value>
-  </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn3.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -152,6 +149,9 @@
   </data>
   <data name="totalMemberLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="&gt;&gt;totalMembersPanel.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="totalMembersPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -162,14 +162,17 @@
   <data name="revenuLabel.Text" xml:space="preserve">
     <value>Revenue This Month</value>
   </data>
-  <data name="&gt;&gt;employeeNumLabel.Parent" xml:space="preserve">
-    <value>totalEmployeePanel</value>
+  <data name="activePlanPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
   </data>
-  <data name="&gt;&gt;totalPaymentPanel.Name" xml:space="preserve">
-    <value>totalPaymentPanel</value>
+  <data name="&gt;&gt;tableAdapterManager.Type" xml:space="preserve">
+    <value>GymManagementSystem.GymManagementDBDataSetTableAdapters.TableAdapterManager, GymManagementSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;revenuLabel.Name" xml:space="preserve">
     <value>revenuLabel</value>
+  </data>
+  <data name="&gt;&gt;gymManagementDBDataSetBindingSource.Name" xml:space="preserve">
+    <value>gymManagementDBDataSetBindingSource</value>
   </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn5.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -179,9 +182,6 @@
   </data>
   <data name="revenueNumLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="&gt;&gt;auditLogLabel.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="&gt;&gt;recentMemberDataGridView.Parent" xml:space="preserve">
     <value>$this</value>
@@ -195,6 +195,9 @@
   <data name="&gt;&gt;recentMemberDataGridView.Name" xml:space="preserve">
     <value>recentMemberDataGridView</value>
   </data>
+  <data name="&gt;&gt;recentMemberLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="recentMemberDataGridView.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
   </data>
@@ -205,7 +208,7 @@
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="totalEmployeePanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 80</value>
+    <value>220, 100</value>
   </data>
   <data name="recentMemberLabel.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -225,14 +228,8 @@
   <data name="&gt;&gt;totalMembersPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="totalEployeeLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
   <data name="activePLanNumLabel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="activePlanPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
   </data>
   <data name="dataGridViewTextBoxColumn3.Width" type="System.Int32, mscorlib">
     <value>150</value>
@@ -260,6 +257,9 @@
   </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn3.Name" xml:space="preserve">
     <value>dataGridViewTextBoxColumn3</value>
+  </data>
+  <data name="activePlanLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>DashboardControl</value>
@@ -315,8 +315,8 @@
   <data name="&gt;&gt;activePlanLabel.Parent" xml:space="preserve">
     <value>activePlanPanel</value>
   </data>
-  <data name="&gt;&gt;totalMemberLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;employeeNumLabel.Parent" xml:space="preserve">
+    <value>totalEmployeePanel</value>
   </data>
   <data name="&gt;&gt;activePLanNumLabel.Parent" xml:space="preserve">
     <value>activePlanPanel</value>
@@ -354,14 +354,23 @@
   <data name="&gt;&gt;activePLanNumLabel.Name" xml:space="preserve">
     <value>activePLanNumLabel</value>
   </data>
+  <data name="dataGridViewTextBoxColumn4.MinimumWidth" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="auditLogLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
   <data name="employeeNumLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="revenueNumLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>17, 47</value>
   </data>
+  <data name="&gt;&gt;totalMemberLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="totalMemberLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>108, 18</value>
+    <value>180, 22</value>
   </data>
   <data name="totalMemberLabel.Text" xml:space="preserve">
     <value>Total Members</value>
@@ -375,17 +384,14 @@
   <data name="&gt;&gt;auditLogLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="auditLogLabel.Text" xml:space="preserve">
-    <value>Audit Log</value>
-  </data>
   <data name="&gt;&gt;auditLogLabel.Name" xml:space="preserve">
     <value>auditLogLabel</value>
   </data>
   <data name="&gt;&gt;memberNumLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;totalEployeeLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="revenuLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 47</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>8, 16</value>
@@ -402,11 +408,14 @@
   <data name="dataGridViewTextBoxColumn2.MinimumWidth" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
+  <data name="recentMemberLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="&gt;&gt;revenueNumLabel.Name" xml:space="preserve">
     <value>revenueNumLabel</value>
   </data>
-  <data name="revenuLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 47</value>
+  <data name="&gt;&gt;totalPaymentPanel.Name" xml:space="preserve">
+    <value>totalPaymentPanel</value>
   </data>
   <data name="memberNumLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>28, 42</value>
@@ -433,7 +442,7 @@
     <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;recentMemberLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="totalEmployeePanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -446,12 +455,6 @@
   </data>
   <data name="activePLanNumLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="activePlanPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 80</value>
-  </data>
-  <data name="totalMembersPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 31</value>
   </data>
   <data name="dataGridViewTextBoxColumn1.Width" type="System.Int32, mscorlib">
     <value>150</value>
@@ -468,6 +471,9 @@
   <data name="&gt;&gt;gymManagementDBDataSetBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;activePlanPanel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="activePlanLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 18</value>
   </data>
@@ -477,17 +483,17 @@
   <data name="activePlanLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="revenuLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 7</value>
-  </data>
   <data name="&gt;&gt;employeeNumLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="&gt;&gt;totalEployeeLabel.Parent" xml:space="preserve">
     <value>totalEmployeePanel</value>
   </data>
+  <data name="recentMemberDataGridView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>980, 398</value>
+  </data>
   <data name="&gt;&gt;totalPaymentPanel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="activePlanPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -505,22 +511,16 @@
     <value>3, 2, 3, 2</value>
   </data>
   <data name="totalPaymentPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 80</value>
+    <value>220, 100</value>
   </data>
   <data name="&gt;&gt;memberNumLabel.Name" xml:space="preserve">
     <value>memberNumLabel</value>
-  </data>
-  <data name="recentMemberLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 134</value>
   </data>
   <data name="revenuLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="totalPaymentPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>485, 31</value>
-  </data>
-  <data name="&gt;&gt;totalMemberLabel.Parent" xml:space="preserve">
-    <value>totalMembersPanel</value>
+    <value>544, 31</value>
   </data>
   <data name="&gt;&gt;gymManagementDBDataSet.Type" xml:space="preserve">
     <value>GymManagementSystem.GymManagementDBDataSet, GymManagementSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
@@ -531,8 +531,8 @@
   <data name="memberNumLabel.Text" xml:space="preserve">
     <value>145</value>
   </data>
-  <data name="&gt;&gt;activePlanPanel.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;totalEployeeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="dataGridViewTextBoxColumn4.Width" type="System.Int32, mscorlib">
     <value>150</value>
@@ -568,13 +568,13 @@
     <value>8</value>
   </data>
   <data name="&gt;&gt;totalEmployeePanel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="activePlanLabel.Text" xml:space="preserve">
     <value>Active Subscription</value>
   </data>
-  <data name="auditLogLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+  <data name="revenuLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 7</value>
   </data>
   <data name="dataGridViewTextBoxColumn7.HeaderText" xml:space="preserve">
     <value>Joined Date</value>
@@ -582,11 +582,11 @@
   <data name="auditLogLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>40, 598</value>
   </data>
-  <data name="&gt;&gt;tableAdapterManager.Type" xml:space="preserve">
-    <value>GymManagementSystem.GymManagementDBDataSetTableAdapters.TableAdapterManager, GymManagementSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="auditLogLabel.Text" xml:space="preserve">
+    <value>Audit Log</value>
   </data>
   <data name="totalEmployeePanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>703, 31</value>
+    <value>794, 31</value>
   </data>
   <data name="&gt;&gt;mEMBERBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -616,7 +616,7 @@
     <value>Recent Members</value>
   </data>
   <data name="totalMembersPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 80</value>
+    <value>220, 100</value>
   </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn4.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -624,8 +624,8 @@
   <data name="&gt;&gt;totalMembersPanel.Name" xml:space="preserve">
     <value>totalMembersPanel</value>
   </data>
-  <data name="recentMemberDataGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>980, 398</value>
+  <data name="activePlanPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 100</value>
   </data>
   <data name="&gt;&gt;memberTableAdapter.Name" xml:space="preserve">
     <value>memberTableAdapter</value>
@@ -636,8 +636,8 @@
   <data name="&gt;&gt;activePlanLabel.Name" xml:space="preserve">
     <value>activePlanLabel</value>
   </data>
-  <data name="dataGridViewTextBoxColumn4.MinimumWidth" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="activePlanPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>294, 31</value>
   </data>
   <data name="employeeNumLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 25</value>
@@ -648,8 +648,8 @@
   <data name="&gt;&gt;dataGridViewTextBoxColumn10.Name" xml:space="preserve">
     <value>dataGridViewTextBoxColumn10</value>
   </data>
-  <data name="recentMemberLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;totalMemberLabel.Parent" xml:space="preserve">
+    <value>totalMembersPanel</value>
   </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn2.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -660,32 +660,32 @@
   <data name="&gt;&gt;totalMembersPanel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="activePlanPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>257, 31</value>
+  <data name="dataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
+    <value>Last Name</value>
   </data>
   <data name="totalEployeeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 18</value>
+    <value>180, 22</value>
   </data>
-  <data name="&gt;&gt;totalMembersPanel.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="totalMembersPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 31</value>
   </data>
   <data name="&gt;&gt;totalEployeeLabel.Name" xml:space="preserve">
     <value>totalEployeeLabel</value>
   </data>
-  <data name="activePlanLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="recentMemberLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 134</value>
   </data>
   <data name="revenueNumLabel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;recentMemberLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="totalEployeeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;tableAdapterManager.Name" xml:space="preserve">
     <value>tableAdapterManager</value>
   </data>
-  <data name="&gt;&gt;gymManagementDBDataSetBindingSource.Name" xml:space="preserve">
-    <value>gymManagementDBDataSetBindingSource</value>
+  <data name="&gt;&gt;auditLogLabel.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="employeeNumLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 42</value>

@@ -213,7 +213,8 @@ namespace GymManagementSystem.Views
                     payCmd.Parameters.AddWithValue("@processedBy", processedBy);
                     payCmd.Parameters.AddWithValue("@amount", selectedPlanPrice);
                     payCmd.Parameters.AddWithValue("@paymentDate", DateTime.Today);
-                    payCmd.Parameters.AddWithValue("@method", paymentComboBox.SelectedItem.ToString());
+                    // Convert display value (e.g. "Credit Card") to DB constraint value (e.g. "credit_card")
+                    payCmd.Parameters.AddWithValue("@method", paymentComboBox.SelectedItem.ToString().ToLower().Replace(" ", "_"));
                     payCmd.Parameters.AddWithValue("@status", "completed");
 
                     payCmd.ExecuteNonQuery();

@@ -88,13 +88,59 @@ namespace GymManagementSystem.Localization
                 {"Plan ID", "ID du plan"},
 {"Name", "Nom"},
 {"Duration Name", "Durée"},
-{"price", "prix"},
-{"description", "description"},
+{"Price", "Prix"},
+{"Description", "Description"},
 
                 {"Currentlry in Gym", "Actuellement dans la salle de sport"},
                 {"Emergency Contact Phone", "Téléphone du contact d’urgence"},
 
+                // Dialog form titles
+                {"Edit a Member’s Information", "Modifier les informations d’un membre"},
+                {"Reactivate Member Form", "Formulaire de réactivation"},
+                {"Employee Register Form", "Formulaire d’inscription d’employé"},
+                {"Register Membership Plan", "Inscrire un plan d’abonnement"},
+                {"Edit Membership Plan", "Modifier le plan d’abonnement"},
 
+                // Common buttons
+                {"Save", "Enregistrer"},
+                {"Cancel", "Annuler"},
+                {"Add", "Ajouter"},
+                {"Update", "Mettre à jour"},
+                {"Create", "Créer"},
+                {"Exit", "Quitter"},
+                {"Confirm", "Confirmer"},
+                {"Confirm Button", "Confirmer"},
+                {"Personel Information", "Informations personnelles"},
+
+                // Edit/Register Member form
+                {"Edit Member", "Modifier un membre"},
+                {"Member Registration", "Inscription d’un membre"},
+                {"Personal Information", "Informations personnelles"},
+                {"Emergency Contact", "Contact d’urgence"},
+                {"Select a Payment Method", "Sélectionner un mode de paiement"},
+                {"Tax: 15%", "Taxe : 15 %"},
+                {"Total Amount:", "Montant total :"},
+                {"Payment Details", "Détails du paiement"},
+
+                // PT Session form
+                {"Select Trainer", "Sélectionner entraîneur"},
+                {"Select Member", "Sélectionner membre"},
+                {"Time:", "Heure :"},
+                {"Duration(min):", "Durée (min) :"},
+
+                // Trainer form
+                {"Add Trainer", "Ajouter entraîneur"},
+
+                // Membership Plan form
+                {"Plan Information", "Informations sur le plan"},
+                {"Duration", "Durée"},
+
+                // Reactivate Member form
+                {"Membership Plan:", "Plan d’abonnement :"},
+                {"Amount:", "Montant :"},
+                {"Start Date:", "Date de début :"},
+                {"Confirm & Activate", "Confirmer et activer"},
+                {"Activating:", "Activation :"},
             };
     }
 }

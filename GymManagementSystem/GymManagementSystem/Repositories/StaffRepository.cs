@@ -267,23 +267,32 @@ namespace GymManagementSystem.Repositories
         // DELETE STAFF
         public void DeleteStaff(int staffId)
         {
-            try
+            using (SqlConnection conn = DatabaseHelper.GetConnection())
             {
-                using (SqlConnection conn = DatabaseHelper.GetConnection())
+                conn.Open();
+                SqlTransaction tx = conn.BeginTransaction();
+                try
                 {
-                    conn.Open();
+                    // Set processed_by to NULL for any payments this staff processed.
+                    // We keep the payment records — only the staff reference is cleared.
+                    SqlCommand clearPayments = new SqlCommand(
+                        "UPDATE PAYMENT SET processed_by = NULL WHERE processed_by = @id", conn, tx);
+                    clearPayments.Parameters.AddWithValue("@id", staffId);
+                    clearPayments.ExecuteNonQuery();
 
-                    string query = "DELETE FROM Staff WHERE staff_id = @StaffID";
-                    SqlCommand cmd = new SqlCommand(query, conn);
+                    // Now safe to delete the staff record
+                    SqlCommand deleteStaff = new SqlCommand(
+                        "DELETE FROM STAFF WHERE staff_id = @id", conn, tx);
+                    deleteStaff.Parameters.AddWithValue("@id", staffId);
+                    deleteStaff.ExecuteNonQuery();
 
-                    cmd.Parameters.AddWithValue("@StaffID", staffId);
-
-                    cmd.ExecuteNonQuery();
+                    tx.Commit();
                 }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error deleting staff: " + ex.Message);
+                catch (Exception ex)
+                {
+                    tx.Rollback();
+                    throw new Exception("Error deleting staff: " + ex.Message);
+                }
             }
         }
         public Staff Login(string username, string password)

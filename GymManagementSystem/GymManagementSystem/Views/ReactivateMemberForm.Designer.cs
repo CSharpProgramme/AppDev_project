@@ -104,20 +104,22 @@
             // cmbPlan
             // 
             this.cmbPlan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPlan.FormattingEnabled = true;
             this.cmbPlan.Location = new System.Drawing.Point(322, 104);
             this.cmbPlan.Name = "cmbPlan";
-            this.cmbPlan.Size = new System.Drawing.Size(258, 28);
+            this.cmbPlan.Size = new System.Drawing.Size(258, 30);
             this.cmbPlan.TabIndex = 6;
             this.cmbPlan.SelectedIndexChanged += new System.EventHandler(this.cmbPlan_SelectedIndexChanged);
             // 
             // cmbMethod
             // 
             this.cmbMethod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMethod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMethod.FormattingEnabled = true;
             this.cmbMethod.Location = new System.Drawing.Point(322, 266);
             this.cmbMethod.Name = "cmbMethod";
-            this.cmbMethod.Size = new System.Drawing.Size(258, 28);
+            this.cmbMethod.Size = new System.Drawing.Size(258, 30);
             this.cmbMethod.TabIndex = 7;
             // 
             // dtpStart

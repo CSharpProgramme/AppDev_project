@@ -36,21 +36,21 @@
             this.btnCheckIn = new System.Windows.Forms.Button();
             this.btnCheckOut = new System.Windows.Forms.Button();
             this.dgvCurrentlyIn = new System.Windows.Forms.DataGridView();
+            this.colCurId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCurName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCurCheckIn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvSearchResults = new System.Windows.Forms.DataGridView();
-            this.dgvAttendanceLog = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
             this.MemberID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCurId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCurName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCurCheckIn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvAttendanceLog = new System.Windows.Forms.DataGridView();
             this.colLogName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colLogCheckIn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colLogCheckOut = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCurrentlyIn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearchResults)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAttendanceLog)).BeginInit();
@@ -89,7 +89,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(258, 129);
+            this.textBox1.Location = new System.Drawing.Point(362, 128);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(259, 32);
             this.textBox1.TabIndex = 3;
@@ -98,7 +98,7 @@
             // 
             this.btnSearch.AutoSize = true;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(549, 128);
+            this.btnSearch.Location = new System.Drawing.Point(652, 128);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(85, 35);
             this.btnSearch.TabIndex = 4;
@@ -149,6 +149,33 @@
             this.dgvCurrentlyIn.Size = new System.Drawing.Size(576, 363);
             this.dgvCurrentlyIn.TabIndex = 7;
             // 
+            // colCurId
+            // 
+            this.colCurId.DataPropertyName = "MemberId";
+            this.colCurId.HeaderText = "ID";
+            this.colCurId.MinimumWidth = 8;
+            this.colCurId.Name = "colCurId";
+            this.colCurId.ReadOnly = true;
+            this.colCurId.Width = 60;
+            // 
+            // colCurName
+            // 
+            this.colCurName.DataPropertyName = "MemberName";
+            this.colCurName.HeaderText = "Member Name";
+            this.colCurName.MinimumWidth = 8;
+            this.colCurName.Name = "colCurName";
+            this.colCurName.ReadOnly = true;
+            this.colCurName.Width = 200;
+            // 
+            // colCurCheckIn
+            // 
+            this.colCurCheckIn.DataPropertyName = "CheckIn";
+            this.colCurCheckIn.HeaderText = "Check In Time";
+            this.colCurCheckIn.MinimumWidth = 8;
+            this.colCurCheckIn.Name = "colCurCheckIn";
+            this.colCurCheckIn.ReadOnly = true;
+            this.colCurCheckIn.Width = 200;
+            // 
             // dgvSearchResults
             // 
             this.dgvSearchResults.AllowUserToResizeColumns = false;
@@ -170,35 +197,6 @@
             this.dgvSearchResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSearchResults.Size = new System.Drawing.Size(1086, 247);
             this.dgvSearchResults.TabIndex = 8;
-            // 
-            // dgvAttendanceLog
-            // 
-            this.dgvAttendanceLog.AllowUserToResizeColumns = false;
-            this.dgvAttendanceLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAttendanceLog.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colLogName,
-            this.colLogCheckIn,
-            this.colLogCheckOut});
-            this.dgvAttendanceLog.Location = new System.Drawing.Point(697, 616);
-            this.dgvAttendanceLog.MultiSelect = false;
-            this.dgvAttendanceLog.Name = "dgvAttendanceLog";
-            this.dgvAttendanceLog.ReadOnly = true;
-            this.dgvAttendanceLog.RowHeadersVisible = false;
-            this.dgvAttendanceLog.RowHeadersWidth = 62;
-            this.dgvAttendanceLog.RowTemplate.Height = 28;
-            this.dgvAttendanceLog.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAttendanceLog.Size = new System.Drawing.Size(699, 363);
-            this.dgvAttendanceLog.TabIndex = 9;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(692, 571);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(250, 26);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Today\'s Attendance Log:";
             // 
             // MemberID
             // 
@@ -252,33 +250,26 @@
             this.Status.MinimumWidth = 8;
             this.Status.Name = "Status";
             this.Status.ReadOnly = true;
+            this.Status.Width = 150;
             // 
-            // colCurId
+            // dgvAttendanceLog
             // 
-            this.colCurId.DataPropertyName = "MemberId";
-            this.colCurId.HeaderText = "ID";
-            this.colCurId.MinimumWidth = 8;
-            this.colCurId.Name = "colCurId";
-            this.colCurId.ReadOnly = true;
-            this.colCurId.Width = 60;
-            // 
-            // colCurName
-            // 
-            this.colCurName.DataPropertyName = "MemberName";
-            this.colCurName.HeaderText = "Member Name";
-            this.colCurName.MinimumWidth = 8;
-            this.colCurName.Name = "colCurName";
-            this.colCurName.ReadOnly = true;
-            this.colCurName.Width = 200;
-            // 
-            // colCurCheckIn
-            // 
-            this.colCurCheckIn.DataPropertyName = "CheckIn";
-            this.colCurCheckIn.HeaderText = "Check In Time";
-            this.colCurCheckIn.MinimumWidth = 8;
-            this.colCurCheckIn.Name = "colCurCheckIn";
-            this.colCurCheckIn.ReadOnly = true;
-            this.colCurCheckIn.Width = 200;
+            this.dgvAttendanceLog.AllowUserToResizeColumns = false;
+            this.dgvAttendanceLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAttendanceLog.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colLogName,
+            this.colLogCheckIn,
+            this.colLogCheckOut});
+            this.dgvAttendanceLog.Location = new System.Drawing.Point(697, 616);
+            this.dgvAttendanceLog.MultiSelect = false;
+            this.dgvAttendanceLog.Name = "dgvAttendanceLog";
+            this.dgvAttendanceLog.ReadOnly = true;
+            this.dgvAttendanceLog.RowHeadersVisible = false;
+            this.dgvAttendanceLog.RowHeadersWidth = 62;
+            this.dgvAttendanceLog.RowTemplate.Height = 28;
+            this.dgvAttendanceLog.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAttendanceLog.Size = new System.Drawing.Size(699, 363);
+            this.dgvAttendanceLog.TabIndex = 9;
             // 
             // colLogName
             // 
@@ -306,6 +297,16 @@
             this.colLogCheckOut.Name = "colLogCheckOut";
             this.colLogCheckOut.ReadOnly = true;
             this.colLogCheckOut.Width = 160;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(692, 571);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(250, 26);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Today\'s Attendance Log:";
             // 
             // AttendanceControl
             // 

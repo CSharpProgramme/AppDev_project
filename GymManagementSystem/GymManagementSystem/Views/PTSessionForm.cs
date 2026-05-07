@@ -121,6 +121,7 @@ namespace GymManagementSystem.Views
             }
 
             PTSessionUpsertForm form = new PTSessionUpsertForm(selected);
+            GymManagementSystem.Localization.MainPanelLocalization.ApplyToForm(form);
             form.FormClosed += (s, args) => LoadSessions();
             form.ShowDialog();
         }
@@ -151,6 +152,7 @@ namespace GymManagementSystem.Views
         private void createSessionButton_Click(object sender, EventArgs e)
         {
             PTSessionUpsertForm form = new PTSessionUpsertForm();
+            GymManagementSystem.Localization.MainPanelLocalization.ApplyToForm(form);
             form.FormClosed += (s, args) => LoadSessions();
             form.ShowDialog();
         }

@@ -40,7 +40,7 @@ namespace GymManagementSystem
         private void RegisterMemberButton_Click(object sender, EventArgs e)
         {
             EmployeeRegisterForm registerForm = new EmployeeRegisterForm();
-            // Keep the grid in sync after adding an employee.
+            GymManagementSystem.Localization.MainPanelLocalization.ApplyToForm(registerForm);
             registerForm.FormClosed += (s, args) => LoadStaff();
             registerForm.ShowDialog();
         }
@@ -118,6 +118,7 @@ namespace GymManagementSystem
             }
 
             EmployeeRegisterForm editForm = new EmployeeRegisterForm(selectedStaff);
+            GymManagementSystem.Localization.MainPanelLocalization.ApplyToForm(editForm);
             editForm.FormClosed += (s, args) => LoadStaff();
             editForm.ShowDialog();
         }

@@ -175,6 +175,7 @@ namespace GymManagementSystem
 
             using (TrainerUpsertForm form = new TrainerUpsertForm(selectedTrainer))
             {
+                GymManagementSystem.Localization.MainPanelLocalization.ApplyToForm(form);
                 if (form.ShowDialog() != DialogResult.OK)
                     return;
 
@@ -189,6 +190,7 @@ namespace GymManagementSystem
         {
             using (TrainerUpsertForm form = new TrainerUpsertForm())
             {
+                GymManagementSystem.Localization.MainPanelLocalization.ApplyToForm(form);
                 if (form.ShowDialog() != DialogResult.OK)
                     return;
 
@@ -202,6 +204,7 @@ namespace GymManagementSystem
         private void viewPTSessionButton_Click(object sender, EventArgs e)
         {
             PTSessionForm form = new PTSessionForm();
+            GymManagementSystem.Localization.MainPanelLocalization.ApplyToForm(form);
             form.ShowDialog();
         }
         public void RefreshLanguage()

@@ -220,6 +220,9 @@
     <EmbeddedResource Include="Views\AttendanceControl.resx">
       <DependentUpon>AttendanceControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\DashboardControl.fr.resx">
+      <DependentUpon>DashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\EmployeeRegisterForm.resx">
       <DependentUpon>EmployeeRegisterForm.cs</DependentUpon>
     </EmbeddedResource>
