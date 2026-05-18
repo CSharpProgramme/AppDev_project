@@ -23,7 +23,7 @@ namespace GymManagementSystem
 
         private void LoadRecentMembers()
         {
-            List<Member> members = memberController.GetAllMembers();
+            List<Member> members = memberController.GetRecentMembers();
 
             recentMemberDataGridView.AutoGenerateColumns = false;
             recentMemberDataGridView.Columns.Clear();

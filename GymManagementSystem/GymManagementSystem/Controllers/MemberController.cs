@@ -24,6 +24,12 @@ namespace GymManagementSystem.Controllers
         {
             return memberRepository.GetAllMembers();
         }
+        public List<Member> GetRecentMembers()
+        {
+            return memberRepository.GetRecentMembers();
+        }
+
+       
 
         public Member GetMemberByID(int memberId)
         {

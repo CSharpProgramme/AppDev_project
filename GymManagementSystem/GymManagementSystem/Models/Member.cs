@@ -19,6 +19,7 @@ namespace GymManagementSystem.Models
         private string emergencyContactName;
         private string emergencyContactPhone;
         private string status;
+        private string addedByStaffName;
 
         // Constructor
         public Member(int memberID, string fName, string lName, string email, string phone, 
@@ -40,6 +41,12 @@ namespace GymManagementSystem.Models
         public Member()
         {
             // Default constructor
+        }
+
+        public string AddedByStaffName
+        {
+            get { return addedByStaffName; }
+            set { addedByStaffName = value; }
         }
 
         // Getters and Setters

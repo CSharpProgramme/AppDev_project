@@ -71,6 +71,62 @@ namespace GymManagementSystem.Repositories
             }
             return members;
         }
+        public List<Member> GetRecentMembers()
+        {
+            List<Member> members = new List<Member>();
+            try
+            {
+                //create a connection to the database using the DatabaseHelper class
+                using (SqlConnection conn = DatabaseHelper.GetConnection())
+                {
+                    //open the connection
+                    conn.Open();
+                    string query = "SELECT * FROM Member order by join_date DESC";
+
+                    //create a command to combine the query and the connection
+                    SqlCommand cmd = new SqlCommand(query, conn);
+
+                    //execute the query and get a reader to go through the results one at a time
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        Member member = new Member
+                        {
+                            //map the database fields to the Member object properties
+                            MemberID = (int)reader["member_id"],
+                            FName = reader["first_name"].ToString(),
+                            LName = reader["last_name"].ToString(),
+                            Email = reader["email"].ToString(),
+
+                            // phone can be NULL in the database so we check for DBNull before reading it
+                            Phone = reader["phone"] == DBNull.Value ? null : reader["phone"].ToString(),
+
+                            // date_of_birth can also be NULL so we return DateTime.MinValue as a safe default
+                            DateOfBirth = reader["date_of_birth"] == DBNull.Value ? DateTime.MinValue : (DateTime)reader["date_of_birth"],
+
+                            JoinDate = (DateTime)reader["join_date"],
+
+                            // emergency contact fields can also be NULL
+                            EmergencyContactName = reader["emergency_contact_name"] ==
+                            DBNull.Value ? null : reader["emergency_contact_name"].ToString(),
+
+                            EmergencyContactPhone = reader["emergency_contact_phone"] ==
+                            DBNull.Value ? null : reader["emergency_contact_phone"].ToString(),
+
+                            Status = reader["status"].ToString()
+                        };
+                        members.Add(member);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions (e.g., log the error)
+                throw new Exception("Error fetching members: " + ex.Message);
+            }
+            return members;
+        }
 
         public Member GetByID(int memberId)
         {
@@ -192,6 +248,7 @@ namespace GymManagementSystem.Repositories
             }
         }
 
+
         public int GetActiveSubscriptionCount()
         {
             try
@@ -200,7 +257,7 @@ namespace GymManagementSystem.Repositories
                 {
                     conn.Open();
                     SqlCommand cmd = new SqlCommand(
-                        "SELECT COUNT(*) FROM SUBSCRIPTION WHERE status = 'active'", conn);
+                        "SELECT COUNT(*) FROM MEMBER WHERE status = 'active'", conn);
                     return (int)cmd.ExecuteScalar();
                 }
             }

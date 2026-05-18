@@ -11,7 +11,7 @@ namespace GymManagementSystem.Localization
             {
                 { "Dashboard", "Dashboard" },
                 { "Members", "Members" },
-                { "Employees", "Employees" },
+                { "Staff", "Staff" },
                 { "Trainers", "Trainers" },
                 { "Revenue", "Revenue" },
                 { "Member's Attendance", "Member's Attendance" },

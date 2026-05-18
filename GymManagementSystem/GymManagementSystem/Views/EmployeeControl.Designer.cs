@@ -1,6 +1,6 @@
 ﻿namespace GymManagementSystem
 {
-    partial class EmployeeControl
+    partial class EmployeeControl : System.Windows.Forms.UserControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.gymManagementDBDataSet = new GymManagementSystem.GymManagementDBDataSet();
-            this.staffBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.staffTableAdapter = new GymManagementSystem.GymManagementDBDataSetTableAdapters.StaffTableAdapter();
-            this.tableAdapterManager = new GymManagementSystem.GymManagementDBDataSetTableAdapters.TableAdapterManager();
             this.staffDataGridView = new System.Windows.Forms.DataGridView();
+            this.RegisterMemberButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.EditStaffBtn = new System.Windows.Forms.Button();
+            this.DeleteStaffBtn = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,44 +44,14 @@
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RegisterMemberButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.EditStaffBtn = new System.Windows.Forms.Button();
-            this.DeleteStaffBtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.gymManagementDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).BeginInit();
+            this.staffBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gymManagementDBDataSet = new GymManagementSystem.GymManagementDBDataSet();
+            this.staffTableAdapter = new GymManagementSystem.GymManagementDBDataSetTableAdapters.StaffTableAdapter();
+            this.tableAdapterManager = new GymManagementSystem.GymManagementDBDataSetTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.staffDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gymManagementDBDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // gymManagementDBDataSet
-            // 
-            this.gymManagementDBDataSet.DataSetName = "GymManagementDBDataSet";
-            this.gymManagementDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // staffBindingSource
-            // 
-            this.staffBindingSource.DataMember = "Staff";
-            this.staffBindingSource.DataSource = this.gymManagementDBDataSet;
-            // 
-            // staffTableAdapter
-            // 
-            this.staffTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.AttendanceTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.EquipmentTableAdapter = null;
-            this.tableAdapterManager.LockerTableAdapter = null;
-            this.tableAdapterManager.Member_ProgressTableAdapter = null;
-            this.tableAdapterManager.Membership_PlanTableAdapter = null;
-            this.tableAdapterManager.MemberTableAdapter = null;
-            this.tableAdapterManager.PaymentTableAdapter = null;
-            this.tableAdapterManager.PT_SessionTableAdapter = null;
-            this.tableAdapterManager.StaffTableAdapter = this.staffTableAdapter;
-            this.tableAdapterManager.SubscriptionTableAdapter = null;
-            this.tableAdapterManager.TrainerTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = GymManagementSystem.GymManagementDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // staffDataGridView
             // 
@@ -107,6 +77,49 @@
             this.staffDataGridView.RowTemplate.Height = 28;
             this.staffDataGridView.Size = new System.Drawing.Size(1187, 463);
             this.staffDataGridView.TabIndex = 1;
+            // 
+            // RegisterMemberButton
+            // 
+            this.RegisterMemberButton.Location = new System.Drawing.Point(536, 44);
+            this.RegisterMemberButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RegisterMemberButton.Name = "RegisterMemberButton";
+            this.RegisterMemberButton.Size = new System.Drawing.Size(153, 49);
+            this.RegisterMemberButton.TabIndex = 2;
+            this.RegisterMemberButton.Text = "Register Staff";
+            this.RegisterMemberButton.UseVisualStyleBackColor = true;
+            this.RegisterMemberButton.Click += new System.EventHandler(this.RegisterMemberButton_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(32, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 29);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Staff";
+            // 
+            // EditStaffBtn
+            // 
+            this.EditStaffBtn.Location = new System.Drawing.Point(712, 45);
+            this.EditStaffBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.EditStaffBtn.Name = "EditStaffBtn";
+            this.EditStaffBtn.Size = new System.Drawing.Size(153, 49);
+            this.EditStaffBtn.TabIndex = 18;
+            this.EditStaffBtn.Text = "Edit Staff Info";
+            this.EditStaffBtn.UseVisualStyleBackColor = true;
+            this.EditStaffBtn.Click += new System.EventHandler(this.EditStaffBtn_Click);
+            // 
+            // DeleteStaffBtn
+            // 
+            this.DeleteStaffBtn.Location = new System.Drawing.Point(887, 45);
+            this.DeleteStaffBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DeleteStaffBtn.Name = "DeleteStaffBtn";
+            this.DeleteStaffBtn.Size = new System.Drawing.Size(153, 49);
+            this.DeleteStaffBtn.TabIndex = 19;
+            this.DeleteStaffBtn.Text = "Delete Staff";
+            this.DeleteStaffBtn.UseVisualStyleBackColor = true;
+            this.DeleteStaffBtn.Click += new System.EventHandler(this.DeleteStaffBtn_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -189,48 +202,35 @@
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             this.dataGridViewTextBoxColumn13.Width = 150;
             // 
-            // RegisterMemberButton
+            // staffBindingSource
             // 
-            this.RegisterMemberButton.Location = new System.Drawing.Point(536, 44);
-            this.RegisterMemberButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.RegisterMemberButton.Name = "RegisterMemberButton";
-            this.RegisterMemberButton.Size = new System.Drawing.Size(153, 49);
-            this.RegisterMemberButton.TabIndex = 2;
-            this.RegisterMemberButton.Text = "Register Staff";
-            this.RegisterMemberButton.UseVisualStyleBackColor = true;
-            this.RegisterMemberButton.Click += new System.EventHandler(this.RegisterMemberButton_Click);
+            this.staffBindingSource.DataMember = "Staff";
+            this.staffBindingSource.DataSource = this.gymManagementDBDataSet;
             // 
-            // label1
+            // gymManagementDBDataSet
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(32, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 29);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Employees";
+            this.gymManagementDBDataSet.DataSetName = "GymManagementDBDataSet";
+            this.gymManagementDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // EditStaffBtn
+            // staffTableAdapter
             // 
-            this.EditStaffBtn.Location = new System.Drawing.Point(712, 45);
-            this.EditStaffBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.EditStaffBtn.Name = "EditStaffBtn";
-            this.EditStaffBtn.Size = new System.Drawing.Size(153, 49);
-            this.EditStaffBtn.TabIndex = 18;
-            this.EditStaffBtn.Text = "Edit Staff Info";
-            this.EditStaffBtn.UseVisualStyleBackColor = true;
-            this.EditStaffBtn.Click += new System.EventHandler(this.EditStaffBtn_Click);
+            this.staffTableAdapter.ClearBeforeFill = true;
             // 
-            // DeleteStaffBtn
+            // tableAdapterManager
             // 
-            this.DeleteStaffBtn.Location = new System.Drawing.Point(887, 45);
-            this.DeleteStaffBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.DeleteStaffBtn.Name = "DeleteStaffBtn";
-            this.DeleteStaffBtn.Size = new System.Drawing.Size(153, 49);
-            this.DeleteStaffBtn.TabIndex = 19;
-            this.DeleteStaffBtn.Text = "Delete Staff";
-            this.DeleteStaffBtn.UseVisualStyleBackColor = true;
-            this.DeleteStaffBtn.Click += new System.EventHandler(this.DeleteStaffBtn_Click);
+            this.tableAdapterManager.AttendanceTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.EquipmentTableAdapter = null;
+            this.tableAdapterManager.LockerTableAdapter = null;
+            this.tableAdapterManager.Member_ProgressTableAdapter = null;
+            this.tableAdapterManager.Membership_PlanTableAdapter = null;
+            this.tableAdapterManager.MemberTableAdapter = null;
+            this.tableAdapterManager.PaymentTableAdapter = null;
+            this.tableAdapterManager.PT_SessionTableAdapter = null;
+            this.tableAdapterManager.StaffTableAdapter = this.staffTableAdapter;
+            this.tableAdapterManager.SubscriptionTableAdapter = null;
+            this.tableAdapterManager.TrainerTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = GymManagementSystem.GymManagementDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // EmployeeControl
             // 
@@ -245,9 +245,9 @@
             this.Name = "EmployeeControl";
             this.Size = new System.Drawing.Size(1313, 695);
             this.Load += new System.EventHandler(this.EmployeeControl_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gymManagementDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gymManagementDBDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -394,7 +394,7 @@
     <value>4</value>
   </data>
   <data name="employeeButton.Text" xml:space="preserve">
-    <value>Employees</value>
+    <value>Staff</value>
   </data>
   <data name="&gt;&gt;employeeButton.Name" xml:space="preserve">
     <value>employeeButton</value>

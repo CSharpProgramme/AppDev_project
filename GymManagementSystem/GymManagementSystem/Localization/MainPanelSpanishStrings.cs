@@ -10,7 +10,7 @@ namespace GymManagementSystem.Localization
             {
                 { "Dashboard", "Panel principal" },
                 { "Members", "Miembros" },
-                { "Employees", "Empleados" },
+                { "Staff", "Empleados" },
                 { "Trainers", "Entrenadores" },
                 { "Revenue", "Ingresos" },
                 { "Member's Attendance", "Asistencia de miembros" },
